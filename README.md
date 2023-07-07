@@ -1,1 +1,2 @@
-# SA_2023_3B_CantinaGo-
+# Cantina Go
+## SA 2023 3ª B
