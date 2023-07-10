@@ -18,7 +18,7 @@
 - [ ] RF9: O gerente pode gerar relatórios de vendas e consumo de alimentos.
 - [ ] RF10: O gerente pode adicionar, editar ou remover produtos do cardápio da cantina.
 
-Gerenciar Produto 
+<h4> Gerenciar Produto </h4>
 
 - [ ] RF11: O sistema deve permitir a inclusão de informações nutricionais para cada produto cadastrado
 - [ ] RF12: O sistema deve listar todos os produtos cadastrados
