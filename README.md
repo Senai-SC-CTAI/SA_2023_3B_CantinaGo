@@ -14,14 +14,14 @@
 <h4> Gerenciar Gerente </h4>
 
 - [ ] RF7: O gerente pode cadastrar um produto
-- [ ] RF8: O gerente pode alterar o status de disponibilidade do produto
+- [ ] RF8: O gerente pode alterar o status de disponibilidade do produto.
 - [ ] RF9: O gerente pode gerar relatórios de vendas e consumo de alimentos.
 - [ ] RF10: O gerente pode adicionar, editar ou remover produtos do cardápio da cantina.
 
 <h4> Gerenciar Produto </h4>
 
-- [ ] RF11: O sistema deve permitir a inclusão de informações nutricionais para cada produto cadastrado
-- [ ] RF12: O sistema deve listar todos os produtos cadastrados
+- [ ] RF11: O sistema deve permitir a inclusão de informações nutricionais para cada produto cadastrado.
+- [ ] RF12: O sistema deve listar todos os produtos cadastrados.
 - [ ] RF13: O usuário poderá requisitar um produto.
 
 -----
