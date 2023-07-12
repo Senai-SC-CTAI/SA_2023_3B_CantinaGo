@@ -9,7 +9,7 @@
 - [ ] RF3: O usuário pode se cadastrar. 
 - [ ] RF4: O usuário pode visualizar, editar e excluir o perfil de usuário.
 - [ ] RF5: O usuário pode fazer um pedido.
-- [ ] RF6: O usuário pode ver o seu histórico de pedidos
+- [ ] RF6: O usuário pode ver o seu histórico de pedidos.
       
 <h4> Gerenciar Gerente </h4>
 
@@ -33,7 +33,7 @@
 - [ ] RF1: O usuário pode visualizar o cardápio do dia da cantina.
 - [ ] RF2: O usuário pode se cadastrar.
 - [ ] RF3: O usuário poderá visualizar, editar e excluir o perfil de usuário.
-- [ ] RF4: O usuário poderá ver o seu histórico de pedidos
+- [ ] RF4: O usuário poderá ver o seu histórico de pedidos.
 - [ ] RF5: O usuário poderá pesquisar produtos por categoria ou palavras-chave.
 
 <h4> Gerenciar Gerente </h4>
