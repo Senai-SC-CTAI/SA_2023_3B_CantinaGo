@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Text>CantinaGo</Text>
       <StatusBar style="auto" />
+      <Image style={styles.logo} source={require('./img/coxinha.png')}/>
     </View>
   );
 }
@@ -13,8 +15,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fa321a',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  logo:{
+    width: 200,
+  }
 });
