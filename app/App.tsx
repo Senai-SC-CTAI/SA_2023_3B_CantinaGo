@@ -1,5 +1,5 @@
+import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import {TabRoutes} from './src/routes/app.route'
 
