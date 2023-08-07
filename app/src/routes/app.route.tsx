@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {MaterialIcons} from '@expo/vector-icons'
+import { Text } from 'react-native'; 
 
 import {Home} from '../screens/Home/index';
 import {Search} from '../screens/Search/index';
@@ -15,9 +16,12 @@ export function TabRoutes() {
       screenOptions={{
         tabBarActiveTintColor: '#FA321A',
         tabBarStyle: {
-          paddingTop: 5,
-          paddingBottom: 10,
+          paddingBottom: 5,
           borderTopWidth: 0, // Remove a linha superior
+        },
+        tabBarLabelStyle: {
+          fontWeight: 'bold', // Define o texto em negrito
+          paddingBottom: 10,
         },
       }}
       >
@@ -29,8 +33,7 @@ export function TabRoutes() {
             headerShown: false,
             tabBarIcon: ({ color, size }) => (
               <MaterialIcons name="home" color={color} size={size} />
-            ),
-            
+            ),    
           }}
         />
         <Screen 
