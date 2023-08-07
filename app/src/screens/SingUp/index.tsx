@@ -1,12 +1,16 @@
-import React from 'react';
-import { View } from 'react-native';
+import * as React from 'react';
+import { View, StyleSheet } from 'react-native';
 
-import { styles } from './styles';
-
-export function SingUp() {
+export function SignUp() {
   return (
     <View style={styles.container}>
 
     </View>
-  );
+);
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+})
