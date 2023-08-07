@@ -13,7 +13,12 @@ export function TabRoutes() {
       <Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
+        tabBarActiveTintColor: '#FA321A',
+        tabBarStyle: {
+          paddingTop: 5,
+          paddingBottom: 10,
+          borderTopWidth: 0, // Remove a linha superior
+        },
       }}
       >
         <Screen 
@@ -21,18 +26,34 @@ export function TabRoutes() {
         component={Home}
         options={{
             tabBarLabel: 'Home',
+            headerShown: false,
             tabBarIcon: ({ color, size }) => (
               <MaterialIcons name="home" color={color} size={size} />
             ),
+            
           }}
         />
         <Screen 
         name='Buscar' 
         component={Search}
+        options={{
+          tabBarLabel: 'Buscar',
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="search" color={color} size={size} />
+          ),
+        }}
         />
         <Screen 
         name='Usuário' 
         component={User}
+        options={{
+          tabBarLabel: 'Usuário',
+          headerShown: false,
+          tabBarIcon: ({ color, size }) => (
+            <MaterialIcons name="person" color={color} size={size} />
+          ),
+        }}
         />
       </Navigator>
   );    

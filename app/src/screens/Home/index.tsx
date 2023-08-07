@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 export function Home() {
   return (
     <View style={styles.container}>
-
+      <Text>Home</Text>
     </View>
 );
 }
@@ -12,5 +12,6 @@ export function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: 'white'
   },
 })
