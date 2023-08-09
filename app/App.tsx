@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Routes } from './src/routes'
-import { SignIn } from './src/screens/SingIn';
+import  SingUp  from './src/screens/SingUp';
 
 export default function App() {
   return (
-      <Routes/>
+      <SingUp/>
   );
 }
 
