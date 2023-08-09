@@ -16,7 +16,7 @@ export function TabRoutes() {
       screenOptions={{
         tabBarActiveTintColor: '#FA321A',
         tabBarStyle: {
-          paddingBottom: 5,
+          paddingBottom: 0,
           borderTopWidth: 0, // Remove a linha superior
         },
         tabBarLabelStyle: {
