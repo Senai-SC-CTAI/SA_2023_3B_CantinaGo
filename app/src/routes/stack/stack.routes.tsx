@@ -1,19 +1,37 @@
 import React from 'react';
-
+import { TouchableOpacity, Text } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-import { Routes } from '../bottomTabs';
-
+import { TabRoutes } from '../bottomTabs/app.route';
+import { SignIn } from '../../screens/SingIn';
 
 const { Screen, Navigator } = createStackNavigator();
 
 export function StackRoutes() {
   return (
-    <Navigator>
+    <Navigator initialRouteName="Entrar">
       <Screen 
-          name='Entrar' 
-          component={Routes}
+        name='Entrar' 
+        component={SignIn}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Screen 
+        name='Home' 
+        component={TabRoutes}
+        options={{
+          headerShown: false,
+        }}
       />
     </Navigator>
   )
+}
+
+export function ButtonWithStackRoutes() {
+  return (
+    <TouchableOpacity onPress={() => Routes}>
+      <Text>Entrar</Text>
+      <StackRoutes />
+    </TouchableOpacity>
+  );
 }

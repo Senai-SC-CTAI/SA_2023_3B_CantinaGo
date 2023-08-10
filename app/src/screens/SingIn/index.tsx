@@ -3,11 +3,11 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-nativ
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-
-import { Routes } from '../../routes/bottomTabs';
-
+import { useNavigation } from '@react-navigation/native'
+import { TabRoutes } from '../../routes/bottomTabs';
 
 export function SignIn() {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
@@ -22,7 +22,7 @@ export function SignIn() {
       />
       <TouchableOpacity 
       style={styles.button} 
-      // onPress={}
+      onPress={() => navigation.navigate('Home')}
       >
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
