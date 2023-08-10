@@ -7,11 +7,11 @@ export function SignIn() {
 
   const navigation = useNavigation()
 
-  function Entrar(){
+  function SignIn(){
     navigation.navigate('Route')
   }
-  function Cadastrar(){
-    navigation.navigate('Cadastrar')
+  function SignUp(){
+    navigation.navigate('SignUp')
   }
   return (
     <View style={styles.container}>
@@ -28,13 +28,13 @@ export function SignIn() {
         secureTextEntry
       />
       
-      <TouchableOpacity style={styles.button} onPress={(Entrar)}>
+      <TouchableOpacity style={styles.button} onPress={(SignIn)}>
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
       
       <Text style={styles.texty}>Não tem login?</Text>
       
-      <TouchableOpacity style={styles.cadastro} onPress={(Cadastrar)}>
+      <TouchableOpacity style={styles.cadastro} onPress={(SignUp)}>
       <Text style={styles.cadastro}>Faça cadastro</Text>
       </TouchableOpacity>
 

@@ -2,9 +2,9 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {MaterialIcons} from '@expo/vector-icons'
 
-import {Home} from '../../screens/Home/index';
-import {Search} from '../../screens/Search/index';
-import {User} from '../../screens/User/index';
+import {Home} from '../../screens/Home';
+import {Search} from '../../screens/Search';
+import {User} from '../../screens/User';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
