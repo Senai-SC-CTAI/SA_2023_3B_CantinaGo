@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import {MaterialIcons} from '@expo/vector-icons'
+
+ 
 
 const CadastroScreen = () => {
   const [email, setEmail] = useState('');
@@ -16,7 +19,7 @@ const CadastroScreen = () => {
   return (
     <View style={styles.container}>
        <Image
-        source={require('./src/assets/imagem.png')} // Substitua pelo caminho correto da sua imagem
+        source={require('../../../assets/img/logo-cor.svg')} // Substitua pelo caminho correto da sua imagem
         style={styles.image}
       />
 
@@ -27,7 +30,10 @@ const CadastroScreen = () => {
         placeholder="seuemail@gmail.com"
         value={email}
         onChangeText={setEmail}
-      />
+        
+        />
+
+      
       <TextInput
         style={styles.input}
         placeholder="criar senha"
@@ -82,6 +88,7 @@ const styles = StyleSheet.create({
   },
   input: {
     width: '50%',
+    borderRadius: 10,
     height: 40,
     backgroundColor: '#F4F4F4',
     borderColor: 'gray',
@@ -93,13 +100,21 @@ const styles = StyleSheet.create({
     marginTop: 20,
     color: 'blue',
   },
-  
-  
   image: {
     width: 200, // Defina a largura desejada da imagem
+    padding: 40,
     height: 200, // Defina a altura desejada da imagem
     resizeMode: 'contain', // Modo de redimensionamento da imagem
-    marginTop: 20, // Espaçamento superior
+    marginBottom: 80, // Espaçamento superior
+  },
+  button: {
+    backgroundColor: 'blue', // Cor de fundo do botão
+    borderRadius: 10, // Borda arredondada
+    padding: 10, // Espaçamento interno
+    width: 150, // Largura do botão
+  },
+  icon: {
+    paddingHorizontal: 10,
   },
 });
 
