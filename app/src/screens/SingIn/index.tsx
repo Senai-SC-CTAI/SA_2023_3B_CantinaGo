@@ -1,16 +1,23 @@
 import * as React from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native'
-import { TabRoutes } from '../../routes/bottomTabs';
 
 export function SignIn() {
+
   const navigation = useNavigation()
+
+  function Entrar(){
+    navigation.navigate('Route')
+  }
+  function Cadastrar(){
+    navigation.navigate('Cadastrar')
+  }
   return (
     <View style={styles.container}>
+      
       <Text style={styles.title}>Login</Text>
+      
       <TextInput
         style={styles.input}
         placeholder="seuemail@estudante.sesisenai.org.br"
@@ -20,14 +27,17 @@ export function SignIn() {
         placeholder="Senha"
         secureTextEntry
       />
-      <TouchableOpacity 
-      style={styles.button} 
-      onPress={() => navigation.navigate('Home')}
-      >
+      
+      <TouchableOpacity style={styles.button} onPress={(Entrar)}>
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
+      
       <Text style={styles.texty}>Não tem login?</Text>
+      
+      <TouchableOpacity style={styles.cadastro} onPress={(Cadastrar)}>
       <Text style={styles.cadastro}>Faça cadastro</Text>
+      </TouchableOpacity>
+
     </View>
   );
 }
