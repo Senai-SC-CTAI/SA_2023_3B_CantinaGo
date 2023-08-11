@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     color: '#FA321A',
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 30,
     fontFamily:'inter',
   },
   texty: {
@@ -83,6 +83,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 5,
+    marginBottom: 25,
   },
   buttonText: {
     color: 'white',

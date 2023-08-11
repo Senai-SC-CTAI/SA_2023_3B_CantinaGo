@@ -44,8 +44,10 @@ export function SignUp() {
      style={styles.input}
      placeholder="turma"
    />
-   <Button title="Cadastrar" />
-
+ <TouchableOpacity style={styles.button} onPress={(SignIn)}>
+        <Text style={styles.buttonText}>Cadastrar</Text>
+      </TouchableOpacity>
+      
    <TouchableOpacity onPress={(SignIn)}>
      <Text style={styles.link}>Já possui uma conta? Faça login </Text>
 
@@ -78,8 +80,9 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   link: {
-    marginTop: 20,
-    color: 'blue',
+    fontSize: 15,
+    marginBottom: 10,
+    color: '#FA321A',
   },
   image: {
     width: 200, // Defina a largura desejada da imagem
@@ -89,10 +92,15 @@ const styles = StyleSheet.create({
     marginBottom: 80, // Espaçamento superior
   },
   button: {
-    backgroundColor: 'blue', // Cor de fundo do botão
-    borderRadius: 10, // Borda arredondada
-    padding: 10, // Espaçamento interno
-    width: 150, // Largura do botão
+    backgroundColor: '#FA321A',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 5,
+    marginBottom: 25,
+  },
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
   },
   icon: {
     paddingHorizontal: 10,

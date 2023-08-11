@@ -1,8 +1,14 @@
 import * as React from 'react';
 import { View, StyleSheet, Text, Image} from 'react-native';
 import { ComidaScroll } from '../../components/ComidaScroll'
+import { useNavigation } from '@react-navigation/native'
 
 export function Home() {
+  const navigation = useNavigation()
+  function User(){
+    navigation.navigate('User')
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
