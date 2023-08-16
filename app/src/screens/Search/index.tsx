@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Image, TextInput, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Image, TextInput, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons'; 
 import { useNavigation } from '@react-navigation/native'
@@ -26,26 +26,34 @@ export function Search() {
           size={24} 
           color="#FA321A"
           style={{marginLeft:20, marginRight:20}} />
-        <TextInput placeholder=""></TextInput>
+        <TextInput placeholder="" style={{width:'70%'}}></TextInput>
       </View>
       </View>
-    <View style={{display:'flex', alignItems:'center', marginTop:50}}>
-      <View style={styles.searchItens}>
-        <View style={styles.searchIten}>
-          <Text style={styles.ItenSearchItens}>Salgados</Text>
-        </View>
-        <View style={styles.searchIten}>
-          <Text style={styles.ItenSearchItens}>Doces</Text>
-        </View>
+      <View style={{ display: 'flex', alignItems: 'center', marginTop: 50 }}>
+        <View style={styles.searchItens}>
+          <View style={styles.searchIten}>
+            <ImageBackground source={require("../../../assets/img/salgados.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
+              <Text style={styles.ItenSearchItens}>Salgados</Text>
+            </ImageBackground>
+          </View>
+          <View style={styles.searchIten}>
+            <ImageBackground source={require("../../../assets/img/doces.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
+              <Text style={styles.ItenSearchItens}>Doces</Text>
+            </ImageBackground>
+          </View>
         </View>
         <View style={styles.searchItens}>
-        <View style={styles.searchIten}>
-          <Text style={styles.ItenSearchItens}>Sucos</Text>
+          <View style={styles.searchIten}>
+            <ImageBackground source={require("../../../assets/img/sucos.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
+              <Text style={styles.ItenSearchItens}>Sucos</Text>
+            </ImageBackground>
+          </View>
+          <View style={styles.searchIten}>
+            <ImageBackground source={require("../../../assets/img/snacks.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
+              <Text style={styles.ItenSearchItens}>Snacks</Text>
+            </ImageBackground>
+          </View>
         </View>
-        <View style={styles.searchIten}>
-          <Text style={styles.ItenSearchItens}>Snacks</Text>
-        </View>
-      </View>
       </View>
 
     </View>
@@ -56,6 +64,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
+  },
+
+  coverImage:{
+    width:"100%",
+    height:"100%",
+    display:'flex',
+    alignItems:'center',
+    justifyContent:"center"
   },
   header: {
     display: 'flex',
@@ -102,7 +118,6 @@ const styles = StyleSheet.create({
     width:180,
     height:240,
     borderRadius:20,
-    backgroundColor:"#FF1B00",
     marginTop:10,
     display:'flex',
     textAlign:'center',
