@@ -4,13 +4,6 @@ import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-ico
 import { useNavigation } from '@react-navigation/native'
 
 export function User() {
-
-  const navigation = useNavigation()
-
-  function Logout(){
-    navigation.navigate('SignIn')
-  }
-
   return (
      <View style={styles.container}>
 
