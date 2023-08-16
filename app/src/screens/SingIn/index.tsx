@@ -1,9 +1,11 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+
 
 const App = () => {
   return (
     <View style={styles.container}>
+       <Image source={require("../../../assets/img/logo.png")} style={{width:100, height:100, resizeMode:"contain"}}></Image>
       <Text style={styles.title}>Login</Text>
       <TextInput
         style={styles.input}
@@ -29,14 +31,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     display:'flex',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
   },
   title: {
     color: '#FA321A',
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
-    fontFamily:'inter',
+  
   },
   texty: {
     fontSize: 15,
@@ -56,14 +58,21 @@ const styles = StyleSheet.create({
     borderColor: '#F4F4F4',
     borderWidth: 1,
     borderRadius: 5,
-    paddingHorizontal: 10, // Adicionado padding horizontal
+    paddingHorizontal: 10, 
     marginBottom: 10,
+    backgroundColor:"#F4F4F4",
+    margin:20,
   },
   button: {
+    margin:25,
     backgroundColor: '#FA321A',
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 5,
+    width:150,
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
   },
   buttonText: {
     color: 'white',
