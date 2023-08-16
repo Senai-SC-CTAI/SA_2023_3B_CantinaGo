@@ -39,7 +39,7 @@
 
 <h4> BERNARDO </h4>
 
-- [ ] RF10 - O usuário poderá se cadastrar no sistema.
+- [ ] RF9 - O usuário poderá fornecer sugestões ou feedback no cardápio.
 - [ ] RF11 - O usuário poderá visualizar o perfil de usuário.
       
 <h4> VENUS </h4>
