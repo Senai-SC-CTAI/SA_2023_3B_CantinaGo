@@ -1,5 +1,7 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
+
+import styles from './styles';
 
 export function Food() {
   return (
@@ -9,8 +11,3 @@ export function Food() {
 );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-})
