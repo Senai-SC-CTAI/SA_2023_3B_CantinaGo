@@ -10,9 +10,10 @@ import { StyleSheet } from 'react-native';
       },
       title: {
         color: '#FA321A',
-        fontSize: 24,
+        fontSize: 32,
         fontWeight: 'bold',
-        marginBottom: 20,
+        marginBottom: 41,
+        marginTop: 80,
       
       },
       texty: {

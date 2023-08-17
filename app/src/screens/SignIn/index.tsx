@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
-
+import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import styles from './styles';
 
 export function SignIn() {
@@ -17,7 +17,7 @@ export function SignIn() {
 
   return (
     <View style={styles.container}>
-    <Image source={require("../../../assets/img/logo.png")} style={{width:100, height:100, resizeMode:"contain"}}></Image>
+    <Image source={require("../../../assets/img/logo-cor.svg")} style={{width:100, height:100, resizeMode:"contain"}}></Image>
    <Text style={styles.title}>Login</Text>
    <TextInput
      style={styles.input}
