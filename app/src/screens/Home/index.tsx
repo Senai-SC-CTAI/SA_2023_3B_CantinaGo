@@ -1,16 +1,9 @@
 import * as React from 'react';
 import { View, StyleSheet, Text, Image} from 'react-native';
-import { ComidaScroll } from '../../components/ComidaScroll'
-import { useNavigation } from '@react-navigation/native'
-
-import styles from './styles'
+import { ComidaScroll } from '../../components/ComidaScroll';
+import styles from './styles';
 
 export function Home() {
-  const navigation = useNavigation()
-  function User(){
-    navigation.navigate('User')
-  }
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -34,14 +27,14 @@ export function Home() {
         </View>
         <Image 
               style={styles.user}
-              source={require('../../../assets/img/User.svg')}
+              source={require('../../../assets/img/user.svg')}
         />
       </View>
       <View style={styles.main}>
         <View style={styles.containerComida}>
-          < ComidaScroll />
-          < ComidaScroll />
-          < ComidaScroll />
+          <ComidaScroll category="Salgados" />
+          <ComidaScroll category="Doces" />
+          <ComidaScroll category="Bebidas" />
         </View>
       </View>
     </View>

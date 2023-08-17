@@ -1,22 +1,23 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, StyleSheet, Text, Image, ImageSourcePropType, TouchableOpacity } from 'react-native';
 
 
-export function Cards() {
+export function Cards(props: { id: React.Key | null | undefined; foto: ImageSourcePropType; nome: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; preco: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; caloria: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity key={props.id} style={styles.container}>
         <View style={styles.card}>
         <Image 
           style={styles.imagemComida}
-          source={require('../../assets/img/pao.png')}
+          source={props.foto}
+          resizeMode="contain" 
         />
-        <Text style={styles.nomeComida}>Pão de queijo</Text>
+        <Text style={styles.nomeComida}>{props.nome}</Text>
         <View style={styles.infoComida}>
-          <Text style={styles.preco}>R$6,90</Text>
-          <Text style={styles.kcal}>150kcal</Text>
+          <Text style={styles.preco}>R${props.preco}</Text>
+          <Text style={styles.kcal}>{props.caloria}kcla</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
     
   );
 }
