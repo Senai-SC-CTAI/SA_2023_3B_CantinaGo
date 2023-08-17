@@ -16,8 +16,8 @@ export function User() {
         />
         </View>
         {/* <View style={styles.feedBackImage}><Image source={require()}></View> */}
-        <View>
-            <TextInput placeholder='Adicione um comentario...' placeholderTextColor={"#6A6A6A"} style={{backgroundColor:"F4F4F4"}}></TextInput>
+        <View style={styles.input}>
+            <TextInput placeholder='Adicione um comentario...' placeholderTextColor={"#6A6A6A"} style={styles.inputComment}></TextInput>
         </View>
         <View>
             <TouchableOpacity style={styles.buttom}><Text>Enviar</Text></TouchableOpacity>  
@@ -32,17 +32,35 @@ export function User() {
     container: {
       flex: 1,
       backgroundColor: '#FFFFFF',
+      display:'flex',
+      alignItems:'center',
+     
     },
     header: {
         display: 'flex',
         flexDirection: 'row',
         width: '100%',
         height: 90,
-        position: 'absolute',
         top: 0,
         alignItems: 'center'
       },
       buttom:{
+        backgroundColor: "#FA321A",
+        width: 140,
+        height: 40,
+        textAlign:'center',
+        justifyContent:'center',
+        display:'flex',
+        marginTop: 40
+      },
+      input:{
 
+      },
+      inputComment:{
+        backgroundColor:"#F4F4F4",
+        width:286,
+        height:272,
+        display: 'flex',
+        borderRadius: 10,
       },
   })
