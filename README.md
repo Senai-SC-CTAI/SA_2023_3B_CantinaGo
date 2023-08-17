@@ -42,7 +42,7 @@
 - [ ] RF9 - O usuário poderá fornecer sugestões ou feedback no cardápio..
 - [ ] RF11 - O usuário poderá visualizar o perfil de usuário.
       
-<h4> VENUS </h4>
+<h4> MARIA </h4>
 
 - [ ] RF10 - O usuário poderá se cadastrar no sistema.
 
