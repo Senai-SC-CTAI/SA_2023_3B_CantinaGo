@@ -49,6 +49,22 @@ const styles = StyleSheet.create({
   icon: {
     paddingHorizontal: 10,
   },
+  viewInput: {
+    width: 290,
+    height: 37,
+    backgroundColor: "#F4F4F4",
+    marginBottom: 20,
+    borderRadius: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  inputsInfo: {
+
+  },
+  inputs: {
+    width: '100%'
+  },
 })
 
 export default styles;

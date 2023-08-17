@@ -27,7 +27,9 @@ export function SignUp() {
      placeholder="seuemail@gmail.com"     
      />
 
-   
+   <View style>
+      <icon><TextInput></TextInput>
+   </View>
    <TextInput
      style={styles.input}
      placeholder="criar senha"
