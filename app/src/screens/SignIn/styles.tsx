@@ -6,14 +6,14 @@ import { StyleSheet } from 'react-native';
         justifyContent: 'center',
         alignItems: 'center',
         display:'flex',
-        backgroundColor: '#f5f5f5',
+        backgroundColor: '#ffffff',
       },
       title: {
         color: '#FA321A',
         fontSize: 24,
         fontWeight: 'bold',
-        marginBottom: 30,
-        fontFamily:'inter',
+        marginBottom: 20,
+      
       },
       texty: {
         fontSize: 15,
@@ -33,15 +33,21 @@ import { StyleSheet } from 'react-native';
         borderColor: '#F4F4F4',
         borderWidth: 1,
         borderRadius: 5,
-        paddingHorizontal: 10, // Adicionado padding horizontal
+        paddingHorizontal: 10, 
         marginBottom: 10,
+        backgroundColor:"#F4F4F4",
+        margin:20,
       },
       button: {
+        margin:25,
         backgroundColor: '#FA321A',
         paddingHorizontal: 20,
         paddingVertical: 10,
         borderRadius: 5,
-        marginBottom: 25,
+        width:150,
+        display:"flex",
+        justifyContent:"center",
+        alignItems:"center",
       },
       buttonText: {
         color: 'white',
