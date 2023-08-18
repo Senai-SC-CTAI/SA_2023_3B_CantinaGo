@@ -1,7 +1,7 @@
 const Content = [
     {
         id: 1,
-        foto: require('/assets/img/pao.png'),
+        foto: require('../../assets/img/pao.png'),
         nome: 'Pão de queijo',
         preco: '6,90',
         caloria: 150,
@@ -9,7 +9,7 @@ const Content = [
     },
     {
         id: 2,
-        foto: require('/assets/img/coxinha.png'),
+        foto: require('../../assets/img/coxinha.png'),
         nome: 'Coxinha',
         preco: '4,50',
         caloria: 220,
@@ -17,7 +17,7 @@ const Content = [
     },
     {
         id: 3,
-        foto: require('/assets/img/Pastel.png'),
+        foto: require('../../assets/img/Pastel.png'),
         nome: 'Pastel',
         preco: '5,20',
         caloria: 180,
@@ -25,7 +25,7 @@ const Content = [
     },
     {
         id: 4,
-        foto: require('/assets/img/beijinho.png'),
+        foto: require('../../assets/img/beijinho.png'),
         nome: 'Dois Amores',
         preco: '7,00',
         caloria: 280,
@@ -33,7 +33,7 @@ const Content = [
     },
     {
         id: 5,
-        foto: require('/assets/img/croissant.png'),
+        foto: require('../../assets/img/croissant.png'),
         nome: 'Croissant',
         preco: '3,80',
         caloria: 220,
@@ -41,7 +41,7 @@ const Content = [
     },
     {
         id: 6,
-        foto: require('/assets/img/Folhado.png'),
+        foto: require('../../assets/img/Folhado.png'),
         nome: 'Folhado',
         preco: '4,70',
         caloria: 150,
@@ -49,7 +49,7 @@ const Content = [
     },
     {
         id: 7,
-        foto: require('/assets/img/Suco.png'),
+        foto: require('../../assets/img/Suco.png'),
         nome: 'Suco de Uva',
         preco: '3,00',
         caloria: 120,
@@ -57,7 +57,7 @@ const Content = [
     },
     {
         id: 8,
-        foto: require('/assets/img/Agua.png'),
+        foto: require('../../assets/img/Agua.png'),
         nome: 'Água',
         preco: '1,50',
         caloria: 0,
@@ -65,7 +65,7 @@ const Content = [
     },
     {
         id: 9,
-        foto: require('/assets/img/Cha.png'),
+        foto: require('../../assets/img/Cha.png'),
         nome: 'Chá Gelado',
         preco: '2,50',
         caloria: 5,
