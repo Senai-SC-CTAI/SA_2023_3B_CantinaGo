@@ -1,9 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { View, StyleSheet, Image, TextInput, Text, TouchableOpacity } from 'react-native';
-import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native'
-import { background } from 'native-base/lib/typescript/theme/styled-system';
+import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
+import { Feather } from '@expo/vector-icons';
 
 import { User } from '../User'
 
@@ -16,7 +14,7 @@ export function Feedback() {
     const [showFeedback, setShowFeedback] = useState(true);
   
     return (
-        <View style={styles.container}>
+        <View>
         {showUser && (
         <View style={styles.user}>
           <User />

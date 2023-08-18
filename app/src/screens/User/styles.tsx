@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
-  container: {
+  user: {
     flex: 1,
     justifyContent: 'center',
     display: 'flex',
@@ -9,10 +9,20 @@ const styles = StyleSheet.create({
 
   },
 
-  user: {},
-  feedback:{},
+  feedback:{
+    flex: 1,
+    justifyContent: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF'
+  },
 
-
+  image: {
+    width: 120, 
+    height: 120,
+    resizeMode: 'contain',
+    marginTop:20
+  },
   header: {
     display: 'flex',
     flexDirection: 'row',
@@ -52,7 +62,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   profilePicture: {
-    marginBottom: 15,
+    marginBottom: 50,
     display: 'flex',
     alignItems: 'center'
   },

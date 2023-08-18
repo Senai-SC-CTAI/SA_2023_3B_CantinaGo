@@ -1,13 +1,21 @@
 import { StyleSheet } from "react-native"
 
 const styles = StyleSheet.create({
-    container: {
+
+    user: { 
       flex: 1,
       backgroundColor: '#FFFFFF',
       display:'flex',
       alignItems:'center',
-     
-    },
+    }, 
+
+      feedback: {
+        flex: 1,
+        backgroundColor: '#FFFFFF',
+        display:'flex',
+        alignItems:'center',
+      },
+
     header: {
         display: 'flex',
         flexDirection: 'row',
@@ -59,9 +67,6 @@ const styles = StyleSheet.create({
         fontWeight:"bold"
     
       },
-
-      user: {}, 
-      feedback: {}
   })
 
   export default styles;
