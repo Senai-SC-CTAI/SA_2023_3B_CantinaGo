@@ -5,6 +5,7 @@ import {MaterialIcons} from '@expo/vector-icons'
 import {Home} from '../../screens/Home';
 import {Search} from '../../screens/Search';
 import {User} from '../../screens/User';
+import { Feedback } from '../../screens/Feedback'
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -18,6 +19,7 @@ export function TabRoutes() {
           height: 72,
           paddingBottom: 0,
           borderTopWidth: 0, // Remove a linha superior
+          alignContent: 'center'
         },
         tabBarLabelStyle: {
           fontWeight: 'bold', // Define o texto em negrito

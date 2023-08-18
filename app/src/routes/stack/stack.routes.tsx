@@ -7,6 +7,7 @@ import { SignUp } from '../../screens/SignUp';
 import { User } from '../../screens/User';
 import { Search } from '../../screens/Search';
 import { Food } from '../../screens/Food';
+import { Feedback } from '../../screens/Feedback';
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -54,7 +55,14 @@ export function StackRoutes() {
         options={{
           headerShown: false,
         }}
-      />
+      /> 
+      <Screen 
+      name='Feedback' 
+      component={Feedback}
+      options={{
+        headerShown: false,
+      }}
+    />
     </Navigator>
   )
 }

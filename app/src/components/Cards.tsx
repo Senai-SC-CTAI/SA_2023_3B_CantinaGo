@@ -14,7 +14,7 @@ export function Cards(props: { id: React.Key | null | undefined; foto: ImageSour
         <Text style={styles.nomeComida}>{props.nome}</Text>
         <View style={styles.infoComida}>
           <Text style={styles.preco}>R${props.preco}</Text>
-          <Text style={styles.kcal}>{props.caloria}kcla</Text>
+          <Text style={styles.kcal}>{props.caloria}kcal</Text>
         </View>
       </View>
     </TouchableOpacity>

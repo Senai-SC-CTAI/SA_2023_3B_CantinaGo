@@ -1,0 +1,67 @@
+import { StyleSheet } from "react-native"
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#FFFFFF',
+      display:'flex',
+      alignItems:'center',
+     
+    },
+    header: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '100%',
+        height: 90,
+        top: 0,
+        alignItems: 'center'
+      },
+      buttom:{
+        backgroundColor: "#FA321A",
+        width: 140,
+        height: 40,
+        textAlign:'center',
+        justifyContent:'center',
+        display:'flex',
+        marginTop: 40,
+        borderRadius: 10
+      },
+      inputComment:{
+        backgroundColor:"#F4F4F4",
+        width:286,
+        height:272,
+        display: 'flex',
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 4,
+    },
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+      },
+      feedBackImage:{
+        width: 140,
+        height: 140,
+        resizeMode:'contain',
+        backgroundColor: "#FA321A",
+        borderRadius: 100,
+        display: 'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        marginBottom: 75,
+        marginTop: 60
+      },
+      title:{
+        fontSize:36,
+        color:"#000000",
+        marginLeft:20,
+        fontWeight:"bold"
+    
+      },
+
+      user: {}, 
+      feedback: {}
+  })
+
+  export default styles;

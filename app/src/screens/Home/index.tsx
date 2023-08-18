@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { View, Text, Image} from 'react-native';
+import { View, Text, Image, ScrollView} from 'react-native';
 import { ComidaScroll } from '../../components/ComidaScroll';
 import styles from './styles';
 
 export function Home() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.header}>
         <View>
           <View>
@@ -37,7 +37,7 @@ export function Home() {
           <ComidaScroll category="Bebidas" />
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 

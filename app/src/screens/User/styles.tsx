@@ -9,6 +9,10 @@ const styles = StyleSheet.create({
 
   },
 
+  user: {},
+  feedback:{},
+
+
   header: {
     display: 'flex',
     flexDirection: 'row',
@@ -43,7 +47,7 @@ const styles = StyleSheet.create({
   inputs: {
     width: '100%'
   },
-  feedback: {
+  feedbackText: {
     display: 'flex',
     textAlign: 'center'
   },
@@ -63,6 +67,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
+ 
 })
 
 export default styles;
