@@ -35,17 +35,16 @@ import { StyleSheet } from 'react-native';
         borderWidth: 1,
         borderRadius: 5,
         paddingHorizontal: 10, 
-        marginBottom: 10,
+        marginBottom: 26,
         backgroundColor:"#F4F4F4",
-        margin:20,
       },
       button: {
-        margin:25,
+        marginBottom: 62,
+        marginTop: 36,
         backgroundColor: '#FA321A',
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        borderRadius: 5,
-        width:150,
+        borderRadius: 10,
+        height: 40,
+        width:140,
         display:"flex",
         justifyContent:"center",
         alignItems:"center",
@@ -53,6 +52,20 @@ import { StyleSheet } from 'react-native';
       buttonText: {
         color: 'white',
         fontWeight: 'bold',
+        fontSize: 15,
+      },
+      viewInput: {
+        width: 290,
+        height: 37,
+        backgroundColor: "#F4F4F4",
+        marginBottom: 20,
+        borderRadius: 10,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+      },
+      inputs: {
+        width: '100%'
       },
     })
     

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, Image} from 'react-native';
+import { View, Text, Image} from 'react-native';
 import { ComidaScroll } from '../../components/ComidaScroll';
 import styles from './styles';
 
@@ -27,7 +27,7 @@ export function Home() {
         </View>
         <Image 
               style={styles.user}
-              source={require('../../../assets/img/user.svg')}
+              source={require('../../../assets/img/User.svg')}
         />
       </View>
       <View style={styles.main}>

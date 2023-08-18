@@ -9,8 +9,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF'
   },
   title: {
-    fontSize: 24,
-    marginBottom: 20,
+    fontSize: 32,
+    marginBottom: 27,
+    marginTop: 80,
     color: '#FA321A',
     fontWeight:  'bold'
   },
@@ -30,22 +31,26 @@ const styles = StyleSheet.create({
     color: '#FA321A',
   },
   image: {
-    width: 200, // Defina a largura desejada da imagem
-    padding: 40,
-    height: 200, // Defina a altura desejada da imagem
-    resizeMode: 'contain', // Modo de redimensionamento da imagem
-    marginBottom: 80, // Espaçamento superior
+    width: 134,
+    height: 134,
+    resizeMode: "contain",
+    marginTop: 40,
   },
   button: {
+    marginBottom: 62,
+    marginTop: 36,
     backgroundColor: '#FA321A',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 5,
-    marginBottom: 25,
+    borderRadius: 10,
+    height: 40,
+    width:140,
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
   },
   buttonText: {
     color: 'white',
     fontWeight: 'bold',
+    fontSize: 15,
   },
   icon: {
     paddingHorizontal: 10,
@@ -60,8 +65,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  inputsInfo: {
-
+  texty: {
+    fontSize: 15,
+    marginBottom: 10,
   },
   inputs: {
     width: '100%'
