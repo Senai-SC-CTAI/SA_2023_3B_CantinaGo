@@ -32,6 +32,7 @@ export function User() {
               style={{ marginLeft: 20 }}
             />
           </View>
+          <Text style={styles.title}>Usuário</Text>
 
           <View style={styles.profileContent}>
             <View style={styles.profilePicture}>

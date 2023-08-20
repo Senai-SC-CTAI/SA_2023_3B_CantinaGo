@@ -19,11 +19,12 @@ export function TabRoutes() {
           height: 72,
           paddingBottom: 0,
           borderTopWidth: 0, // Remove a linha superior
-          alignContent: 'center'
+          
         },
         tabBarLabelStyle: {
           fontWeight: 'bold', // Define o texto em negrito
-          paddingBottom: 20,
+          paddingBottom: 20,  
+          
         },
         tabBarIconStyle: {
           marginBottom: -13, // Ajuste para reduzir o espaçamento vertical entre ícone e texto

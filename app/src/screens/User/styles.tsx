@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
   user: {
     flex: 1,
-    justifyContent: 'center',
     display: 'flex',
     alignItems: 'center',
     backgroundColor: '#FFFFFF'
@@ -11,10 +10,9 @@ const styles = StyleSheet.create({
 
   feedback:{
     flex: 1,
-    justifyContent: 'center',
-    display: 'flex',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#FFFFFF',
+    display:'flex',
+    alignItems:'center',
   },
 
   image: {
@@ -29,9 +27,16 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 90,
     position: 'absolute',
-    top: 0,
-    alignItems: 'center'
+    alignItems: 'center',
   },
+  title:{
+    fontSize:36,
+    color:"#000000",
+    marginLeft:20,
+    fontWeight:"bold"
+
+  },
+  
   profileInfo: {
     marginBottom: 70
   },
@@ -50,7 +55,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     display: 'flex',
     textAlign: 'center',
+    marginTop: 50,
   },
+
   inputsInfo: {
 
   },
