@@ -7,14 +7,17 @@ import { useNavigation } from '@react-navigation/native'
 import { Feedback } from '../Feedback';
 
 import styles from './styles';
-import { useStyledSystemPropsResolver } from 'native-base';
 
 export function User() {
 
+  const navigation = useNavigation();
+
+  function back() {
+    navigation.navigate("Home");
+  }
+
   const [showUser, setShowUser] = useState(true);
   const [showFeedback, setShowFeedback] = useState(false);
-
-  const navigation = useNavigation()
 
   function Logout() {
     navigation.navigate('SignIn')
@@ -26,12 +29,14 @@ export function User() {
         <View style={styles.user}>
 
           <View style={styles.header}>
+            <TouchableOpacity onPress={back}>
             <Feather
               name="arrow-left"
               size={38}
               color="#FA321A"
               style={{ marginLeft: 20 }}
             />
+              </TouchableOpacity>
           </View>
           <Text style={styles.title}>Usuário</Text>
 
