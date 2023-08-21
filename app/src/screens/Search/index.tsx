@@ -7,16 +7,24 @@ import { color } from 'react-native-reanimated';
 
 
 export function Search() {
+ 
+  const navigation = useNavigation();
 
+  function back() {
+    navigation.navigate("Home");
+  }
+  
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Feather
-          name="arrow-left"
-          size={38}
-          color="#FA321A"
-          style={{ marginLeft: 20 }}
-        />
+      <TouchableOpacity onPress={back}>
+            <Feather
+              name="arrow-left"
+              size={38}
+              color="#FA321A"
+              style={{ marginLeft: 20 }}
+            />
+              </TouchableOpacity>
         <Text style={styles.title}>Buscar</Text>
       </View>
     <View style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
