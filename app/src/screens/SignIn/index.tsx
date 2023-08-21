@@ -1,11 +1,7 @@
 import React from "react";
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import {
-  MaterialIcons,
-  MaterialCommunityIcons,
-  Feather,
-} from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import styles from "./styles";
 

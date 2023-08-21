@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native'
 import { Feedback } from '../Feedback';
 
 import styles from './styles';
+import { useStyledSystemPropsResolver } from 'native-base';
 
 export function User() {
 
@@ -20,7 +21,7 @@ export function User() {
   }
 
   return (
-    <View>
+    <View style={styles.container}>
       {showUser && (
         <View style={styles.user}>
 
