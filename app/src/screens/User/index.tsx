@@ -34,11 +34,11 @@ export function User() {
               name="arrow-left"
               size={38}
               color="#FA321A"
-              style={{ marginLeft: 20 }}
+              style={{ marginLeft: 10}}
             />
               </TouchableOpacity>
-          </View>
           <Text style={styles.title}>Usuário</Text>
+          </View>
 
           <View style={styles.profileContent}>
             <View style={styles.profilePicture}>

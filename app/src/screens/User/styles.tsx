@@ -33,14 +33,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     height: 90,
-    position: 'absolute',
-    alignItems: 'center',
+    top: 0,
+    alignItems: 'center'
   },
   title:{
-    fontSize:36,
+    fontSize: 36,
     color:"#000000",
-    marginLeft:20,
-    fontWeight:"bold"
+    marginLeft: 20,
+    fontWeight:"bold",
+    marginRight: 173  
 
   },
   

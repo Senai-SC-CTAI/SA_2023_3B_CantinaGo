@@ -1,3 +1,4 @@
+import { position } from "native-base/lib/typescript/theme/styled-system";
 import { StyleSheet } from "react-native"
 
 const styles = StyleSheet.create({
@@ -19,10 +20,11 @@ const styles = StyleSheet.create({
     header: {
         display: 'flex',
         flexDirection: 'row',
-        width: '100%',
+        width: '136.5%',
         height: 90,
         top: 0,
-        alignItems: 'center'
+        alignItems: 'center',
+        
       },
       buttom:{
         backgroundColor: "#FA321A",
@@ -64,8 +66,8 @@ const styles = StyleSheet.create({
         fontSize:36,
         color:"#000000",
         marginLeft:20,
-        fontWeight:"bold"
-    
+        fontWeight:"bold",
+        marginRigth: 173,
       },
   })
 
