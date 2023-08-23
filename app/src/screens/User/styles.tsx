@@ -1,4 +1,8 @@
 import { StyleSheet } from "react-native"
+import {
+  useFonts,Inter_300Light,
+  Inter_400Regular,
+  Inter_600SemiBold, Inter_700Bold} from '@expo-google-fonts/inter'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -41,8 +45,8 @@ const styles = StyleSheet.create({
     color:"#000000",
     marginLeft: 20,
     fontWeight:"bold",
-    marginRight: 173  
-
+    marginRight: 173,  
+    fontFamily: Inter_700Bold
   },
   
   profileInfo: {
@@ -70,7 +74,7 @@ const styles = StyleSheet.create({
 
   },
   inputs: {
-    width: '100%'
+    width: '100%',
   },
   feedbackText: {
     display: 'flex',

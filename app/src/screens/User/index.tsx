@@ -2,7 +2,15 @@ import * as React from 'react';
 import { useState } from 'react';
 import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
 import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
+import AppLoading from "expo-app-loading";
+
+import {
+  useFonts,Inter_300Light,
+  Inter_400Regular,
+  Inter_600SemiBold, Inter_700Bold} from '@expo-google-fonts/inter'
+
+
 
 import { Feedback } from '../Feedback';
 
@@ -55,8 +63,8 @@ export function User() {
               />
             </View>
             <View style={styles.profileInfo}>
-              <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Nome do Usuário</Text>
-              <Text style={{ fontSize: 14, color: '#9E9D9D' }}>Tipo de usuário</Text>
+              <Text style={{ fontSize: 20, fontFamily: Inter_700Bold  }}>Nome do Usuário</Text>
+              <Text style={{ fontSize: 14, color: '#9E9D9D', fontFamily: Inter_400Regular}}>Tipo de usuário</Text>
             </View>
           </View>
           <View style={styles.inputsInfo}>
