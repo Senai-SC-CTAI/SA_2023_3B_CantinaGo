@@ -1,29 +1,37 @@
 import * as React from 'react';
-import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles';
 
 export function Food() {
+
+  const navigation = useNavigation();
+
+  function back() {
+    navigation.navigate("Search");
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-          <TouchableOpacity>
-            <Feather 
-            name="arrow-left" 
-            size={38} 
-            color="#FA321A" 
-            style={{ marginLeft: 20 }} 
-            />
-          </TouchableOpacity>
+        <TouchableOpacity onPress={back}>
+          <Feather
+            name="arrow-left"
+            size={38}
+            color="#FA321A"
+            style={{ marginLeft: 20 }}
+          />
+        </TouchableOpacity>
 
-         <Text style={styles.title}>Comidas</Text>
+        <Text style={styles.title}>Comidas</Text>
       </View>
 
       <View style={styles.card}>
         <Text style={styles.titleComida}>Pão de Queijo</Text>
         <Text style={styles.categoriaComida}>Salgados</Text>
-        <Image 
+        <Image
           style={styles.imagemComida}
           source={require('../../../assets/img/pao.png')}
           resizeMode="contain"
@@ -45,6 +53,6 @@ export function Food() {
         <Text style={styles.precoTexto}>R$6,90</Text>
       </View>
     </View>
-);
+  );
 }
 

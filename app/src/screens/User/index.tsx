@@ -30,14 +30,14 @@ export function User() {
 
           <View style={styles.header}>
             <TouchableOpacity onPress={back}>
-            <Feather
-              name="arrow-left"
-              size={38}
-              color="#FA321A"
-              style={{ marginLeft: 10}}
-            />
-              </TouchableOpacity>
-          <Text style={styles.title}>Usuário</Text>
+              <Feather
+                name="arrow-left"
+                size={38}
+                color="#FA321A"
+                style={{ marginLeft: 10 }}
+              />
+            </TouchableOpacity>
+            <Text style={styles.title}>Usuário</Text>
           </View>
 
           <View style={styles.profileContent}>
