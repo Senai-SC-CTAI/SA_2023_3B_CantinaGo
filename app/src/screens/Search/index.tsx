@@ -13,8 +13,8 @@ export function Search() {
   function back() {
     navigation.navigate("Home");
   }
-  function food() {
-    navigation.navigate("Food");
+  function category() {
+    navigation.navigate("Category");
   }
 
   return (
@@ -45,7 +45,7 @@ export function Search() {
       <View style={{ display: 'flex', alignItems: 'center', marginTop: 50 }}>
         <View style={styles.searchItens}>
 
-          <TouchableOpacity onPress={food}>
+          <TouchableOpacity onPress={category}>
             <View style={styles.searchIten}>
               <ImageBackground source={require("../../../assets/img/salgados.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
                 <Text style={styles.ItenSearchItens}>Salgados</Text>
@@ -53,7 +53,7 @@ export function Search() {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={food}>
+          <TouchableOpacity onPress={category}>
           <View style={styles.searchIten}>
             <ImageBackground source={require("../../../assets/img/doces.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
               <Text style={styles.ItenSearchItens}>Doces</Text>
@@ -64,7 +64,7 @@ export function Search() {
 
         <View style={styles.searchItens}>
 
-          <TouchableOpacity onPress={food}>
+          <TouchableOpacity onPress={category}>
           <View style={styles.searchIten}>
             <ImageBackground source={require("../../../assets/img/sucos.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
               <Text style={styles.ItenSearchItens}>Sucos</Text>
@@ -72,7 +72,7 @@ export function Search() {
           </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={food}>
+          <TouchableOpacity onPress={category}>
           <View style={styles.searchIten}>
             <ImageBackground source={require("../../../assets/img/snacks.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
               <Text style={styles.ItenSearchItens}>Snacks</Text>
