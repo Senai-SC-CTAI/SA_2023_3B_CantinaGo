@@ -49,7 +49,9 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.29,
     shadowRadius: 4.65,
-      },
+        fontFamily: "Inter_500Medium"
+      
+    },
       feedBackImage:{
         width: 140,
         height: 140,
@@ -66,8 +68,8 @@ const styles = StyleSheet.create({
         fontSize:36,
         color:"#000000",
         marginLeft:20,
-        fontWeight:"bold",
         marginRigth: 173,
+        fontFamily: "Inter_700Bold"
       },
   })
 

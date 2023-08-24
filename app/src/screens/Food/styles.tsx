@@ -45,13 +45,13 @@ const styles = StyleSheet.create({
   titleComida: {
     fontSize:36,
     color:"#000000",
-    fontWeight:"bold"
+    fontFamily:"Inter_700Bold",
   },
 
   categoriaComida: {
     fontSize:20,
     color:"#7A7A7A",
-    fontWeight:"bold"
+    fontFamily:"Inter_600SemiBold"
   },
 
   imagemComida: {
@@ -63,8 +63,8 @@ const styles = StyleSheet.create({
   calorias: {
     fontSize:25,
     color:"#7A7A7A",
-    fontWeight:"bold",
     marginBottom: 20,
+    fontFamily:"Inter_600SemiBold"
   },
 
   tituloIgredientes: {
@@ -77,7 +77,9 @@ const styles = StyleSheet.create({
   },
 
   textoIgredientes: {
-    color: '#7A7A7A'
+    color: '#7A7A7A',
+    fontFamily:"Inter_400Regular",
+    fontSize:12,
     
   },
 

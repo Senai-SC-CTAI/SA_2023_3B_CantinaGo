@@ -3,7 +3,26 @@ import { View, Text, Image, ScrollView} from 'react-native';
 import { ComidaScroll } from '../../components/ComidaScroll';
 import styles from './styles';
 
+import {
+  useFonts,
+  Inter_300Light,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_700Bold,
+  Inter_500Medium
+  }  from '@expo-google-fonts/inter';
+
+
+
 export function Home() {
+
+  useFonts({
+    Inter_400Regular,
+    Inter_700Bold,
+    Inter_600SemiBold,
+    Inter_500Medium
+
+})
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>

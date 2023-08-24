@@ -2,6 +2,14 @@ import * as React from 'react';
 import { useState } from 'react';
 import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+import {
+  useFonts,
+  Inter_300Light,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_700Bold,
+  Inter_500Medium
+  }  from '@expo-google-fonts/inter';
 
 import { User } from '../User'
 
@@ -9,6 +17,14 @@ import styles from './style'
 
 export function Feedback() {
   
+  useFonts({
+    Inter_400Regular,
+    Inter_700Bold,
+    Inter_600SemiBold,
+    Inter_500Medium
+
+})
+
   
     const [showUser, setShowUser] = useState(false);
     const [showFeedback, setShowFeedback] = useState(true);
@@ -39,7 +55,7 @@ export function Feedback() {
             <TextInput placeholder='Adicione um comentario...' placeholderTextColor={"#6A6A6A"} style={styles.inputComment}></TextInput>
         </View>
         <View>
-            <TouchableOpacity style={styles.buttom}><Text style={{color:"white", fontWeight: 'bold'}}>Enviar</Text></TouchableOpacity>  
+            <TouchableOpacity style={styles.buttom}><Text style={{color:"white", fontFamily: "Inter_600SemiBold"}}>Enviar</Text></TouchableOpacity>  
         </View>
 
 

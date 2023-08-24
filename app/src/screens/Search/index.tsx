@@ -4,10 +4,25 @@ import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-ico
 import { FontAwesome } from '@expo/vector-icons'; 
 import { useNavigation } from '@react-navigation/native'
 import { color } from 'react-native-reanimated';
+import {
+  useFonts,
+  Inter_300Light,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_700Bold,
+  Inter_500Medium
+  }  from '@expo-google-fonts/inter';
 
 
 export function Search() {
- 
+ useFonts({
+    Inter_400Regular,
+    Inter_700Bold,
+    Inter_600SemiBold,
+    Inter_500Medium
+
+})
+
   const navigation = useNavigation();
 
   function back() {
@@ -113,7 +128,7 @@ const styles = StyleSheet.create({
     fontSize:36,
     color:"#000000",
     marginLeft:20,
-    fontWeight:"bold"
+    fontFamily:"Inter_700Bold"
 
   },
   searchItens:{
@@ -138,6 +153,6 @@ const styles = StyleSheet.create({
   ItenSearchItens:{
     color:"#FFFFFF",
     fontSize:24,
-    fontWeight:"bold"
+    fontFamily:"Inter_700Bold"
   }
 })
