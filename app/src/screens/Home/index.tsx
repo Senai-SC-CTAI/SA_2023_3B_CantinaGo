@@ -2,15 +2,8 @@ import * as React from 'react';
 import { View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import { ComidaScroll } from '../../components/ComidaScroll';
 import styles from './styles';
-import { useNavigation } from '@react-navigation/native';
 
 export function Home() {
-  const navigation = useNavigation();
-
-  function back() {
-    navigation.navigate("User");
-  }
-
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>

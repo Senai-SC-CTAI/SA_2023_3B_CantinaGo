@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native"
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -40,9 +41,8 @@ const styles = StyleSheet.create({
     fontSize: 36,
     color:"#000000",
     marginLeft: 20,
-    fontWeight:"bold",
-    marginRight: 173  
-
+    marginRight: 173,  
+    fontFamily: "Inter_700Bold" 
   },
   
   profileInfo: {
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
 
   },
   inputs: {
-    width: '100%'
+    width: '100%',
   },
   feedbackText: {
     display: 'flex',

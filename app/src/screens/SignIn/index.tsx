@@ -4,7 +4,24 @@ import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
 
+import {
+  useFonts,
+  Inter_300Light,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_700Bold,
+  Inter_500Medium
+  }  from '@expo-google-fonts/inter';
+
 export function SignIn() {
+   useFonts({
+    Inter_400Regular,
+    Inter_700Bold,
+    Inter_600SemiBold,
+    Inter_500Medium
+
+})
+
   const navigation = useNavigation();
 
   function SignIn() {
