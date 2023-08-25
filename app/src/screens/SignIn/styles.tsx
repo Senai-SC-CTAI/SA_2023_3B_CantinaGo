@@ -12,18 +12,20 @@ import { StyleSheet } from 'react-native';
         color: '#FA321A',
         fontSize: 32,
         fontWeight: 'bold',
-        marginBottom: 41,
-        marginTop: 80,
+        marginBottom: 30,
+        marginTop: 20,
       
       },
       texty: {
-        fontSize: 15,
-        marginBottom: 10,
+        fontSize: 14,
+        color: '#7A7A7A'
       },
       cadastro: {
-        fontSize: 15,
-        marginBottom: 10,
+        fontSize: 14,
         color: '#FA321A',
+        fontWeight: 'bold',
+        textDecorationLine: 'underline',
+        
       },
       input: {
         justifyContent: 'center',
@@ -39,7 +41,7 @@ import { StyleSheet } from 'react-native';
         backgroundColor:"#F4F4F4",
       },
       button: {
-        marginBottom: 62,
+        marginBottom: 50,
         marginTop: 36,
         backgroundColor: '#FA321A',
         borderRadius: 10,
@@ -51,8 +53,7 @@ import { StyleSheet } from 'react-native';
       },
       buttonText: {
         color: 'white',
-        fontWeight: 'bold',
-        fontSize: 15,
+        fontSize: 19,
       },
       viewInput: {
         width: 290,

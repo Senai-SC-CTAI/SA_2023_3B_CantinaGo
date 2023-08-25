@@ -26,31 +26,30 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   link: {
-    fontSize: 15,
-    marginBottom: 10,
+    fontSize: 14,
     color: '#FA321A',
+    fontWeight: 'bold',
+    textDecorationLine: 'underline',
   },
   image: {
     width: 134,
     height: 134,
     resizeMode: "contain",
-    marginTop: 40,
+    marginTop: -50,
   },
   button: {
-    marginBottom: 62,
-    marginTop: 36,
-    backgroundColor: '#FA321A',
-    borderRadius: 10,
-    height: 40,
-    width:140,
-    display:"flex",
-    justifyContent:"center",
-    alignItems:"center",
+      marginBottom: 30,
+        backgroundColor: '#FA321A',
+        borderRadius: 10,
+        height: 40,
+        width:140,
+        display:"flex",
+        justifyContent:"center",
+        alignItems:"center",
   },
   buttonText: {
     color: 'white',
-    fontWeight: 'bold',
-    fontSize: 15,
+    fontSize: 19,
   },
   icon: {
     paddingHorizontal: 10,
@@ -66,8 +65,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   texty: {
-    fontSize: 15,
-    marginBottom: 10,
+    fontSize: 14,
+    color: '#7A7A7A'
   },
   inputs: {
     width: '100%'

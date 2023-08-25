@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { View, TextInput, Text, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, TextInput, Text, TouchableOpacity, ImageBackground, Image } from 'react-native';
 import { Feather } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
@@ -34,11 +33,15 @@ export function Search() {
       {/* input search */}
       <View style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
         <View style={styles.inputSearchHolder}>
-          <FontAwesome
-            name="search"
-            size={24}
-            color="#FA321A"
-            style={{ marginLeft: 20, marginRight: 20 }} />
+          <Image
+              source={require("../../../assets/Icons/BuscarVisi.svg")}
+              style={{
+                width: 25,
+                height: 25,
+                resizeMode: "contain",
+                marginLeft: 13,
+              }}
+            />
           <TextInput placeholder="" style={{ width: '70%' }}></TextInput>
         </View>
       </View>

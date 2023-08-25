@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import styles from "./styles";
 
@@ -23,17 +22,22 @@ export function SignIn() {
           width: 134,
           height: 134,
           resizeMode: "contain",
-          marginTop: 40,
+          marginTop: -100,
+          marginBottom: 50,
+
         }}
       ></Image>
       <Text style={styles.title}>Login</Text>
 
         <View style={styles.viewInput}>
-          <MaterialCommunityIcons
-            name="email-outline"
-            size={24}
-            color="#6A6A6A"
-            style={{ marginLeft: 10}}
+          <Image
+            source={require("../../../assets/Icons/Email.svg")}
+            style={{
+              width: 17,
+              height: 17,
+              resizeMode: "contain",
+              marginLeft: 13,
+            }}
           />
           <TextInput
             style={styles.inputs}
@@ -43,11 +47,14 @@ export function SignIn() {
         </View>
 
         <View style={styles.viewInput}>
-          <MaterialCommunityIcons
-            name="lock-outline"
-            size={24}
-            color="#6A6A6A"
-            style={{ marginLeft: 10}}
+          <Image
+            source={require("../../../assets/Icons/Senha.svg")}
+            style={{
+              width: 20,
+              height: 20,
+              resizeMode: "contain",
+              marginLeft: 13,
+            }}
           />
           <TextInput
             style={styles.inputs}
@@ -61,7 +68,7 @@ export function SignIn() {
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
       <Text style={styles.texty}>Não tem login?</Text>
-      <TouchableOpacity style={styles.cadastro} onPress={SignUp}>
+      <TouchableOpacity  onPress={SignUp}>
         <Text style={styles.cadastro}>Faça cadastro</Text>
       </TouchableOpacity>
     </View>

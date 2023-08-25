@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   
   profileInfo: {
-    marginBottom: 70
+    marginBottom: 70,
   },
   viewInput: {
     width: 290,
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   profilePicture: {
-    marginBottom: 50,
+    marginBottom: 10,
     display: 'flex',
     alignItems: 'center'
   },

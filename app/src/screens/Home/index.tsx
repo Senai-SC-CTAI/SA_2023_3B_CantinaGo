@@ -16,7 +16,7 @@ export function Home() {
             <View style={styles.buttonCalendario}>
               <Image 
                 style={styles.calendario}
-                source={require('../../../assets/img/calendario.svg')}
+                source={require('../../../assets/icons/calendario.svg')}
               />
             </View>
             <View>
@@ -25,6 +25,7 @@ export function Home() {
             </View>
           </View>
         </View>
+        
         <Image 
               style={styles.user}
               source={require('../../../assets/img/User.svg')}

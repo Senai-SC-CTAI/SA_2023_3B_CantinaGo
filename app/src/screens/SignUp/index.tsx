@@ -1,11 +1,5 @@
 import * as React from "react";
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
-import {
-  MaterialIcons,
-  MaterialCommunityIcons,
-  Feather,
-  FontAwesome5,
-} from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
@@ -26,13 +20,16 @@ export function SignUp() {
 
       <Text style={styles.title}> Cadastro </Text>
 
-      <View style={styles.inputsInfo}>
+      <View>
         <View style={styles.viewInput}>
-          <MaterialCommunityIcons
-            name="email-outline"
-            size={24}
-            color="#6A6A6A"
-            style={{ marginLeft: 10 }}
+        <Image
+            source={require("../../../assets/Icons/Email.svg")}
+            style={{
+              width: 17,
+              height: 17,
+              resizeMode: "contain",
+              marginLeft: 10,
+            }}
           />
           <TextInput
             style={styles.inputs}
@@ -41,11 +38,14 @@ export function SignUp() {
           ></TextInput>
         </View>
         <View style={styles.viewInput}>
-          <MaterialCommunityIcons
-            name="lock-outline"
-            size={24}
-            color="#6A6A6A"
-            style={{ marginLeft: 10 }}
+        <Image
+            source={require("../../../assets/Icons/Senha.svg")}
+            style={{
+              width: 20,
+              height: 20,
+              resizeMode: "contain",
+              marginLeft: 10,
+            }}
           />
           <TextInput
             style={styles.inputs}
@@ -54,11 +54,14 @@ export function SignUp() {
           ></TextInput>
         </View>
         <View style={styles.viewInput}>
-          <MaterialCommunityIcons
-            name="lock-outline"
-            size={24}
-            color="#6A6A6A"
-            style={{ marginLeft: 10 }}
+        <Image
+            source={require("../../../assets/Icons/Senha.svg")}
+            style={{
+              width: 20,
+              height: 20,
+              resizeMode: "contain",
+              marginLeft: 10,
+            }}
           />
           <TextInput
             style={styles.inputs}
@@ -67,11 +70,14 @@ export function SignUp() {
           ></TextInput>
         </View>
         <View style={styles.viewInput}>
-          <Feather
-            name="smartphone"
-            size={24}
-            color="#6A6A6A"
-            style={{ marginLeft: 10 }}
+        <Image
+            source={require("../../../assets/Icons/Telefone.svg")}
+            style={{
+              width: 20,
+              height: 20,
+              resizeMode: "contain",
+              marginLeft: 10,
+            }}
           />
           <TextInput
             style={styles.inputs}
@@ -80,11 +86,14 @@ export function SignUp() {
           ></TextInput>
         </View>
         <View style={styles.viewInput}>
-          <MaterialCommunityIcons
-            name="school-outline"
-            size={24}
-            color="#6A6A6A"
-            style={{ marginLeft: 10 }}
+        <Image
+            source={require("../../../assets/Icons/Turma.svg")}
+            style={{
+              width: 20,
+              height: 20,
+              resizeMode: "contain",
+              marginLeft: 10,
+            }}
           />
           <TextInput
             style={styles.inputs}
@@ -97,7 +106,7 @@ export function SignUp() {
         <Text style={styles.buttonText}>Cadastrar</Text>
       </TouchableOpacity>
       
-      <Text style={styles.texty}>Não tem login?</Text>
+      <Text style={styles.texty}>Já possui conta?</Text>
       <TouchableOpacity onPress={SignIn}>
         <Text style={styles.link}>Faça login</Text>
       </TouchableOpacity>

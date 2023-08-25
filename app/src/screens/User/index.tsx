@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
-import { MaterialIcons, MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
 
 import { Feedback } from '../Feedback';
@@ -46,13 +45,27 @@ export function User() {
                 source={require('../../../assets/img/User.svg')}
                 style={styles.image}
               />
+              <View style={{
+                  backgroundColor: '#6A6A6A',
+                  borderRadius: 100, 
+                  width: 30,
+                  height: 30,
+                  position: 'absolute',
+                  marginLeft: 80, 
+                  marginTop: 25,
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>
+                <Image
+                  source={require("../../../assets/Icons/Editar.svg")}
+                  style={{
+                    width: 20,
+                    height: 20,
+                    resizeMode: "contain",
 
-              <MaterialCommunityIcons
-                name="pencil-minus-outline"
-                size={24}
-                color="#FFFFFF"
-                style={{ position: 'absolute', padding: 4, backgroundColor: '#6A6A6A', borderRadius: 20, marginLeft: '55%', marginTop: 7 }}
-              />
+                  }}
+                />
+              </View>
             </View>
             <View style={styles.profileInfo}>
               <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Nome do Usuário</Text>
@@ -61,26 +74,84 @@ export function User() {
           </View>
           <View style={styles.inputsInfo}>
             <View style={styles.viewInput}>
-              <MaterialCommunityIcons name="email-outline" size={24} color="#6A6A6A" style={{ marginLeft: 10, fontWeight: 'bold' }} />
+              <Image
+                source={require("../../../assets/Icons/Email.svg")}
+                style={{
+                  width: 20,
+                  height: 20,
+                  resizeMode: "contain",
+                  marginLeft: 13,
+                }}
+              />
               <TextInput style={styles.inputs} placeholder="  seuemail@estudante.sesisenai.org.br" placeholderTextColor={"#6A6A6A"}  >
               </TextInput>
             </View>
             <View style={styles.viewInput}>
-              <MaterialIcons name="calendar-today" size={24} color="#6A6A6A" style={{ marginLeft: 10, fontWeight: 'bold' }} />
+              <Image
+                source={require("../../../assets/Icons/Data.svg")}
+                style={{
+                  width: 20,
+                  height: 20,
+                  resizeMode: "contain",
+                  marginLeft: 13,
+                }}
+              />
               <TextInput style={styles.inputs} placeholder="  data de nascimento" placeholderTextColor={"#6A6A6A"}  >
               </TextInput>
-              <MaterialCommunityIcons name="pencil-minus-outline" size={24} color="#6A6A6A" style={{ marginRight: 10, fontWeight: 'bold' }} />
-            </View>
-            <View style={styles.viewInput}><MaterialCommunityIcons name="school-outline" size={24} color="#6A6A6A" style={{ marginLeft: 10, fontWeight: 'bold' }} />
-              <TextInput style={styles.inputs} placeholder="  turma" placeholderTextColor={"#6A6A6A"}  >
-              </TextInput>
-              <MaterialCommunityIcons name="pencil-minus-outline" size={24} color="#6A6A6A" style={{ marginRight: 10, fontWeight: 'bold' }} />
+              <Image
+                source={require("../../../assets/Icons/EditarCinza.svg")}
+                style={{
+                  width: 25,
+                  height: 25,
+                  resizeMode: "contain",
+                  marginRight: 10,
+                }}
+              />
             </View>
             <View style={styles.viewInput}>
-              <Feather name="smartphone" size={24} color="#6A6A6A" style={{ marginLeft: 10, fontWeight: 'bold' }} /><TextInput style={styles.inputs} placeholder="  telefone" placeholderTextColor={"#6A6A6A"}  >
+              <Image
+                source={require("../../../assets/Icons/Turma.svg")}
+                style={{
+                  width: 23,
+                  height: 23,
+                  resizeMode: "contain",
+                  marginLeft: 13,
+                }}
+              />
+              <TextInput style={styles.inputs} placeholder="  turma" placeholderTextColor={"#6A6A6A"}  >
               </TextInput>
-              <MaterialCommunityIcons name="pencil-minus-outline" size={24} color="#6A6A6A" style={{ marginRight: 10, fontWeight: 'bold' }} />
-            </View>
+              <Image
+                source={require("../../../assets/Icons/EditarCinza.svg")}
+                style={{
+                  width: 25,
+                  height: 25,
+                  resizeMode: "contain",
+                  marginRight: 10,
+                }}
+              />            
+              </View>
+            <View style={styles.viewInput}>
+              <Image
+                source={require("../../../assets/Icons/Telefone.svg")}
+                style={{
+                  width: 20,
+                  height: 20,
+                  resizeMode: "contain",
+                  marginLeft: 13,
+                }}
+              />
+              <TextInput style={styles.inputs} placeholder="  telefone" placeholderTextColor={"#6A6A6A"}  >
+              </TextInput>
+              <Image
+                source={require("../../../assets/Icons/EditarCinza.svg")}
+                style={{
+                  width: 25,
+                  height: 25,
+                  resizeMode: "contain",
+                  marginRight: 10,
+                }}
+              />           
+              </View>
           </View>
           <View style={styles.feedbackText}>
             <Text style={{ color: "#9E9D9D", fontSize: 14 }}>Algum comentário?</Text>
