@@ -1,14 +1,29 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
+import { Feather } from '@expo/vector-icons'
 import { useNavigation } from '@react-navigation/native';
-import { Feather } from '@expo/vector-icons';
+
+import {
+  useFonts,
+  Inter_300Light,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_700Bold
+  }  from '@expo-google-fonts/inter';
+
 
 import { Feedback } from '../Feedback';
-
 import styles from './styles';
 
+
+
 export function User() {
+
+  useFonts({
+    Inter_400Regular,
+    Inter_700Bold,
+})
 
   const navigation = useNavigation();
 
@@ -69,8 +84,8 @@ export function User() {
               </View>
             </View>
             <View style={styles.profileInfo}>
-              <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Nome do Usuário</Text>
-              <Text style={{ fontSize: 14, color: '#9E9D9D' }}>Tipo de usuário</Text>
+              <Text style={{ fontSize: 20, fontFamily: "Inter_700Bold" }}>Nome do Usuário</Text>
+              <Text style={{ fontSize: 14, color: '#9E9D9D', fontFamily:"Inter_400Regular"}}>Tipo de usuário</Text>
             </View>
           </View>
           <View style={styles.inputsInfo}>
@@ -99,6 +114,7 @@ export function User() {
               />
               <TextInput style={styles.inputs} placeholder="  data de nascimento" placeholderTextColor={"#6A6A6A"}  >
               </TextInput>
+
               <Image
                 source={require("../../../assets/Icons/EditarCinza.svg")}
                 style={{
@@ -108,6 +124,7 @@ export function User() {
                   marginRight: 10,
                 }}
               />
+
             </View>
             <View style={styles.viewInput}>
               <Image
@@ -155,9 +172,9 @@ export function User() {
               </View>
           </View>
           <View style={styles.feedbackText}>
-            <Text style={{ color: "#9E9D9D", fontSize: 14 }}>Algum comentário?</Text>
+            <Text style={{ color: "#9E9D9D", fontSize: 14, fontFamily:'Inter_400Regular' }}>Algum comentário?</Text>
             <TouchableOpacity onPress={() => { setShowUser(false); setShowFeedback(true); }}>
-              <Text style={{ fontSize: 14, textDecorationLine: 'underline', color: '#FA321A' }}>Deixe-o aqui</Text>
+              <Text style={{ fontSize: 14, textDecorationLine: 'underline', color: '#FA321A', fontFamily:'Inter_400Regular'  }}>Deixe-o aqui</Text>
             </TouchableOpacity>
           </View>
 

@@ -3,10 +3,26 @@ import { View, TextInput, Text, TouchableOpacity, ImageBackground, Image } from 
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
 
+import {
+  useFonts,
+  Inter_300Light,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_700Bold,
+  Inter_500Medium
+  }  from '@expo-google-fonts/inter';
+
+
 import styles from './styles'
 
 export function Search() {
-
+  useFonts({
+    Inter_400Regular,
+    Inter_700Bold,
+    Inter_600SemiBold,
+    Inter_500Medium
+})
+  
   const navigation = useNavigation();
 
   function back() {

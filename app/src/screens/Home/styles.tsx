@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
   bigText: {
     fontSize: 35,
-    fontWeight: 'bold',
+    fontFamily:"Inter_700Bold"
   },
   line: {
     width: 150,
@@ -53,12 +53,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: -5,
+    fontFamily:"Inter_700Bold"
   },
   diaMes: {
     fontSize: 12,
     color: '#FA321A',
-    fontWeight: '700',
     marginLeft: 2,
+    fontFamily:"Inter_700Bold"
   },
   user: {
     width: 70,

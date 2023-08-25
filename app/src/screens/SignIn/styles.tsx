@@ -12,20 +12,17 @@ import { StyleSheet } from 'react-native';
         color: '#FA321A',
         fontSize: 32,
         fontWeight: 'bold',
-        marginBottom: 30,
-        marginTop: 20,
+        marginBottom: 41,
+        marginTop: 80,
       
       },
       texty: {
-        fontSize: 14,
-        color: '#7A7A7A'
+        fontSize: 15,
+        marginBottom: 10,
       },
       cadastro: {
         fontSize: 14,
         color: '#FA321A',
-        fontWeight: 'bold',
-        textDecorationLine: 'underline',
-        
       },
       input: {
         justifyContent: 'center',
