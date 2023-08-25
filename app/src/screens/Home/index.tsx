@@ -32,7 +32,10 @@ export function Home() {
             </View>
           </View>
         </View>
-        <TouchableOpacity onPress={back}>
+        <TouchableOpacity style={{
+          marginLeft: 50,
+        }}
+        onPress={back}>
           <Image 
                 style={styles.user}
                 source={require('../../../assets/img/User.svg')}
