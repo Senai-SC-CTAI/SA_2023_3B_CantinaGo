@@ -70,7 +70,8 @@ const Content = [
         preco: '2,50',
         caloria: 5,
         category: 'Bebidas',
-    }
+    },
+    
 ];
 
 export default Content;

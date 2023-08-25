@@ -6,7 +6,7 @@ import Content from "../data/Content"
 
 export function ComidaScroll(props: { category: string }) {
   const filteredContent = Content.filter(item => item.category === props.category);
-
+  
   return (
     <View style={styles.container}>
       <Text style={styles.tituloComidas}>{props.category}</Text>

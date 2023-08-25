@@ -1,10 +1,15 @@
 import * as React from 'react';
 import { View, StyleSheet, Text, Image, ImageSourcePropType, TouchableOpacity } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
 
 export function Cards(props: { id: React.Key | null | undefined; foto: ImageSourcePropType; nome: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; preco: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; caloria: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) {
+  const navigation = useNavigation();
+
+  function goToFood() {
+    navigation.navigate("Food");
+  }
   return (
-    <TouchableOpacity key={props.id} style={styles.container}>
+    <TouchableOpacity key={props.id} style={styles.container} onPress={goToFood}>
         <View style={styles.card}>
         <Image 
           style={styles.imagemComida}
