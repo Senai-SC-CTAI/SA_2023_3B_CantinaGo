@@ -51,8 +51,8 @@ export function Feedback() {
         </View>
         <View style={styles.feedBackImage}><Image source={require("../../../assets/img/feedback-img.svg")} style={{width: 89, height: 82,}}/>
         </View>
-        <View>
-            <TextInput placeholder='Adicione um comentario...' placeholderTextColor={"#6A6A6A"} style={styles.inputComment}></TextInput>
+        <View style={styles.inputBox}>
+            <Text style={styles.TextInput}>Adicione um comentario...</Text>
         </View>
         <View>
             <TouchableOpacity style={styles.buttom}><Text style={{color:"white", fontFamily: "Inter_600SemiBold"}}>Enviar</Text></TouchableOpacity>  

@@ -17,12 +17,14 @@ import { StyleSheet } from 'react-native';
       
       },
       texty: {
-        fontSize: 15,
-        marginBottom: 10,
+        fontSize: 14,
+        color: '#7A7A7A'
       },
       cadastro: {
         fontSize: 14,
         color: '#FA321A',
+        fontWeight: 'bold',
+        textDecorationLine: 'underline',
       },
       input: {
         justifyContent: 'center',

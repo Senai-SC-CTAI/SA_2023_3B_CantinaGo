@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         marginTop: 40,
         borderRadius: 10
       },
-      inputComment:{
+      inputBox: {
         backgroundColor:"#F4F4F4",
         width:286,
         height:272,
@@ -44,14 +44,21 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         shadowColor: "#000",
         shadowOffset: {
-          width: 0,
-          height: 4,
-    },
+        width: 0,
+        height: 4,
+      },
     shadowOpacity: 0.29,
     shadowRadius: 4.65,
         fontFamily: "Inter_500Medium"
       
     },
+
+    TextInput: {
+      marginTop: 10,
+      marginLeft: 15,
+      color: '#6A6A6A',  
+    },
+
       feedBackImage:{
         width: 140,
         height: 140,
