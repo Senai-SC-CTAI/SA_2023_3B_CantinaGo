@@ -1,14 +1,17 @@
+import { position } from "native-base/lib/typescript/theme/styled-system";
 import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
+    position: 'relative'
   },
   header: {
     marginTop: 35,
     marginLeft: 35,
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    
   },
   bigText: {
     fontSize: 35,
@@ -49,14 +52,33 @@ const styles = StyleSheet.create({
     
   },
 
-  diaSemana: {
-    fontSize: 20,
+  datePicker: {
+    position: 'absolute',
+    top: 95,
+    left: 33,
+    backgroundColor: '#F4F4F4',
+    borderRadius: 10,
+    width: '80%',
     fontWeight: 'bold',
-    marginBottom: -5,
+
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 5,
+    },
+    shadowOpacity: 0.5,
+    shadowRadius: 5.00,
+
+  },
+
+  diaSemana: {
+    fontSize: 25,
+    fontWeight: 'bold',
     fontFamily:"Inter_700Bold"
   },
   diaMes: {
-    fontSize: 12,
+    fontSize: 15,
     color: '#FA321A',
     marginLeft: 2,
     fontFamily:"Inter_700Bold"
