@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     
+    
   },
   bigText: {
     fontSize: 35,
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
   user: {
     width: 70,
     height: 70,
-    marginLeft: '20%'
+
   },
   main: {
     marginLeft: 35,

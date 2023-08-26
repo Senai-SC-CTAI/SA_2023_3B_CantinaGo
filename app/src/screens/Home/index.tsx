@@ -95,6 +95,9 @@ export function Home() {
         </View>
         {/* Botão de navegação para a tela "User" */}
         <TouchableOpacity style={{
+          position: 'absolute',
+          top: 0,
+          right: 30,
           marginLeft: 50,
         }}
         onPress={back}>
