@@ -7,3 +7,7 @@
 - npx expo install expo-font
 - npm install react-native-modern-datepicker --save
 - npm install date-fns
+- npm install styled-components
+- npm install --save @types/styled-components @types/styled-components-react-native
+
+
