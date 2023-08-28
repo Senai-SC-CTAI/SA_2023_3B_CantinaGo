@@ -31,7 +31,7 @@
 <h4> CAIRÉ  </h4>
 
 - [ ] RF1 - O aluno poderá visualizar o cardápio do dia.
-- [ ] RF2 - O aluno poderá visualizar o cardápio da semana.
+- [ ] RF2 - O aluno poderá visualizar o cardápio de qualquer dia disponível no sistema.
       
 <h4> JAÍZA </h4>
 
@@ -39,7 +39,7 @@
 
 <h4> BERNARDO </h4>
 
-- [ ] RF9 - O usuário poderá fornecer sugestões ou feedback no cardápio..
+- [ ] RF9 - O usuário poderá fornecer sugestões ou feedback no cardápio.
 - [ ] RF11 - O usuário poderá visualizar o perfil de usuário.
       
 <h4> MARIA </h4>
@@ -53,4 +53,4 @@
 
 <h4> ANA </h4>
 
-- [ ] RF14 - O usuário poderá pesquisar produtos por categoria ou palavras-chave
+- [ ] RF14 - O usuário poderá pesquisar produtos por categoria ou palavras-chave.
