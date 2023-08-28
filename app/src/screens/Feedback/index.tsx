@@ -49,7 +49,7 @@ export function Feedback() {
           </TouchableOpacity>
          <Text style={styles.title}>Feedback</Text>
         </View>
-        <View style={styles.feedBackImage}><Image source={require("../../../assets/img/feedback-img.svg")} style={{width: 89, height: 82,}}/>
+        <View style={styles.feedBackImage}><Image source={require("../../../assets/img/feedback-img.svg")} style={{width: 89, height: 82, marginTop:10}}/>
         </View>
         <View style={styles.inputBox}>
             <Text style={styles.TextInput}>Adicione um comentario...</Text>
