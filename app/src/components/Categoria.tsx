@@ -1,94 +1,92 @@
 import * as React from 'react';
-import { View, StyleSheet, Text, ScrollView, Image } from 'react-native';
-import { Cards } from './Cards';
-
-import Content from "../data/Content"
+import { View, StyleSheet, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import Content from '../data/Content'; // Import your content data file
 
 import {
-    useFonts,
-    Inter_300Light,
-    Inter_400Regular,
-    Inter_600SemiBold,
-    Inter_700Bold,
-    Inter_500Medium
-    }  from '@expo-google-fonts/inter';
-  
+  useFonts,
+  Inter_400Regular,
+  Inter_600SemiBold,
+  Inter_700Bold,
+} from '@expo-google-fonts/inter';
 
-export function Categoria(props: { category: string }) {
-  const filteredContent = Content.filter(item => item.category === props.category);
+export function Categoria(props: { categoryFoods: typeof Content }) {
+  const navigation = useNavigation();
 
   useFonts({
     Inter_400Regular,
     Inter_700Bold,
     Inter_600SemiBold,
-    Inter_500Medium
+  });
 
-})
-  
   return (
-      <View style={styles.container}>
-          <Image source={require("../../assets/img/pao.png")} style={styles.ImageComida}></Image>
-          <View style={styles.Information}>
-              <Text style={styles.nome}>Nome Comida</Text>
-              <Text style={styles.caloria}>Caloria Comida</Text>
-              <Text style={styles.preco}>Preço Comida</Text>
+    <ScrollView contentContainerStyle={styles.container}>
+      {props.categoryFoods.map(item => (
+        <TouchableOpacity
+          key={item.id}
+          onPress={() => navigation.navigate('Food', { itemId: item.id })}
+        >
+          <View style={styles.foodContainer}>
+            <Image source={item.foto} style={styles.ImageComida} />
+            <View style={styles.Information}>
+              <Text style={styles.nome}>{item.nome}</Text>
+              <Text style={styles.caloria}>{item.caloria} kcal</Text>
+              <Text style={styles.preco}>R${item.preco}</Text>
+            </View>
           </View>
-      </View>
+        </TouchableOpacity>
+      ))}
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flexGrow: 1,
+  },
+  foodContainer: {
     backgroundColor: '#F4F4F4',
-    display:'flex',
-    flexDirection:'row',
-    width:"90%",
-    height:80,
-    alignContent:'center',
-    alignItems:'center',
-    borderRadius:5,
-    shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 3,
-      },
-      shadowOpacity: 0.29,
-      shadowRadius: 4.65,
-  
-      elevation: 7,
-      marginTop:10,
-  },
-  tituloComidas: {
-    fontSize: 28,
-    fontWeight: '700',
-    marginBottom: 15,
-  },
-  scrollComidas: {
     flexDirection: 'row',
+    width: '80%',
+    height: 80,
+    alignItems: 'center',
+    borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.29,
+    shadowRadius: 4.65,
+    elevation: 7,
+    marginBottom: 10,
+
+    alignSelf: 'center'
   },
-  Information:{
-    display:'flex',
-    flexDirection:'column'
+  Information: {
+    flex: 1,
+    flexDirection: 'column',
+    marginRight: 20,
   },
-  ImageComida:{
-    width:60,
-    height:60,
-    resizeMode:"contain",
-    marginRight:20,
-    marginLeft:20
+  ImageComida: {
+    width: 60,
+    height: 60,
+    resizeMode: 'contain',
+    marginLeft: 20,
+    marginRight: 10,
   },
-  nome:{
-    fontSize:14,
-    fontFamily:"Inter_600SemiBold",
+  nome: {
+    fontSize: 14,
+    fontFamily: 'Inter_600SemiBold',
   },
-  caloria:{
-    fontSize:12,
-    fontFamily:"Inter_600SemiBold",
-    color:"#7A7A7A"
+  caloria: {
+    fontSize: 12,
+    fontFamily: 'Inter_600SemiBold',
+    color: '#7A7A7A',
   },
-  preco:{
-    fontSize:12,
-    fontFamily:"Inter_400Regular",
-    color:"#FA321A"
-  }
+  preco: {
+    fontSize: 12,
+    fontFamily: 'Inter_400Regular',
+    color: '#FA321A',
+  },
 });
