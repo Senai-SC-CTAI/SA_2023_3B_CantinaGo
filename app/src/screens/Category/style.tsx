@@ -4,7 +4,6 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       display:'flex',
-      justifyContent: 'center',
       alignItems:'center',
       backgroundColor: '#FFFFFF'
     },
@@ -23,6 +22,10 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         marginRigth: 173,
       },
+    categoriaRows: {
+      width: '100%'
+
+    }
    
   })
 

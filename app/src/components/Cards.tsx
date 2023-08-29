@@ -1,29 +1,38 @@
 import * as React from 'react';
 import { View, StyleSheet, Text, Image, ImageSourcePropType, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native'; // Hook para navegação.
 
+
+//Sim isso é necessário. (Deve ter alguma forma mais eficiente....)
 export function Cards(props: { id: React.Key | null | undefined; foto: ImageSourcePropType; nome: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; preco: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; caloria: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined; }) {
+  // Hook de navegação para redirecionamento entre telas.
   const navigation = useNavigation();
 
+  // Função para navegar para a tela Food e passar o ID do item como parâmetro, assim ao clicar vai para o alimento selecionado.
   function goToFood() {
-    navigation.navigate("Food");
+    navigation.navigate("Food", { itemId: props.id });
   }
+  
   return (
-    <TouchableOpacity key={props.id} style={styles.container} onPress={goToFood}>
-        <View style={styles.card}>
+    // Ao clicar, vai para o alimento selecionado
+    <TouchableOpacity style={styles.container} onPress={goToFood}>
+      <View style={styles.card}>
+        {/* Imagem do item */}
         <Image 
           style={styles.imagemComida}
           source={props.foto}
           resizeMode="contain" 
         />
+        {/* Nome do item */}
         <Text style={styles.nomeComida}>{props.nome}</Text>
         <View style={styles.infoComida}>
+          {/* Preço do item */}
           <Text style={styles.preco}>R${props.preco}</Text>
+          {/* Valor calórico do item */}
           <Text style={styles.kcal}>{props.caloria}kcal</Text>
         </View>
       </View>
     </TouchableOpacity>
-    
   );
 }
 
@@ -40,7 +49,6 @@ const styles = StyleSheet.create({
     marginRight: 15,
     marginLeft: 5,
     marginBottom: 20,
-
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -52,13 +60,11 @@ const styles = StyleSheet.create({
   card: {
     
   },
-
   imagemComida: {
     width: 110,
     height: 90,
     marginBottom: 10,
   },
-
   nomeComida:{
     fontSize: 15,
     fontWeight: 'bold',

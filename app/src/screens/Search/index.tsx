@@ -9,11 +9,13 @@ import {
   Inter_400Regular,
   Inter_600SemiBold,
   Inter_700Bold,
-  Inter_500Medium
+  Inter_500Medium,
   }  from '@expo-google-fonts/inter';
 
 
 import styles from './styles'
+
+
 
 export function Search() {
   useFonts({
@@ -28,10 +30,9 @@ export function Search() {
   function back() {
     navigation.navigate("Home");
   }
-  function category() {
-    navigation.navigate("Category");
+  function category(category: string) {
+    navigation.navigate("Category", { category });
   }
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -64,7 +65,7 @@ export function Search() {
       <View style={{ display: 'flex', alignItems: 'center', marginTop: 50 }}>
         <View style={styles.searchItens}>
 
-          <TouchableOpacity onPress={category}>
+        <TouchableOpacity onPress={() => category("Salgados")}>
             <View style={styles.searchIten}>
               <ImageBackground source={require("../../../assets/img/salgados.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
                 <Text style={styles.ItenSearchItens}>Salgados</Text>
@@ -72,7 +73,7 @@ export function Search() {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={category}>
+          <TouchableOpacity onPress={() => category("Doces")}>
           <View style={styles.searchIten}>
             <ImageBackground source={require("../../../assets/img/doces.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
               <Text style={styles.ItenSearchItens}>Doces</Text>
@@ -83,7 +84,7 @@ export function Search() {
 
         <View style={styles.searchItens}>
 
-          <TouchableOpacity onPress={category}>
+        <TouchableOpacity onPress={() => category("Bebidas")}>
           <View style={styles.searchIten}>
             <ImageBackground source={require("../../../assets/img/sucos.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
               <Text style={styles.ItenSearchItens}>Sucos</Text>
@@ -91,7 +92,7 @@ export function Search() {
           </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={category}>
+           <TouchableOpacity onPress={() => category("Snacks")}>
           <View style={styles.searchIten}>
             <ImageBackground source={require("../../../assets/img/snacks.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
               <Text style={styles.ItenSearchItens}>Snacks</Text>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import styles from './styles'; 
-import { useNavigation } from '@react-navigation/native'; // Hook para navegação em uma aplicação React Navigation.
-import { ComidaScroll } from '../../components/ComidaScroll'; // Importação do componente cada Linha de alimentos por categoria
+import { useNavigation } from '@react-navigation/native'; // Hook para navegação.
+import { ComidaScroll } from '../../components/ComidaScroll'; // Importação do componente de ScrollHorizontal por categoria
 
 import DatePicker from 'react-native-modern-datepicker'; // Importação da API de calendário
 import { getToday, getFormatedDate } from 'react-native-modern-datepicker'; // Funções auxiliares relacionadas à data.
@@ -37,6 +37,7 @@ export function Home() {
   function back() {
     navigation.navigate("User");
   }
+  
 
   // Função para abrir o seletor de data.
   const openDatePicker = () => {
@@ -114,6 +115,7 @@ export function Home() {
           <ComidaScroll category="Salgados" />
           <ComidaScroll category="Doces" />
           <ComidaScroll category="Bebidas" />
+          <ComidaScroll category="Snacks" />
         </View>
       </View>
       
