@@ -42,7 +42,7 @@ export function StackRoutes() {
         component={User}
         options={{
           headerShown: false,
-        }}
+        }}  
       />
       <Screen 
         name='Search' 
