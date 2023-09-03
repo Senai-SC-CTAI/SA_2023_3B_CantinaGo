@@ -17,10 +17,13 @@
     --C3: #545454;
     --C4: #171717;
 
-    /* Template */
-    margin: 0;
-    padding: 0;
-    background-color: var(--B2);
-    font-family: 'Inter', sans-serif; 
-    transition: .5s;
+}
+
+body{
+     /* Template */
+     margin: 0;
+     padding: 0;
+     background-color: var(--B2);
+     font-family: 'Inter', sans-serif; 
+     transition: .5s;
 }

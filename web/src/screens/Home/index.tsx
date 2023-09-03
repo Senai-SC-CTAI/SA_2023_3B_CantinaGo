@@ -1,4 +1,5 @@
 import './style.css'
+import '../../components/StyleTemplate/style.css'
 import Header from '../../components/Header/index'
 
 import Calendar from '../../assets/icons/Calendario.svg'
@@ -10,23 +11,21 @@ function App() {
     <>
       <Header />
       <article className='welcome'>
-        <section className='welcomeText'>
-          <div>
+        <section className='welcomeContent'>
+          <div className='welcomeText'>
             <h1>Bom dia!</h1>
-            <h2>Quarta Feira,</h2>
+            <h2>Quarta-Feira,</h2>
             <h3>2 de Agosto</h3>
             <p>Por favor, escolha o dia 
               que deseja para visualizar
               o cardápio de sua preferência.</p>
           </div>
-          <div>
-            <img src={Calendar}/>
+          <div className='welcomeCalendar'>
+            <img src={Calendar} className='calendarImage'/>
             <input type="date" className="dateInput" name="dateInput" id="dateInput" />
           </div>
         </section>
-        <section>
-          <img src={FoodsImage} className='foodImage'/>
-        </section>
+        <img src={FoodsImage} className='foodImage'/>
       </article>
     </>
   )

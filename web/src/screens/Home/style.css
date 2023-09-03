@@ -10,14 +10,68 @@ img{
 .welcome{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: ;
+    background-color: var(--L2);
+    color: var(--B1)
+}
+
+.welcomeContent{
+    padding: 2rem 3rem;
 }
 
 .welcomeText{
-
+    max-width: 20vw;
 }
 
+.welcomeText h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
 
+.welcomeText h2{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.welcomeText h3{
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-top: -0.4rem;
+}
+
+.welcomeText p{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    max-width: 13rem;
+    font-weight: 500;
+}
+
+.welcomeCalendar{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 15vw;
+}
+
+.calendarImage{
+    max-width: 3vw;
+}
+
+.dateInput{
+    border-radius: 10px;
+    border: none;
+    height: 2.5rem;
+    margin-top: 0.2rem;
+    width: 90%;
+    padding: 0px 10px;
+    color: var(--C2)
+}
+
+/* Remove the calendar icon from the input */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
 
 
 .foodImage{
