@@ -1,4 +1,7 @@
+
+
 import './style.css'
+import '../StyleTemplate/style.css'
 import logo from '../../assets/icons/Logo.svg'
 import user from '../../assets/icons/User.svg'
 import React, { useState } from 'react';
@@ -19,22 +22,13 @@ function Header() {
           </div>
           <nav className="nav">
             <ul>
-              <li
-                className={activeItem === 'Home' ? 'active' : ''}
-                onMouseEnter={() => handleItemClick('Home')}
-              >
+              <li>
                 <a href="#">Home</a>
               </li>
-              <li
-                className={activeItem === 'Buscar' ? 'active' : ''}
-                onMouseEnter={() => handleItemClick('Buscar')}
-              >
+              <li>
                 <a href="#">Buscar</a>
               </li>
-              <li
-                className={activeItem === 'Sobre' ? 'active' : ''}
-                onMouseEnter={() => handleItemClick('Sobre')}
-              >
+              <li>
                 <a href="#">Sobre</a>
               </li>
             </ul>

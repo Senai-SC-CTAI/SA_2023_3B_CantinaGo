@@ -1,0 +1,26 @@
+*{
+    /* scroll */
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    /* color pallet */
+    --L1: #FA321A;
+    --L2: #FD6A48;
+    --L3: #FFA995;
+
+    --B1: #fff;
+    --B2: #f1f1f1;
+    --B3: #f4f4f4;
+
+    --C1: #7A7A7A;
+    --C2: #6C6C6C;
+    --C3: #545454;
+    --C4: #171717;
+
+    /* Template */
+    margin: 0;
+    padding: 0;
+    background-color: var(--B2);
+    font-family: 'Inter', sans-serif; 
+    transition: .5s;
+}

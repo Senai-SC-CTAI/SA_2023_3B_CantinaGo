@@ -2,3 +2,24 @@
     margin: 0;
     padding: 0
 }
+
+img{
+    max-width: 100vw;
+}
+
+.welcome{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: ;
+}
+
+.welcomeText{
+
+}
+
+
+
+
+.foodImage{
+    width: 70vw;
+}
