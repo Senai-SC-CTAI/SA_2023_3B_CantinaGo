@@ -1,0 +1,11 @@
+footer{
+    background-color: var(--L1);
+    width: 100%;
+    padding: 2vw 1vw;
+    text-align: center;
+}
+
+footer p{
+    color: var(--B1);
+    font-size: 1.2vw;
+}

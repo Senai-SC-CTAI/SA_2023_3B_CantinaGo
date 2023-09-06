@@ -1,21 +1,24 @@
+/* Template */
 * {
     margin: 0;
     padding: 0
 }
 
-img{
+.welcome img{
     max-width: 100vw;
 }
 
+/* Welcome Styles */
 .welcome{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--L2);
-    color: var(--B1)
+    color: var(--B1);
+
 }
 
 .welcomeContent{
-    padding: 2rem 3rem;
+    padding: 2vw 3vw;
 }
 
 .welcomeText{
@@ -23,33 +26,33 @@ img{
 }
 
 .welcomeText h1{
-    font-size: 4rem;
+    font-size: 4vw;
     font-weight: bold;
 }
 
 .welcomeText h2{
-    font-size: 2rem;
+    font-size: 2vw;
     font-weight: 500;
 }
 
 .welcomeText h3{
-    font-size: 1.3rem;
+    font-size: 1.3vw;
     font-weight: normal;
-    margin-top: -0.4rem;
+    margin-top: -0.4vw;
 }
 
 .welcomeText p{
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    max-width: 13rem;
+    margin-top: 1vw;
+    font-size: 0.9vw;
+    max-width: 13vw;
     font-weight: 500;
 }
 
 .welcomeCalendar{
-    margin-top: 1rem;
+    margin-top: 1vw;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1vw;
     max-width: 15vw;
 }
 
@@ -60,8 +63,8 @@ img{
 .dateInput{
     border-radius: 10px;
     border: none;
-    height: 2.5rem;
-    margin-top: 0.2rem;
+    height: 2.5vw;
+    margin-top: 0.2vw;
     width: 90%;
     padding: 0px 10px;
     color: var(--C2)
@@ -73,7 +76,43 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
 }
 
-
 .foodImage{
     width: 70vw;
 }
+
+
+/* Main Styles */
+
+.main{
+    margin-top: 3vw;
+    margin-left: 3vw;
+}
+
+.scrollCards{
+    margin-bottom: 3vw;
+}
+
+.titleCategory{
+    font-size: 4vw;
+    margin-bottom: 1vw;
+}
+
+.scroll{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+    gap: 20px;
+    grid-column: span 4;
+  }
+
+  .verMaisButton {
+    background-color: var(--B1);
+    border: none;
+    
+  }

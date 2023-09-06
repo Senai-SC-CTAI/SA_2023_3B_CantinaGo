@@ -23,7 +23,7 @@ body{
      /* Template */
      margin: 0;
      padding: 0;
-     background-color: var(--B2);
+     background-color: var(--B1);
      font-family: 'Inter', sans-serif; 
      transition: .5s;
 }
