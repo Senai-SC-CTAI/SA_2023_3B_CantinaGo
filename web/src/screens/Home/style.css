@@ -67,7 +67,8 @@
     margin-top: 0.2vw;
     width: 90%;
     padding: 0px 10px;
-    color: var(--C2)
+    color: var(--C2);
+    font-size: 1vw;
 }
 
 /* Remove the calendar icon from the input */
