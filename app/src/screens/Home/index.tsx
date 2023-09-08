@@ -17,6 +17,7 @@ import {
   Inter_700Bold,
   Inter_500Medium
 }  from '@expo-google-fonts/inter'; // Importação de fontes do Google Fonts usando Expo.
+import Content from '../../data/Content';
 
 // Componente principal da tela Home.
 export function Home() {
@@ -68,7 +69,8 @@ export function Home() {
     setDatePickerVisible(false); // Fecha o seletor de data após selecionar uma data.
   };
 
-
+  //Função para pegar a categoria e criar automaticamente um ScrollView para ela
+  const Categories = Array.from(new Set(Content.map((item) => item.category)));
   return (
     // Componente de rolagem que abrange todo o conteúdo da tela. Essencial!!!
     <ScrollView style={styles.container}>
@@ -112,10 +114,9 @@ export function Home() {
       <View style={styles.main}>
         <View style={styles.containerComida}>
           {/* Componentes personalizados para mostrar listas de comidas */}
-          <ComidaScroll category="Salgados" />
-          <ComidaScroll category="Doces" />
-          <ComidaScroll category="Bebidas" />
-          <ComidaScroll category="Snacks" />
+          {(Categories as string[]).map((category) => (
+          <ComidaScroll key={category} category={category} />
+  ))}
         </View>
       </View>
       
