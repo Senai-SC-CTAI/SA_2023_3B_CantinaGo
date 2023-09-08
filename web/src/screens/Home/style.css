@@ -93,27 +93,3 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-bottom: 3vw;
 }
 
-.titleCategory{
-    font-size: 4vw;
-    margin-bottom: 1vw;
-}
-
-.scroll{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-
-.cardContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
-    gap: 20px;
-    grid-column: span 4;
-  }
-
-  .verMaisButton {
-    background-color: var(--B1);
-    border: none;
-    
-  }
