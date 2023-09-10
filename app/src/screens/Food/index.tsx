@@ -59,6 +59,118 @@ export function Food() {
   }
 
   return (
+    // Padrão
+    // <View style={styles.container}>
+    //   <View style={styles.header}>
+    //     {/* Botão para voltar à tela anterior */}
+    //     <TouchableOpacity onPress={back}>
+    //       <Feather
+    //         name="arrow-left"
+    //         size={38}
+    //         color="#FA321A"
+    //         style={{ marginLeft: 20 }}
+    //       />
+    //     </TouchableOpacity>
+
+    //     <Text style={styles.title}>Comidas</Text>
+    //   </View>
+
+    //   <View style={styles.card}>
+    //     <Image
+    //        style={styles.backgroundImage}
+    //        source={require('../../../assets/img/FoodDesign1.png')}
+    //        resizeMode="contain"
+    //     />
+    //     {/* Exibindo o nome do alimento */}
+    //     <Text style={styles.titleComida}>{selectedFood.nome}</Text>
+    //     {/* Exibindo a categoria do alimento */}
+    //     <Text style={styles.categoriaComida}>{selectedFood.category}</Text>
+    //     {/* Exibindo a imagem do alimento */}
+    //     <Image
+    //       style={styles.imagemComida}
+    //       source={selectedFood.foto}
+    //       resizeMode="contain"
+    //     />
+    //     {/* Exibindo as calorias do alimento */}
+    //     <Text style={styles.calorias}>{selectedFood.caloria} kcal</Text>
+
+    //     {/* Título para a seção de ingredientes */}
+    //     <Text style={styles.tituloIgredientes}>Ingredientes</Text>
+    //     {/* Exibindo a lista de ingredientes */}
+    //     <View style={styles.igredientes}>
+    //       {selectedFood.ingredientes.map((ingrediente, index) => (
+    //         <Text key={index} style={styles.textoIgredientes}>
+    //           • {ingrediente}
+    //         </Text>
+    //       ))}
+    //     </View>
+    //   </View>
+
+    //   <View style={styles.card}>
+    //     {/* Exibindo o preço do alimento */}
+    //     <Text style={styles.precoTexto}>R${selectedFood.preco}</Text>
+    //   </View>
+    // </View>
+
+
+    // Design1 
+    // <View style={styles.container}>
+    //   <View style={styles.header}>
+    //     {/* Botão para voltar à tela anterior */}
+    //     <TouchableOpacity onPress={back}>
+    //       <Feather
+    //         name="arrow-left"
+    //         size={38}
+    //         color="#FA321A"
+    //         style={{ marginLeft: 20 }}
+    //       />
+    //     </TouchableOpacity>
+    //     <View style={{marginLeft: 20,}}>
+    //       {/* Exibindo o nome do alimento */}
+    //       <Text style={styles.titleComida}>{selectedFood.nome}</Text>
+    //       {/* Exibindo a categoria do alimento */}
+    //       <Text style={styles.categoriaComida}>{selectedFood.category}</Text>
+    //     </View>
+    //   </View>
+
+    //   <View style={styles.card}>
+    //     <Image
+    //        style={styles.backgroundImage}
+    //        source={require('../../../assets/img/FoodDesign1.png')}
+    //        resizeMode="contain"
+    //     />
+        
+    //     {/* Exibindo a imagem do alimento */}
+    //     <View style={{alignItems:'center', width: '100%'}}>
+    //       <Image
+    //         style={styles.imagemComida}
+    //         source={selectedFood.foto}
+    //         resizeMode="contain"
+    //       />
+
+    //     </View>
+    //     {/* Exibindo as calorias do alimento */}
+    //     <Text style={styles.calorias}>{selectedFood.caloria} kcal</Text>
+
+    //     {/* Título para a seção de ingredientes */}
+    //     <Text style={styles.tituloIgredientes}>Ingredientes</Text>
+    //     {/* Exibindo a lista de ingredientes */}
+    //     <View style={styles.igredientes}>
+    //       {selectedFood.ingredientes.map((ingrediente, index) => (
+    //         <Text key={index} style={styles.textoIgredientes}>
+    //           • {ingrediente}
+    //         </Text>
+    //       ))}
+    //     </View>
+    //   </View>
+
+    //   <View style={styles.cardPrice}>
+    //     {/* Exibindo o preço do alimento */}
+    //     <Text style={styles.precoTexto}>R${selectedFood.preco}</Text>
+    //   </View>
+    // </View>
+
+    //Design2
     <View style={styles.container}>
       <View style={styles.header}>
         {/* Botão para voltar à tela anterior */}
@@ -70,21 +182,28 @@ export function Food() {
             style={{ marginLeft: 20 }}
           />
         </TouchableOpacity>
-
-        <Text style={styles.title}>Comidas</Text>
+        <View style={{marginLeft: 20,}}>
+          {/* Exibindo o nome do alimento */}
+          <Text style={styles.titleComida}>{selectedFood.nome}</Text>
+          {/* Exibindo a categoria do alimento */}
+          <Text style={styles.categoriaComida}>{selectedFood.category}</Text>
+        </View>
       </View>
+      <Image
+         style={styles.backgroundImage}
+         source={require('../../../assets/img/FoodDesign2.png')} 
+      />
 
+        <View style={{alignItems:'center', width: '100%'}}>
+          <Image
+            style={styles.imagemComida}
+            source={selectedFood.foto}
+            resizeMode="contain"
+          />
+
+        </View>
       <View style={styles.card}>
-        {/* Exibindo o nome do alimento */}
-        <Text style={styles.titleComida}>{selectedFood.nome}</Text>
-        {/* Exibindo a categoria do alimento */}
-        <Text style={styles.categoriaComida}>{selectedFood.category}</Text>
         {/* Exibindo a imagem do alimento */}
-        <Image
-          style={styles.imagemComida}
-          source={selectedFood.foto}
-          resizeMode="contain"
-        />
         {/* Exibindo as calorias do alimento */}
         <Text style={styles.calorias}>{selectedFood.caloria} kcal</Text>
 
@@ -100,7 +219,7 @@ export function Food() {
         </View>
       </View>
 
-      <View style={styles.card}>
+      <View style={styles.cardPrice}>
         {/* Exibindo o preço do alimento */}
         <Text style={styles.precoTexto}>R${selectedFood.preco}</Text>
       </View>
