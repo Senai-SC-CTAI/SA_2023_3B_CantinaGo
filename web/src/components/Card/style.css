@@ -29,19 +29,30 @@
 
 .card h4{
     font-size: 1.5vw;
+    text-decoration: none;
+}
+
+a:-webkit-any-link {
+    color: var(--P1);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5vw;
 }
 
 .infoCard{
     display: flex;
-    gap: 1vw
+    gap: 1vw;
+    text-decoration: none;
 }
 
 .price{
     color: var(--L1);
     font-size: 1vw;
+    text-decoration: none;
 }
 
 .kcal{
     color: var(--C2);
     font-size: 1vw;
+    text-decoration: none;
 }

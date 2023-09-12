@@ -2,6 +2,7 @@ import './style.css'
 import React, { useState, useEffect } from 'react';
 import Content from '../../components/Data/content'
 import Card from '../../components/Card/index'
+import {Link} from "react-router-dom"
 
 function ScrollCategory(props: { category: string }) {
 
@@ -27,6 +28,7 @@ function ScrollCategory(props: { category: string }) {
       <div className='scroll'>
         <div className='cardContainer'>
         {filteredContent.slice(0, visibleCards).map((content) => (
+          <Link to={`/Food/${content.id}`}  key={content.id}>
             <Card
               key={content.id}
               foto={content.foto}
@@ -35,6 +37,8 @@ function ScrollCategory(props: { category: string }) {
               caloria={content.caloria}
               id={content.id}
             />
+          
+          </Link>
           ))}
         </div>
         {visibleCards < totalCards && (

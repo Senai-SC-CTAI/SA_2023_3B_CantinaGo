@@ -1,7 +1,7 @@
 const Content = [
     {
         id: 1,
-        foto: "src/assets/img/Pao.png",
+        foto: "/src/assets/img/Pao.png",
         nome: 'Pão de queijo',
         preco: '6,90',
         caloria: 150,
@@ -17,7 +17,7 @@ const Content = [
     },
     {
       id: 2,
-      foto:'src/assets/img/coxinha.png',
+      foto:'/src/assets/img/coxinha.png',
       nome: 'Coxinha',
       preco: '4,50',
       caloria: 220,
@@ -30,7 +30,7 @@ const Content = [
     },
     {
       id: 3,
-      foto: 'src/assets/img/Pastel.png',
+      foto: '/src/assets/img/Pastel.png',
       nome: 'Pastel',
       preco: '5,20',
       caloria: 180,
@@ -43,7 +43,7 @@ const Content = [
     },
     {
       id: 4,
-      foto: 'src/assets/img/beijinho.png',
+      foto: '/src/assets/img/beijinho.png',
       nome: 'Dois Amores',
       preco: '7,00',
       caloria: 280,
@@ -57,7 +57,7 @@ const Content = [
     },
     {
       id: 5,
-      foto: 'src/assets/img/Crossaint.png',
+      foto: '/src/assets/img/Crossaint.png',
       nome: 'Croissant',
       preco: '3,80',
       caloria: 220,
@@ -70,7 +70,7 @@ const Content = [
     },
     {
       id: 6,
-      foto: 'src/assets/img/Folhado.png',
+      foto: '/src/assets/img/Folhado.png',
       nome: 'Folhado',
       preco: '4,70',
       caloria: 150,
@@ -83,7 +83,7 @@ const Content = [
     },
     {
       id: 7,
-      foto: 'src/assets/img/Suco.png',
+      foto: '/src/assets/img/Suco.png',
       nome: 'Suco de Uva',
       preco: '3,00',
       caloria: 120,
@@ -95,7 +95,7 @@ const Content = [
     },
     {
       id: 8,
-      foto: 'src/assets/img/Agua.png',
+      foto: '/src/assets/img/Agua.png',
       nome: 'Água',
       preco: '1,50',
       caloria: 0,
@@ -106,7 +106,7 @@ const Content = [
     },
     {
       id: 9,
-      foto: 'src/assets/img/Cha.png',
+      foto: '/src/assets/img/Cha.png',
       nome: 'Chá Gelado',
       preco: '2,50',
       caloria: 5,
@@ -118,7 +118,7 @@ const Content = [
     },
     {
       id: 10,
-      foto: 'src/assets/img/SnackMandioca.png',
+      foto: '/src/assets/img/SnackMandioca.png',
       nome: 'Snack de Mandioca',
       preco: '3,50',
       caloria: 100,
@@ -131,7 +131,7 @@ const Content = [
     },
     {
       id: 11,
-      foto: 'src/assets/img/SnackPuravida.png',
+      foto: '/src/assets/img/SnackPuravida.png',
       nome: 'Snack Puravida',
       preco: '2,50',
       caloria: 150,
@@ -143,7 +143,7 @@ const Content = [
     },
     {
       id: 12,
-      foto: 'src/assets/img/SnackHitter.png',
+      foto: '/src/assets/img/SnackHitter.png',
       nome: 'Barrinha de Chocolate',
       preco: '2,50',
       caloria: 120,

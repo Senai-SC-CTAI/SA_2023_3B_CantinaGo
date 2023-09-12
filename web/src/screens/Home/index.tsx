@@ -14,6 +14,8 @@ import Content from '../../components/Data/content'
 import Calendar from '../../assets/icons/Calendario.svg'
 import FoodsImage from '../../assets/img/ImageHeader.png'
 
+import {Routes, Route} from 'react-router-dom'
+
 const uniqueCategories = Array.from(new Set(Content.map((item) => item.category)));
 
 function App() {
