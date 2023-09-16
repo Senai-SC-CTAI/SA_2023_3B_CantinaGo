@@ -15,7 +15,6 @@ import {
 export function ComidaScroll(props: { category: string }) {
   // Filtrar o conteúdo com base na categoria
   const filteredContent = Content.filter(item => item.category === props.category);
-
   // Carregar as fontes definidas
   useFonts({
     Inter_400Regular,
