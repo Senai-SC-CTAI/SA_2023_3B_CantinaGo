@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import App from './screens/Home/index.tsx'
+import App from './screens/SignUp/index.tsx'
 import Food from './screens/Food/index.tsx'
 
 import {
