@@ -1,7 +1,6 @@
-import LogoSingUp from '../../assets/img/singuplogo.svg'
+import LogoSingUp from '../../assets/img/singuplogo.svg';
 import { Link } from 'react-router-dom';
-import './style.css'
-
+import './style.css';
 
 const RegisterForm = () => {
   return (
@@ -11,32 +10,32 @@ const RegisterForm = () => {
       </div>
       <div className="div-content">
         <h2>Cadastrar</h2>
+        
         <div className="input-container">
-          <h3>E-mail</h3>
-          <input className = 'inputEmail' type="email" placeholder="seuemail@estudante.sesisenai.org.br" />
+          <h3 className="input-label">E-mail</h3>
+          <input className='input-email' type="email" placeholder="seuemail@estudante.sesisenai.org.br" />
         </div>
         <div className="input-left">
-          <div className="input-container">
-            <h3>Senha</h3>
-            <input type="password" placeholder="senha" />
+          <div className="input-senha">
+            <h3 className="input-label">Senha</h3>
+            <input className='input-password' type="password" placeholder="senha" />
           </div>
-          <div className="input-container">
-            <h3>Confirmar Senha</h3>
-            <input type="password" placeholder="senha" />
+          <div className="input-senha">
+            <h3 className="input-label">Confirmar Senha</h3>
+            <input className='input-confirm-password' type="password" placeholder="senha" />
           </div>
         </div>
         <div className="input-right">
-
-          <div className="input-container">
-            <h3>Telefone</h3>
-            <input type="text" placeholder="48 99999-9999" />
+          <div className="input-telefone">
+            <h3 className="input-label">Telefone</h3>
+            <input className='input-telefone' type="number" placeholder="48 99999-9999" />
           </div>
-          <div className="input-container">
-            <h3>Turma</h3>
-            <input type="text" placeholder="XX" />
+          <div className="input-turma">
+            <h3 className="input-label">Turma</h3>
+            <input className='input-turma' type="text" placeholder="XX" />
           </div>
         </div>
-        <button>Entrar</button>
+        <button className="submit-button">Entrar</button>
         <div className="login-link">
           Já possui conta? <Link to="/login">Faça o login</Link>
         </div>
@@ -46,4 +45,3 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
-

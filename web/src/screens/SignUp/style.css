@@ -34,15 +34,19 @@ body{
 }
 .input-container{
     color: #545454;
-    height: 50px;
     font-weight: 300;
     float: left;
     padding: 10px;
     border-radius: 5;
 }
 
-.inputEmail{
-    width: 100%;
+.input-email{
+    width: 400px;
+    color: #545454;
+    font-weight: 200;
+    float: left;
+    padding: 5px;
+    border-radius: 5;
 }
 
 button{
@@ -57,4 +61,35 @@ button{
 }
 .columns{
     display: grid;
+}
+.input-password{
+    width: 400px;
+    color: #545454;
+    font-weight: 200;
+    float: left;
+    padding: 5px;
+    border-radius: 5;
+}
+.input-confirm-password{
+    width: 400px;
+    color: #545454;
+    font-weight: 200;
+    float: left;
+    padding: 5px;
+    border-radius: 5;
+}
+.input-telefone{
+    width: 400px;
+    font-weight: 200;
+    float: left;
+    padding: 5px;
+    border-radius: 5;
+}
+.input-turma{
+    width: 400px;
+    font-weight: 200;
+    float: left;
+    padding: 5px;
+    border-radius: 5PX;
+    height: 25px;
 }

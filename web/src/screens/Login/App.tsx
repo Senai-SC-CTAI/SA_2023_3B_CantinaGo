@@ -1,4 +1,5 @@
-import './style.css'
+import LogoSingUp from '../../assets/img/singuplogo.svg';
+import './style.css';
 
 function App() {
 
