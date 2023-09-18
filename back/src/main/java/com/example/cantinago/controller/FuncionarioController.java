@@ -22,16 +22,16 @@ public class FuncionarioController {
     public Funcionario criarFuncionario(@RequestBody Funcionario funcionario) {
     return funcionarioRepository.save(funcionario);
   }
-    @DeleteMapping("/{id}")
-    public ResponseEntity<String> deletarFuncionario(@PathVariable Long id) {
-    if (funcionarioRepository.existsById(id)) {
-      funcionarioRepository.deleteById(id);
+    @DeleteMapping("/{id_funcionario}")
+    public ResponseEntity<String> deletarFuncionario(@PathVariable Long id_funcionario) {
+    if (funcionarioRepository.existsById(id_funcionario)) {
+      funcionarioRepository.deleteById(id_funcionario);
       return ResponseEntity.ok("Funcionario deletado com sucesso");
     } else {
       return ResponseEntity.notFound().build();
      }
     }
-    @PutMapping("/{id}")
+    @PutMapping("/{id_funcionario}")
     public ResponseEntity<Funcionario> atualizarFuncionario(@PathVariable Long id_funcionario, @RequestBody Funcionario funcionarioAtualizado) {
         if (funcionarioRepository.existsById(id_funcionario)) {
             Funcionario funcionario = funcionarioRepository.findById(id_funcionario).get();

@@ -17,7 +17,7 @@ public class UsuarioController {
 
     @GetMapping
 
-    public List<Usuario> listarUsuario() {
+    public List<Usuario> listarUsuarios() {
         return usuarioRepository.findAll();
     }
 
@@ -27,4 +27,30 @@ public class UsuarioController {
         return usuarioRepository.save(usuario);
     }
 
+    @DeleteMapping("/{id_usuario}")
+    
+    public ResponseEntity<String> deletarUsuario(@PathVariable Long id) {
+    if (UsuarioRepository.existsById(id_usuario)) {
+      UsuarioRepository.deleteById(id_usuario);
+      return ResponseEntity.ok("Usuario deletado com sucesso");
+    } else {
+      return ResponseEntity.notFound().build();
+     }
+    }
+    
+    @PutMapping("/{id_usuario}")
+    
+    public ResponseEntity<Usuario> atualizarUsuario(@PathVariable Long id_usuario, @RequestBody Usuario usuarioAtualizado) {
+        if (UsuarioRepository.existsById(id_usuario)) {
+            Usuario usuario = UsuarioRepository.findById(id_usuario).get();
+            usuario.setNome(usuarioAtualizado.getNome());
+            usuario.setSobrenome(usuarioAtualizado.getSobrenome());
+            usuario.setEmail(usuarioAtualizado.getEmail());
+
+            Usuario usuarioAtualizadoBD = usuarioRepository.save(usuario);
+            return ResponseEntity.ok(usuarioAtualizadoBD);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }

@@ -10,7 +10,7 @@ import jakarta.persistence.*;
 public class Gerente {
       @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_gerente;
     private String nome;
     private String email;
 
