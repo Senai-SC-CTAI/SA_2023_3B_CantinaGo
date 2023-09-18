@@ -18,17 +18,23 @@ function Food() {
   return (
     <>
       <Header/>
-      
-      <div key={selectedContent.id}>
-        <h1>{selectedContent.nome}</h1>
-        <h2>{selectedContent.category}</h2>
+      <main key={selectedContent.id}>
+        <article className='content'>
+          <h1 className='name'>{selectedContent.nome}</h1>
+          <section className='ingredientes'>
+            <p className='ingredientesTitle'>ingredientes</p>
+            <p className='ingredientesText'>{selectedContent.ingredientes}</p>
+          </section>
+          <section>
+            <p>{selectedContent.preco}</p>
+            <p>{selectedContent.caloria}</p>
+          </section>
+          <button>Comprar</button>
+        </article>
         <img src={selectedContent.foto}/>
-        <h4>{selectedContent.caloria}</h4>
-        <p>igredientes</p>
-        <p>{selectedContent.ingredientes}</p>
-        <h3>{selectedContent.preco}</h3>
+      
         
-      </div>
+      </main>
 
     </>
   )

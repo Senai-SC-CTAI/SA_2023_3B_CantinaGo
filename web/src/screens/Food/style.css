@@ -1,0 +1,14 @@
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.name{
+    font-size: 4vw;
+    font-weight: bold;
+    margin-bottom: 4vw;
+}
+
+.ingredientesTitle{
+    
+}

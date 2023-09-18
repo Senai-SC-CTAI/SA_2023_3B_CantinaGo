@@ -30,7 +30,7 @@ dependencies {
 	runtimeOnly 'org.postgresql:postgresql'
 	'spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok:1.18.20'
-  annotationProcessor 'org.projectlombok:lombok:1.18.20'
+  	annotationProcessor 'org.projectlombok:lombok:1.18.20'
   
 
 }
