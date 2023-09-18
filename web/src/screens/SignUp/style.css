@@ -25,7 +25,7 @@ body{
     grid-template-columns: 1fr 1fr;
 }
 .div-content{
-    margin-left: 50%;
+    margin-left: 0.5%;
     height: 100vh;
     display: grid;
     justify-content: center;
@@ -33,5 +33,28 @@ body{
 
 }
 .input-container{
+    color: #545454;
+    height: 50px;
     font-weight: 300;
+    float: left;
+    padding: 10px;
+    border-radius: 5;
+}
+
+.inputEmail{
+    width: 100%;
+}
+
+button{
+    border-radius: 5px;
+    width: 420px;
+    height: 50px;
+    background-color: #FA321A;
+    color: #FFFF;
+    font: bold;
+    justify-content: center;
+    align-items: center;
+}
+.columns{
+    display: grid;
 }
