@@ -1,7 +1,13 @@
 import * as React from 'react';
-import { View, TextInput, Text, TouchableOpacity, ImageBackground, Image } from 'react-native';
+import { View, TextInput, Text, TouchableOpacity, ImageBackground, Image, FlatList } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
+import { useState, useEffect } from 'react';
+import axios from 'axios'
+
+
+
+
 
 import {
   useFonts,
@@ -18,6 +24,35 @@ import styles from './styles'
 
 
 export function Search() {
+
+
+  const [comidas, setComidas] = useState([]);
+  const [novaComida, setNovaComida] = useState({
+    id:"",
+    foto:"",
+    nome:"",
+    preco:"",
+    caloria:"",
+    category:"",
+    ingredientes:[""],
+  });
+  
+
+  useEffect(() => {
+    fetchComidas();
+  }, []);
+
+  const fetchComidas = async () => {
+    try {
+    } catch (error) {
+      console.error('Erro ao buscar comidas:', error);
+    }
+  };
+  
+  
+
+
+
   useFonts({
     Inter_400Regular,
     Inter_700Bold,
@@ -33,6 +68,11 @@ export function Search() {
   function category(category: string) {
     navigation.navigate("Category", { category });
   }
+
+function pesquisa(){
+  useState
+}
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -46,6 +86,7 @@ export function Search() {
         </TouchableOpacity>
         <Text style={styles.title}>Buscar</Text>
       </View>
+    
 
       {/* input search */}
       <View style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -62,6 +103,12 @@ export function Search() {
           <TextInput placeholder="" style={{ width: '70%' }}></TextInput>
         </View>
       </View>
+      <FlatList
+      data={comidas}
+      renderItem={({})}>
+
+
+      </FlatList>
       <View style={{ display: 'flex', alignItems: 'center', marginTop: 50 }}>
         <View style={styles.searchItens}>
 
