@@ -62,34 +62,14 @@ button{
 .columns{
     display: grid;
 }
-.input-password{
+.input-email{
     width: 400px;
-    color: #545454;
-    font-weight: 200;
+    background-color: #c4c3c3;
     float: left;
     padding: 5px;
     border-radius: 5;
-}
-.input-confirm-password{
-    width: 400px;
-    color: #545454;
-    font-weight: 200;
-    float: left;
-    padding: 5px;
-    border-radius: 5;
-}
-.input-telefone{
-    width: 400px;
-    font-weight: 200;
-    float: left;
-    padding: 5px;
-    border-radius: 5;
-}
-.input-turma{
-    width: 400px;
-    font-weight: 200;
-    float: left;
-    padding: 5px;
-    border-radius: 5PX;
-    height: 25px;
+    font-size: 27px;
+    height: 72px;
+    width: 100%;
+    margin-bottom: 10px;
 }

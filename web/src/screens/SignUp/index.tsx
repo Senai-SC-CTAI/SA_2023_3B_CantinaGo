@@ -15,27 +15,27 @@ const RegisterForm = () => {
           <h3 className="input-label">E-mail</h3>
           <input className='input-email' type="email" placeholder="seuemail@estudante.sesisenai.org.br" />
         </div>
-        <div className="input-container">
+        <div className="input-left">
           <div className="input-senha">
             <h3 className="input-label">Senha</h3>
-            <input className='input-password' type="password" placeholder="senha" />
+            <input className='input-email' type="password" placeholder="senha" />
           </div>
-          <div className="input-container">
+          <div className="input-senha">
             <h3 className="input-label">Confirmar Senha</h3>
-            <input className='input-confirm-password' type="password" placeholder="senha" />
+            <input className='input-email' type="password" placeholder="senha" />
           </div>
         </div>
-        <div className="input-container">
+        <div className="input-right">
           <div className="input-telefone">
             <h3 className="input-label">Telefone</h3>
-            <input className='input-telefone' type="number" placeholder="48 99999-9999" />
+            <input className='input-email' type="number" placeholder="48 99999-9999" />
           </div>
-          <div className="input-container">
+          <div className="input-turma">
             <h3 className="input-label">Turma</h3>
-            <input className='input-turma' type="text" placeholder="XX" />
+            <input className='input-email' type="text" placeholder="XX" />
           </div>
         </div>
-        <button className="submit-button">Entrar</button>
+        <button className="submit-button">Cadastrar</button>
         <div className="login-link">
           Já possui conta? <Link to="/login">Faça o login</Link>
         </div>
