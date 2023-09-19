@@ -20,7 +20,9 @@ const RegisterForm = () => {
             <h3 className="input-label">Senha</h3>
             <input className='input-email' type="password" placeholder="senha" />
           </div>
-    
+          <div className="login-link">
+           <Link to="/login">Esqueceu a senha?</Link>
+        </div>
         </div>
         </div>
         <button className="submit-button">Entrar</button>
