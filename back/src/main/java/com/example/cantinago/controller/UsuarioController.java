@@ -44,9 +44,13 @@ public class UsuarioController {
         if (usuarioRepository.existsById(id_usuario)) {
             Usuario usuario = usuarioRepository.findById(id_usuario).get();
             usuario.setNome(usuarioAtualizado.getNome());
+<<<<<<< HEAD
             usuario.setSobrenome(usuarioAtualizado.getSobrenome());
             usuario.setSenha(usuarioAtualizado.getSenha());
             usuario.setConfirmarSenha(usuarioAtualizado.getConfirmarSenha());;
+=======
+            // usuario.setSobrenome(usuarioAtualizado.getSobrenome());
+>>>>>>> 3148862725f9fb38952825811f9eb8121d76b96f
             usuario.setEmail(usuarioAtualizado.getEmail());
             usuario.setTelefone(usuarioAtualizado.getTelefone());
             usuario.setTurma(usuarioAtualizado.getTurma());
