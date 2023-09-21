@@ -35,7 +35,6 @@ public class GerenteController {
         if (gerenteRepository.existsById(id_gerente)) {
             Gerente gerente = gerenteRepository.findById(id_gerente).get();
             gerente.setNome(gerenteAtualizado.getNome());
-            gerente.setSobrenome(gerenteAtualizado.getSobrenome());
             gerente.setEmail(gerenteAtualizado.getEmail());
 
             Gerente gerenteAtualizadoBD = gerenteRepository.save(gerente);

@@ -29,7 +29,7 @@ public class UsuarioController {
 
     @DeleteMapping("/{id_usuario}")
     
-    public ResponseEntity<String> deletarUsuario(@PathVariable Long id) {
+    public ResponseEntity<String> deletarUsuario(@PathVariable Long id_usuario) {
     if (usuarioRepository.existsById(id_usuario)) {
       usuarioRepository.deleteById(id_usuario);
       return ResponseEntity.ok("Usuario deletado com sucesso");
