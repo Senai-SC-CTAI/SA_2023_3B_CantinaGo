@@ -1,5 +1,4 @@
 package com.example.cantinago.controller;
-package com.example.cantinago.controller;
 import com.example.cantinago.model.Gerente;
 import com.example.cantinago.repository.GerenteRepository;
 import org.springframework.beans.factory.annotation.Autowired;

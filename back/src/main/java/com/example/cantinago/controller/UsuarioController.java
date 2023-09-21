@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
-@CrossOrigin(origins = "http://localhost:5173") // Endereço do front
+@CrossOrigin(origins = "http://localhost:19006") // Endereço do front
 @RestController
 
 @RequestMapping("/usuario")
 
 public class UsuarioController {
     @Autowired
-    private UsuarioRepository UsuarioRepository;
+    private UsuarioRepository usuarioRepository;
 
     @GetMapping
 
@@ -30,8 +30,8 @@ public class UsuarioController {
     @DeleteMapping("/{id_usuario}")
     
     public ResponseEntity<String> deletarUsuario(@PathVariable Long id) {
-    if (UsuarioRepository.existsById(id_usuario)) {
-      UsuarioRepository.deleteById(id_usuario);
+    if (usuarioRepository.existsById(id_usuario)) {
+      usuarioRepository.deleteById(id_usuario);
       return ResponseEntity.ok("Usuario deletado com sucesso");
     } else {
       return ResponseEntity.notFound().build();
@@ -41,8 +41,8 @@ public class UsuarioController {
     @PutMapping("/{id_usuario}")
     
     public ResponseEntity<Usuario> atualizarUsuario(@PathVariable Long id_usuario, @RequestBody Usuario usuarioAtualizado) {
-        if (UsuarioRepository.existsById(id_usuario)) {
-            Usuario usuario = UsuarioRepository.findById(id_usuario).get();
+        if (usuarioRepository.existsById(id_usuario)) {
+            Usuario usuario = usuarioRepository.findById(id_usuario).get();
             usuario.setNome(usuarioAtualizado.getNome());
             usuario.setSobrenome(usuarioAtualizado.getSobrenome());
             usuario.setEmail(usuarioAtualizado.getEmail());

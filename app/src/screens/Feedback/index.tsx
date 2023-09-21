@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import {
@@ -10,6 +10,8 @@ import {
   Inter_700Bold,
   Inter_500Medium
   }  from '@expo-google-fonts/inter';
+
+import axios from 'axios';
 
 import { User } from '../User'
 
@@ -25,6 +27,32 @@ export function Feedback() {
 
 })
 
+    useEffect(() => {
+      fetchFeedback()
+    }, [])
+
+    const fetchFeedback = async ( ) =>  {
+      try {
+        const response = await axios.get('http://localhost:8090/feedback')
+        setFeedback(response.data);
+      } catch (error){
+        console.log('erro', error)
+      }
+      };
+    }
+
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      try {
+        let novoFeedback = {
+          data: data,
+          email: comentario,
+        }
+        await axios.post('http://localhost:8090/feedback', novoFeedback)
+        fetchFeedback();
+        set('')
+      }
+    }
   
     const [showUser, setShowUser] = useState(false);
     const [showFeedback, setShowFeedback] = useState(true);
