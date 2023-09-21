@@ -44,6 +44,7 @@ export function Search() {
 
   const fetchComidas = async () => {
     try {
+      
     } catch (error) {
       console.error('Erro ao buscar comidas:', error);
     }
