@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
+import Modal from "react-native-modal";
 import { Feather } from '@expo/vector-icons';
 import {
   useFonts,
@@ -18,6 +19,12 @@ import { User } from '../User'
 import styles from './style'
 
 export function Feedback() {
+
+  // react modal
+  const [isModalVisible, setModalVisible] = React.useState(false); // Estado para controlar a visibilidade do modal
+  function closeModal() {
+    setModalVisible(false);
+  }
 
   useFonts({
     Inter_400Regular,
@@ -50,6 +57,7 @@ export function Feedback() {
       await axios.post('http://localhost:8090/feedback', novoFeedback);
       fetchFeedback();
       setComentarioInput(''); // Limpa o campo de comentário após o envio
+      setModalVisible(true);      
     } catch (error) {
       console.error('Erro ao criar feedback:', error);
     }
@@ -108,11 +116,24 @@ export function Feedback() {
           <View>
             <TouchableOpacity
               style={styles.buttom}
-              onPress={handleSubmit}>
+              onPress={handleSubmit}
+              >
               <Text style={{ color: "white", fontFamily: "Inter_600SemiBold" }}>Enviar</Text>
             </TouchableOpacity>
           </View>
+            {/* Modal de Confirmação */}
+       <Modal isVisible={isModalVisible}>
+        <View style={styles.modalContainer}>
+          <Text style={styles.modalText}>Feedback enviado com sucesso!</Text>
+          <View style={styles.modalButtons}>
+            <TouchableOpacity style={styles.modalButton} onPress={closeModal}>
+              <Text style={styles.modalButtonText}>Ok</Text>
+            </TouchableOpacity>
+          </View>
         </View>
+      </Modal>
+        </View>
+        
       )}
 
     </View>

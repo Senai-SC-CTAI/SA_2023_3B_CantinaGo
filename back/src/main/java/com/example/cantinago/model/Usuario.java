@@ -12,13 +12,9 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;
     private String nome;
-<<<<<<< HEAD
     private String sobrenome;
     private String senha;
     private String confirmarSenha;
-=======
-    // private String sobrenome;
->>>>>>> 3148862725f9fb38952825811f9eb8121d76b96f
     private String email;
     private String turma;
     private String telefone;

@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import App from './screens/SignUp/index.tsx'
+import Login from './screens/Login/index.tsx'
 import Food from './screens/Food/index.tsx'
+import Home from './screens/Home/index.tsx'
 
 import {
   createBrowserRouter,
@@ -13,11 +14,15 @@ const router = createBrowserRouter(
   [
       {
         path: "/",
-        element: <App />
+        element: <Login />
       },
       {
         path: '/food/:id',
         element: <Food/>
+      },
+      {
+        path: '/home',
+        element: <Home/>
       }
   ]
 )

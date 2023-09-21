@@ -2,7 +2,7 @@ import LogoSingUp from '../../assets/img/singuplogo.svg';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-const RegisterForm = () => {
+export default function Login ()  {
   return (
     <div className="register-container">
       <div className="div-logo">
@@ -34,4 +34,3 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;

@@ -78,6 +78,30 @@ const styles = StyleSheet.create({
         marginRigth: 173,
         fontFamily: "Inter_700Bold"
       },
+      modalContainer: {
+        backgroundColor: '#FFFFFF',
+        borderRadius: 10,
+        padding: 20,
+      },
+      modalText: {
+        fontSize: 18,
+        marginBottom: 20,
+        textAlign: 'center',
+      },
+      modalButtons: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+      },
+      modalButton: {
+        backgroundColor: '#FA321A',
+        padding: 10,
+        borderRadius: 5,
+        marginHorizontal: 10,
+      },
+      modalButtonText: {
+        color: 'white',
+        fontSize: 16,
+      },
   })
 
   export default styles;
