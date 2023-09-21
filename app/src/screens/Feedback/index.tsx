@@ -55,7 +55,6 @@ export function Feedback() {
     }
   };
 
-
   // const handleUpdate = async (id, feedbackAtualizado) => {
   //   try {
   //     await axios.put(`http://localhost:8090/feedback/${id}`, feedbackAtualizado);

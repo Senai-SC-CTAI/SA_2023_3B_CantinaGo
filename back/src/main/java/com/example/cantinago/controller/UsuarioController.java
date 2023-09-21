@@ -44,7 +44,7 @@ public class UsuarioController {
         if (usuarioRepository.existsById(id_usuario)) {
             Usuario usuario = usuarioRepository.findById(id_usuario).get();
             usuario.setNome(usuarioAtualizado.getNome());
-            usuario.setSobrenome(usuarioAtualizado.getSobrenome());
+            // usuario.setSobrenome(usuarioAtualizado.getSobrenome());
             usuario.setEmail(usuarioAtualizado.getEmail());
 
             Usuario usuarioAtualizadoBD = usuarioRepository.save(usuario);
