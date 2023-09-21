@@ -45,8 +45,11 @@ public class UsuarioController {
             Usuario usuario = usuarioRepository.findById(id_usuario).get();
             usuario.setNome(usuarioAtualizado.getNome());
             usuario.setSobrenome(usuarioAtualizado.getSobrenome());
+            usuario.setSenha(usuarioAtualizado.getSenha());
+            usuario.setConfirmarSenha(usuarioAtualizado.getConfirmarSenha());;
             usuario.setEmail(usuarioAtualizado.getEmail());
-
+            usuario.setTelefone(usuarioAtualizado.getTelefone());
+            usuario.setTurma(usuarioAtualizado.getTurma());
             Usuario usuarioAtualizadoBD = usuarioRepository.save(usuario);
             return ResponseEntity.ok(usuarioAtualizadoBD);
         } else {
