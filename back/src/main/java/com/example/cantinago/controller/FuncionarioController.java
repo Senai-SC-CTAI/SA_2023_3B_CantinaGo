@@ -1,12 +1,11 @@
 package com.example.cantinago.controller;
-package com.example.cantinago.controller;
 import com.example.cantinago.model.Funcionario;
 import com.example.cantinago.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
-@CrossOrigin(origins = "http://localhost:5173")//Endereço do front
+@CrossOrigin(origins = "http://localhost:19006")//Endereço do front
 @RestController
 @RequestMapping("/funcionarios")
 
@@ -18,6 +17,7 @@ public class FuncionarioController {
     public List<Funcionario> listarFuncionarios() {
     return funcionarioRepository.findAll();
   }
+
     @PostMapping
     public Funcionario criarFuncionario(@RequestBody Funcionario funcionario) {
     return funcionarioRepository.save(funcionario);

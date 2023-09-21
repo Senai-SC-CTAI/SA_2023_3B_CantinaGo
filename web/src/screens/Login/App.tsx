@@ -27,7 +27,7 @@ const RegisterForm = () => {
         </div>
         <button className="submit-button">Entrar</button>
         <div className="login-link">
-          Não possui conta? <Link to="/login">Faça o Cadastro</Link>
+          Não possui conta? <Link to="/ajuda">Faça o Cadastro</Link>
         </div>
       </div>
   

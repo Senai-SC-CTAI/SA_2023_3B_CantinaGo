@@ -1,75 +1,108 @@
-*{
+/* Reset de margens e preenchimentos */
+* {
     margin: 0;
-    padding: 0
-}
-
-body{
-    background-color: AAAAAA;
-}
-
-.div-logo{
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #AAAAAA;
+    font-family: Arial, sans-serif;
+  }
+  
+  .register-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .div-logo {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
-}
-
-.Logo{
+  }
+  
+  .Logo {
     width: 100%;
     position: absolute;
     height: auto;
     right: 0;
-}
-.register-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.div-content{
+  }
+  
+  .div-content {
     margin-left: 0.5%;
     height: 100vh;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   
 
-}
-.input-container{
-    color: #545454;
+  }
+  
+  .input-label {
+    
     font-weight: 300;
-    float: left;
-    padding: 10px;
-    border-radius: 5;
-}
-
-.input-email{
-    width: 400px;
-    color: #545454;
-    font-weight: 200;
-    float: left;
-    padding: 5px;
-    border-radius: 5;
-}
-
-button{
+    margin-bottom: 5px;
+  }
+  
+  .input-email {
+    border: 1px solid #cac6c6;
     border-radius: 5px;
-    width: 420px;
-    height: 50px;
-    background-color: #FA321A;
-    color: #FFFF;
-    font: bold;
-    justify-content: center;
-    align-items: center;
-}
-.columns{
-    display: grid;
-}
-.input-email{
-    width: 400px;
-    background-color: #c4c3c3;
-    float: left;
-    padding: 5px;
-    border-radius: 5;
-    font-size: 27px;
-    height: 72px;
     width: 100%;
-    margin-bottom: 10px;
-}
+    height: 40px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .submit-button {
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    background-color: #FA321A;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+   margin: 10px;
+  }
+  
+  .submit-button:hover {
+    background-color: #E61B0D;
+  }
+  
+  .login-link {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: #FA321A;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
