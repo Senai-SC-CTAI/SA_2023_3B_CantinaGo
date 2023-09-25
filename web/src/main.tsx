@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import Login from './screens/Login/index.tsx'
 import Food from './screens/Food/index.tsx'
 import Home from './screens/Home/index.tsx'
+import Gerenciamento from './screens/Gerenciamento/index.tsx'
 
 import {
   createBrowserRouter,
@@ -23,6 +24,10 @@ const router = createBrowserRouter(
       {
         path: '/home',
         element: <Home/>
+      },
+      {
+        path: '/gerenciamento',
+        element: <Gerenciamento />
       }
   ]
 )

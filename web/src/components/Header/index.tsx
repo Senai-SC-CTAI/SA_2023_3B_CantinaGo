@@ -31,6 +31,9 @@ function Header() {
               <li>
                 <a href="#">Sobre</a>
               </li>
+              <li>
+                <a href="/gerenciamento">Gerenciamento</a>
+              </li>
             </ul>
           </nav>
         </div>

@@ -4,30 +4,32 @@ import './style.css';
 
 export default function Login ()  {
   return (
-    <div className="register-container">
-      <div className="div-logo">
-        <img src={LogoSingUp} className='Logo' />
+    <div className="register-container-Login">
+      <div className="div-logo-Login">
+        <img src={LogoSingUp} className='Logo-Login' />
       </div>
-      <div className="div-content">
-        <h2>Cadastrar</h2>
+      <div className="div-content-Login">
+        <h2 className="entrar-text-Login">Entrar</h2>
         
-        <div className="input-container">
-          <h3 className="input-label">E-mail</h3>
-          <input className='input-email' type="email" placeholder="seuemail@estudante.sesisenai.org.br" />
+        <div className="input-container-Login">
+          <h3 className="input-label-Login">E-mail</h3>
+          <input className='input-email-Login' type="email" placeholder="seuemail@estudante.sesisenai.org.br" />
         </div>
-        <div className="input-left">
-          <div className="input-senha">
-            <h3 className="input-label">Senha</h3>
-            <input className='input-email' type="password" placeholder="senha" />
+        <div className="input-container-Login">
+          <div className="input-senha-Login">
+            <h3 className="input-label-Login">Senha</h3>
+            <input className='input-email-Login' type="password" placeholder="senha" />
           </div>
-          <div className="login-link">
-           <Link to="/login">Esqueceu a senha?</Link>
-        </div>
-        </div>
-        </div>
-        <button className="submit-button">Entrar</button>
-        <div className="login-link">
+          <div className='esqueceuSenha-Login'>
+            <Link to="/home" className='input_label-Login'>Esqueceu a senha?</Link>
+          </div>
+        </div> 
+        
+        <Link to="/home" className="submit-button-Login">Entrar</Link>
+        <div className="login-link-Login">
           Não possui conta? <Link to="/ajuda">Faça o Cadastro</Link>
+        </div>
+        
         </div>
       </div>
   

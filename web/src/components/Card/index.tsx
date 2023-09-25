@@ -6,7 +6,7 @@ function Card(props: { id: Key | null | undefined; foto: string | undefined; nom
 
   return (
     <>
-    <div key={props.id} className='body'>
+    <div key={props.id} className='bodyCard'>
         <div className='card'>
             <img src={props.foto} />
             <div>

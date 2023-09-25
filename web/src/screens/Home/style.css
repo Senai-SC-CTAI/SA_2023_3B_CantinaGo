@@ -77,19 +77,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
 }
 
-.foodImage{
+.foodImageHome{
     width: 70vw;
 }
 
 
 /* Main Styles */
 
-.main{
+.mainHome{
     margin-top: 3vw;
     margin-left: 3vw;
 }
 
-.scrollCards{
+.scrollCardsHome{
     margin-bottom: 3vw;
 }
 
