@@ -13,16 +13,16 @@ export function TabRoutes() {
 
   const tabIcons = {
     Home: {
-      normal: require("../../../assets/Icons/Home.svg"),
-      selected: require("../../../assets/Icons/HomeVisi.svg"),
+      normal: require("../../../assets/Icons/Home.png"),
+      selected: require("../../../assets/Icons/HomeVisi.png"),
     },
     Buscar: {
-      normal: require("../../../assets/Icons/Buscar.svg"),
-      selected: require("../../../assets/Icons/BuscarVisi.svg"),
+      normal: require("../../../assets/Icons/Buscar.png"),
+      selected: require("../../../assets/Icons/BuscarVisi.png"),
     },
     Usuário: {
-      normal: require("../../../assets/Icons/User.svg"),
-      selected: require("../../../assets/Icons/UserVisi.svg"),
+      normal: require("../../../assets/Icons/User.png"),
+      selected: require("../../../assets/Icons/UserVisi.png"),
     },
   };
 

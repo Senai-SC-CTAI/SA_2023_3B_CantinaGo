@@ -49,8 +49,8 @@ const styles = StyleSheet.create({
     marginBottom: 70,
   },
   viewInput: {
-    width: 290,
-    height: 37,
+    width: '50%',
+    height: 40,
     backgroundColor: "#F4F4F4",
     marginBottom: 20,
     borderRadius: 10,
@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
   },
   inputs: {
     width: '100%',
+    marginRight: 30,
   },
   feedbackText: {
     display: 'flex',

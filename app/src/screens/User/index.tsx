@@ -58,40 +58,34 @@ export function User() {
           <View style={styles.profileContent}>
             <View style={styles.profilePicture}>
               <Image
-                source={require('../../../assets/img/User.svg')}
+                source={require('../../../assets/img/User.png')}
                 style={styles.image}
               />
-              <View style={{
-                  backgroundColor: '#6A6A6A',
-                  borderRadius: 100, 
-                  width: 30,
-                  height: 30,
-                  position: 'absolute',
-                  marginLeft: 80, 
-                  marginTop: 25,
-                  justifyContent: 'center',
-                  alignItems: 'center'
-                }}>
                 <Image
-                  source={require("../../../assets/Icons/Editar.svg")}
+                  source={require("../../../assets/Icons/Editar.png")}
                   style={{
-                    width: 20,
-                    height: 20,
+                    width: 30,
+                    height: 30,
                     resizeMode: "contain",
+                    
+                    position: 'absolute',
+                    right: 30,
+                    top: 30,
+                    justifyContent: 'center',
+                    alignItems: 'center'
 
                   }}
                 />
-              </View>
             </View>
             <View style={styles.profileInfo}>
               <Text style={{ fontSize: 20, fontFamily: "Inter_700Bold" }}>Nome do Usuário</Text>
-              <Text style={{ fontSize: 14, color: '#9E9D9D', fontFamily:"Inter_400Regular"}}>Tipo de usuário</Text>
+              <Text style={{ fontSize: 14, color: '#9E9D9D', fontFamily:"Inter_400Regular", textAlign: 'center'}}>Tipo de usuário</Text>
             </View>
           </View>
           <View style={styles.inputsInfo}>
             <View style={styles.viewInput}>
               <Image
-                source={require("../../../assets/Icons/Email.svg")}
+                source={require("../../../assets/Icons/Email.png")}
                 style={{
                   width: 20,
                   height: 20,
@@ -104,7 +98,7 @@ export function User() {
             </View>
             <View style={styles.viewInput}>
               <Image
-                source={require("../../../assets/Icons/Data.svg")}
+                source={require("../../../assets/Icons/Data.png")}
                 style={{
                   width: 20,
                   height: 20,
@@ -116,11 +110,12 @@ export function User() {
               </TextInput>
 
               <Image
-                source={require("../../../assets/Icons/EditarCinza.svg")}
+                source={require("../../../assets/Icons/EditarCinza.png")}
                 style={{
                   width: 25,
                   height: 25,
                   resizeMode: "contain",
+                  marginLeft: -30,
                   marginRight: 10,
                 }}
               />
@@ -128,10 +123,10 @@ export function User() {
             </View>
             <View style={styles.viewInput}>
               <Image
-                source={require("../../../assets/Icons/Turma.svg")}
+                source={require("../../../assets/Icons/Turma.png")}
                 style={{
-                  width: 23,
-                  height: 23,
+                  width: 20,
+                  height: 20,
                   resizeMode: "contain",
                   marginLeft: 13,
                 }}
@@ -139,18 +134,19 @@ export function User() {
               <TextInput style={styles.inputs} placeholder="  turma" placeholderTextColor={"#6A6A6A"}  >
               </TextInput>
               <Image
-                source={require("../../../assets/Icons/EditarCinza.svg")}
+                source={require("../../../assets/Icons/EditarCinza.png")}
                 style={{
                   width: 25,
                   height: 25,
                   resizeMode: "contain",
+                  marginLeft: -30,
                   marginRight: 10,
                 }}
               />            
               </View>
             <View style={styles.viewInput}>
               <Image
-                source={require("../../../assets/Icons/Telefone.svg")}
+                source={require("../../../assets/Icons/Telefone.png")}
                 style={{
                   width: 20,
                   height: 20,
@@ -161,12 +157,14 @@ export function User() {
               <TextInput style={styles.inputs} placeholder="  telefone" placeholderTextColor={"#6A6A6A"}  >
               </TextInput>
               <Image
-                source={require("../../../assets/Icons/EditarCinza.svg")}
+                source={require("../../../assets/Icons/EditarCinza.png")}
                 style={{
                   width: 25,
                   height: 25,
                   resizeMode: "contain",
+                  marginLeft: -30,
                   marginRight: 10,
+        
                 }}
               />           
               </View>
@@ -174,7 +172,7 @@ export function User() {
           <View style={styles.feedbackText}>
             <Text style={{ color: "#9E9D9D", fontSize: 14, fontFamily:'Inter_400Regular' }}>Algum comentário?</Text>
             <TouchableOpacity onPress={() => { setShowUser(false); setShowFeedback(true); }}>
-              <Text style={{ fontSize: 14, textDecorationLine: 'underline', color: '#FA321A', fontFamily:'Inter_400Regular'  }}>Deixe-o aqui</Text>
+              <Text style={{ fontSize: 14, textDecorationLine: 'underline', color: '#FA321A', fontFamily:'Inter_400Regular', textAlign: 'center'  }}>Deixe-o aqui</Text>
             </TouchableOpacity>
           </View>
 

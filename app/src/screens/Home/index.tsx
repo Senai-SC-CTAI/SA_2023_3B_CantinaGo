@@ -85,7 +85,7 @@ export function Home() {
             <TouchableOpacity onPress={openDatePicker} style={styles.buttonCalendario}>
               <Image 
                 style={styles.calendario}
-                source={require('../../../assets/icons/calendario.svg')}
+                source={require('../../../assets/Icons/Calendario.png')}
               />
             </TouchableOpacity>
             <View>
@@ -106,7 +106,7 @@ export function Home() {
         onPress={back}>
           <Image 
             style={styles.user}
-            source={require('../../../assets/img/User.svg')}
+            source={require('../../../assets/img/User.png')}
           />
         </TouchableOpacity>
       </View>
