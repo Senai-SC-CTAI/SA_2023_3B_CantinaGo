@@ -71,6 +71,24 @@ const styles = StyleSheet.create({
       color:"#FFFFFF",
       fontSize:24,
       fontWeight:"bold"
+    },
+    nomeView:{
+      display:'flex',
+      flexDirection:'row',
+      alignItems:'center',
+      justifyContent:"flex-start",
+      height:60,
+    },
+    imagemPesquisa:{
+      resizeMode:'contain',
+      width:50,
+      height:50,
+      marginLeft:20,
+      marginRight:15,
+    },
+    nomeItem:{
+      fontSize:14,
+      fontFamily:'Inter_700Bold',
     }
   })
 

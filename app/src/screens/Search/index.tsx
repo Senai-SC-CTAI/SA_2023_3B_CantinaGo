@@ -15,10 +15,11 @@ import {
   }  from '@expo-google-fonts/inter';
 
 import styles from './styles'
+import Content from "../../data/Content" //
 
 export function Search() {
 
-
+  const filteredContent = Content.filter(item => item.nome);
   const [comidas, setComidas] = useState([]);
   const [novaComida, setNovaComida] = useState({
     id:"",
@@ -93,13 +94,16 @@ function pesquisa(){
           <TextInput placeholder="" style={{ width: '70%' }}></TextInput>
         </View>
       </View>
-      <FlatList
-      data={comidas}
-      renderItem={({})}
-      style={{position: 'absolute'}}>
-
-
-      </FlatList>
+     <FlatList
+        data={Content}
+        renderItem={({ item}) => (
+          <View style={styles.nomeView}>
+            <Image source={item.foto} style={styles.imagemPesquisa}></Image>
+            <Text style={styles.nomeItem}>{item.nome}</Text>
+          </View>
+        )}
+        keyExtractor={(item, index) => index.toString()}
+      />
       <View style={{ display: 'flex', alignItems: 'center', marginTop: 50 }}>
         <View style={styles.searchItens}>
 
