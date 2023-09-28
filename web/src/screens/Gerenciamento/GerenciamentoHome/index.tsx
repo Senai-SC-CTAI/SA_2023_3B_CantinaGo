@@ -21,6 +21,7 @@ function App() {
             <Link to='/EditarCardapio'>
               <p className='buttonGerenciamento'>Editar Cardápio</p>
             </Link>
+              <p className='buttonGerenciamento'>Mostrar Feedbacks</p>
           </div>
         </section>
 

@@ -37,7 +37,7 @@ export default function SignUp() {
         </div>
         <button className="submit-button">Cadastrar</button>
         <div className="login-link">
-          Já possui conta? <Link to="/login">Faça o login</Link>
+          Já possui conta? <Link to="/">Faça o login</Link>
         </div>
       </div>
     </div>
