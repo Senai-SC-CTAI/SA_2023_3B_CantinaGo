@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     height: 90,
-    top: 20,
+    top: 35,
   },
 
   title: {

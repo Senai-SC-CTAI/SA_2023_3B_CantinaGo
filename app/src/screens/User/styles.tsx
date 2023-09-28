@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     height: 90,
-    top: 0,
+    top: 20,
     alignItems: 'center'
   },
   title:{

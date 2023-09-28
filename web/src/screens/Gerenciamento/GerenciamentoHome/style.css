@@ -1,0 +1,61 @@
+.mainGerenciamento{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    padding: 2vw
+}
+
+.mainGerenciamento section{
+    display: flex;
+    gap: 2vw
+}
+
+.mainGerenciamento article{
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    margin: 1vw
+}
+
+.graphic1Gerenciamento {
+   background-color: var(--L2);
+   width: 60vw;
+   height: 30vw; 
+   border-radius: 10px;
+}
+
+.graphic2Gerenciamento{
+    background-color: var(--B3);
+    width: 50vw;
+    height: 45vw;
+    border-radius: 10px;
+}
+
+.graphic3Gerenciamento{
+    background-color: var(--B3);
+    width: 40vw;
+    height: 35vw;
+    border-radius: 10px;
+}
+
+.buttonsGerenciamento{
+    margin: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 30vw;
+}
+
+.buttonGerenciamento{
+    background-color: var(--L2);
+    color: var(--B1);
+    font-size: 1vw;
+    width: 100%;
+    padding: 1vw;
+    border-radius: 10px;
+    text-align: center;
+    transition: .25s;
+}
+
+.buttonGerenciamento:hover{
+    background-color: var(--L1);
+};
+

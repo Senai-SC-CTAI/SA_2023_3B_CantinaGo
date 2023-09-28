@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       width: '100%',
       height: 90,
-      top: 0,
+      top: 20,
       alignItems: 'center',
     },
     title:{
@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         marginRigth: 173,
       },
     categoriaRows: {
+      marginTop: 60,
       width: '100%'
 
     }

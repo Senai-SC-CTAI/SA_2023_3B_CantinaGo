@@ -4,7 +4,11 @@ import ReactDOM from 'react-dom/client'
 import Login from './screens/Login/index.tsx'
 import Food from './screens/Food/index.tsx'
 import Home from './screens/Home/index.tsx'
-import Gerenciamento from './screens/Gerenciamento/index.tsx'
+import Gerenciamento from './screens/Gerenciamento/GerenciamentoHome/index.tsx'
+import EditarCardapio from './screens/Gerenciamento/EditarCardapio/index.tsx'
+import EditarComida from './screens/Gerenciamento/EditarComida/index.tsx'
+import ListaComidas from './screens/Gerenciamento/ListaComidas/index.tsx'
+import RegistrarComida from './screens/Gerenciamento/RegistrarComida/index.tsx'
 
 import {
   createBrowserRouter,
@@ -28,7 +32,23 @@ const router = createBrowserRouter(
       {
         path: '/gerenciamento',
         element: <Gerenciamento />
-      }
+      },
+      {
+        path: '/editarCardapio',
+        element: <EditarCardapio />
+      },
+      {
+        path: '/editarComida',
+        element: <EditarComida />
+      },
+      {
+        path: '/listaComidas',
+        element: <ListaComidas />
+      },
+      {
+        path: '/registrarComida',
+        element: <RegistrarComida />
+      },
   ]
 )
 
