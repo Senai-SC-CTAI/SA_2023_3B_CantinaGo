@@ -96,6 +96,7 @@ export function SignUp() {
           <TextInput
             style={styles.inputs}
             placeholder="criar senha"
+            secureTextEntry={true}
             placeholderTextColor={"#6A6A6A"}
             value={senhaInput}
             onChangeText={(text) => setSenhaInput(text)}
@@ -114,6 +115,7 @@ export function SignUp() {
           <TextInput
             style={styles.inputs}
             placeholder="  confirmar senha"
+            secureTextEntry={true}
             placeholderTextColor={"#6A6A6A"}
             value={confirmarSenhaInput}
             onChangeText={(text) => setConfirmarSenhaInput(text)}

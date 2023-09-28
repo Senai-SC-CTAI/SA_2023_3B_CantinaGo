@@ -9,7 +9,7 @@ export default function Login ()  {
         <img src={LogoSingUp} className='Logo' />
       </div>
       <div className="div-content">
-        <h2>Cadastrar</h2>
+        <h2>Login</h2>
         
         <div className="input-container">
           <h3 className="input-label">E-mail</h3>
