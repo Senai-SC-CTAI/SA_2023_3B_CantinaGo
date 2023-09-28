@@ -156,82 +156,7 @@
             ></TextInput>
           </View>
         </View>
-<<<<<<< HEAD
-        <View style={styles.viewInput}>
-        <Image
-            source={require("../../../assets/Icons/Senha.svg")}
-            style={{
-              width: 20,
-              height: 20,
-              resizeMode: "contain",
-              marginLeft: 10,
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="criar senha"
-            secureTextEntry={true}
-            placeholderTextColor={"#6A6A6A"}
-            value={senhaInput}
-            onChangeText={(text) => setSenhaInput(text)}
-          ></TextInput>
-        </View>
-        <View style={styles.viewInput}>
-        <Image
-            source={require("../../../assets/Icons/Senha.svg")}
-            style={{
-              width: 20,
-              height: 20,
-              resizeMode: "contain",
-              marginLeft: 10,
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="  confirmar senha"
-            secureTextEntry={true}
-            placeholderTextColor={"#6A6A6A"}
-            value={confirmarSenhaInput}
-            onChangeText={(text) => setConfirmarSenhaInput(text)}
-          ></TextInput>
-        </View>
-        <View style={styles.viewInput}>
-        <Image
-            source={require("../../../assets/Icons/Telefone.svg")}
-            style={{
-              width: 20,
-              height: 20,
-              resizeMode: "contain",
-              marginLeft: 10,
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="  telefone"
-            placeholderTextColor={"#6A6A6A"}
-            value={telefoneInput}
-            onChangeText={(text) => setTelefoneInput(text)}
-          ></TextInput>
-        </View>
-        <View style={styles.viewInput}>
-        <Image
-            source={require("../../../assets/Icons/Turma.svg")}
-            style={{
-              width: 20,
-              height: 20,
-              resizeMode: "contain",
-              marginLeft: 10,
-            }}
-          />
-          <TextInput
-            style={styles.inputs}
-            placeholder="  turma"
-            placeholderTextColor={"#6A6A6A"}
-            value={turmaInput}
-            onChangeText={(text) => setTurmaInput(text)}
-          ></TextInput>
-=======
->>>>>>> 178d08511418ac67d084c5dec7506a2c114a77de
+        
         </View>
         <TouchableOpacity 
         style={styles.button} 
@@ -245,4 +170,4 @@
         </TouchableOpacity>
       </View>
     );
-  }
+          }

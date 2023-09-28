@@ -8,13 +8,8 @@ export default function Login ()  {
       <div className="div-logo-Login">
         <img src={LogoSingUp} className='Logo-Login' />
       </div>
-<<<<<<< HEAD
       <div className="div-content">
         <h2>Login</h2>
-=======
-      <div className="div-content-Login">
-        <h2 className="entrar-text-Login">Entrar</h2>
->>>>>>> 178d08511418ac67d084c5dec7506a2c114a77de
         
         <div className="input-container-Login">
           <h3 className="input-label-Login">E-mail</h3>
