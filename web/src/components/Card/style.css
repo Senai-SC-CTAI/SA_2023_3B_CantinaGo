@@ -1,5 +1,5 @@
 
-.body{
+.bodyCard{
     padding: 1vw;
 }
 
@@ -17,7 +17,7 @@
     overflow: hidden;
 }
 
-.body img{
+.bodyCard img{
     display: block;
     margin: 0 auto;
     margin-bottom: 2vw;
@@ -27,15 +27,12 @@
     grid-row: span 3;
 }
 
-.card h4{
-    font-size: 1.5vw;
+a:-webkit-any-link {
+    cursor: pointer;
     text-decoration: none;
 }
 
-a:-webkit-any-link {
-    color: var(--P1);
-    cursor: pointer;
-    text-decoration: none;
+.card a{
     font-size: 1.5vw;
 }
 
@@ -55,4 +52,8 @@ a:-webkit-any-link {
     color: var(--C2);
     font-size: 1vw;
     text-decoration: none;
+}
+
+.card h4{
+    color: #000000
 }

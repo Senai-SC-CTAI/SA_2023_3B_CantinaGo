@@ -6,103 +6,112 @@
   }
   
   body {
-    background-color: #AAAAAA;
     font-family: Arial, sans-serif;
   }
   
-  .register-container {
+  .register-container-Login {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
   
-  .div-logo {
+  .div-logo-Login {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
   }
   
-  .Logo {
+  .Logo-Login {
     width: 100%;
     position: absolute;
     height: auto;
     right: 0;
   }
   
-  .div-content {
-    margin-left: 0.5%;
-    height: 100vh;
+  .div-content-Login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+ .entrar-text-Login {
+    font-size: 3vw;
+    margin-bottom: 5vh;
+    color: var(--C3)
   }
   
-  .input-container {
-    margin-bottom: 20px;
+  .input-container-Login {
+    margin-bottom: 2vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-   
-
   }
   
-  .input-label {
-    
+  .input-label-Login {
     font-weight: 300;
     margin-bottom: 5px;
+    color: var(--C2);
+    font-weight: 500;
   }
   
-  .input-email {
-    border: 1px solid #cac6c6;
-    border-radius: 5px;
+  .input-email-Login {
+    border-radius: 10px;
     width: 100%;
-    height: 40px;
-    padding: 10px;
+    padding: 1.5vw 1vw;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.2vw;
+    background-color: var(--B3);
+    color: var(--C2);
+    border: hidden;
   }
   
-  
-  .button-container {
-    margin-top: 20px;
+  .esqueceuSenha-Login {
+    color: var(--L1);
+    font-size: 1vw;
+    margin-left: 1vw;
+    margin-top: 5px;
   }
   
-  .submit-button {
+  .submit-button-Login {
     border: none;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 150px;
     height: 40px;
     background-color: #FA321A;
-    color: #FFFFFF;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-   margin: 10px;
+    margin: 10px;
+    color: #fff
   }
   
-  .submit-button:hover {
+  .submit-button-Login:hover {
     background-color: #E61B0D;
   }
   
-  .login-link {
+  .login-link-Login {
     margin-top: 10px;
     font-size: 14px;
   }
+
   
-  .login-link a {
+  .login-link-Login a {
     color: #FA321A;
     text-decoration: none;
     font-weight: bold;
   }
+
+  .input_label-Login{
+    color: #FA321A;
+
+  }
   
-  .login-link a:hover {
+  .login-link-Login a:hover {
     text-decoration: underline;
   }
   

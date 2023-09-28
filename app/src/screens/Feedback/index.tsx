@@ -103,7 +103,7 @@ export function Feedback() {
             </TouchableOpacity>
             <Text style={styles.title}>Feedback</Text>
           </View>
-          <View style={styles.feedBackImage}><Image source={require("../../../assets/img/feedback-img.svg")} style={{ width: 89, height: 82, marginTop: 10 }} />
+          <View style={styles.feedBackImage}><Image source={require("../../../assets/img/feedback-img.png")} style={{ width: 89, height: 82, marginTop: 10 }} />
           </View>
           <View style={styles.inputBox}>
 
@@ -118,7 +118,7 @@ export function Feedback() {
               style={styles.buttom}
               onPress={handleSubmit}
               >
-              <Text style={{ color: "white", fontFamily: "Inter_600SemiBold" }}>Enviar</Text>
+              <Text style={{ color: "white", fontFamily: "Inter_600SemiBold", textAlign: 'center' }}>Enviar</Text>
             </TouchableOpacity>
           </View>
             {/* Modal de Confirmação */}

@@ -5,10 +5,6 @@ import { useNavigation } from '@react-navigation/native'
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 
-
-
-
-
 import {
   useFonts,
   Inter_300Light,
@@ -18,10 +14,7 @@ import {
   Inter_500Medium,
   }  from '@expo-google-fonts/inter';
 
-
 import styles from './styles'
-
-
 
 export function Search() {
 
@@ -50,10 +43,6 @@ export function Search() {
     }
   };
   
-  
-
-
-
   useFonts({
     Inter_400Regular,
     Inter_700Bold,
@@ -64,7 +53,7 @@ export function Search() {
   const navigation = useNavigation();
 
   function back() {
-    navigation.navigate("Home");
+    navigation.goBack();
   }
   function category(category: string) {
     navigation.navigate("Category", { category });
@@ -93,7 +82,7 @@ function pesquisa(){
       <View style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
         <View style={styles.inputSearchHolder}>
           <Image
-              source={require("../../../assets/Icons/BuscarVisi.svg")}
+              source={require("../../../assets/Icons/BuscarVisi.png")}
               style={{
                 width: 25,
                 height: 25,
@@ -106,7 +95,8 @@ function pesquisa(){
       </View>
       <FlatList
       data={comidas}
-      renderItem={({})}>
+      renderItem={({})}
+      style={{position: 'absolute'}}>
 
 
       </FlatList>
@@ -115,7 +105,7 @@ function pesquisa(){
 
         <TouchableOpacity onPress={() => category("Salgados")}>
             <View style={styles.searchIten}>
-              <ImageBackground source={require("../../../assets/img/salgados.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
+              <ImageBackground source={require("../../../assets/img/salgados.png")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
                 <Text style={styles.ItenSearchItens}>Salgados</Text>
               </ImageBackground>
             </View>
@@ -123,7 +113,7 @@ function pesquisa(){
 
           <TouchableOpacity onPress={() => category("Doces")}>
           <View style={styles.searchIten}>
-            <ImageBackground source={require("../../../assets/img/doces.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
+            <ImageBackground source={require("../../../assets/img/doces.png")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
               <Text style={styles.ItenSearchItens}>Doces</Text>
             </ImageBackground>
           </View>
@@ -134,7 +124,7 @@ function pesquisa(){
 
         <TouchableOpacity onPress={() => category("Bebidas")}>
           <View style={styles.searchIten}>
-            <ImageBackground source={require("../../../assets/img/sucos.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
+            <ImageBackground source={require("../../../assets/img/sucos.png")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
               <Text style={styles.ItenSearchItens}>Sucos</Text>
             </ImageBackground>
           </View>
@@ -142,7 +132,7 @@ function pesquisa(){
 
            <TouchableOpacity onPress={() => category("Snacks")}>
           <View style={styles.searchIten}>
-            <ImageBackground source={require("../../../assets/img/snacks.svg")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
+            <ImageBackground source={require("../../../assets/img/snacks.png")} resizeMode="cover" style={styles.coverImage} imageStyle={{ borderRadius: 20 }}>
               <Text style={styles.ItenSearchItens}>Snacks</Text>
             </ImageBackground>
           </View>

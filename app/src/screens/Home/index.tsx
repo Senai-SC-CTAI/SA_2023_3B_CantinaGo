@@ -34,8 +34,7 @@ export function Home() {
   // Estado para controlar a visibilidade do seletor de data.
   const [isDatePickerVisible, setDatePickerVisible] = useState(false);
 
-  // Função para navegar de volta para a tela "User".
-  function back() {
+  function user() {
     navigation.navigate("User");
   }
   
@@ -85,7 +84,7 @@ export function Home() {
             <TouchableOpacity onPress={openDatePicker} style={styles.buttonCalendario}>
               <Image 
                 style={styles.calendario}
-                source={require('../../../assets/icons/calendario.svg')}
+                source={require('../../../assets/Icons/Calendario.png')}
               />
             </TouchableOpacity>
             <View>
@@ -103,10 +102,10 @@ export function Home() {
           right: 30,
           marginLeft: 50,
         }}
-        onPress={back}>
+        onPress={user}>
           <Image 
             style={styles.user}
-            source={require('../../../assets/img/User.svg')}
+            source={require('../../../assets/img/User.png')}
           />
         </TouchableOpacity>
       </View>

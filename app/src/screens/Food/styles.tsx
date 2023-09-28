@@ -20,7 +20,9 @@ const styles = StyleSheet.create({
     fontSize:36,
     color:"#000000",
     marginLeft:20,
-    fontWeight:"bold"
+    fontWeight:"bold",
+    marginRight: 100,
+
   },
 
   card: {
@@ -48,7 +50,8 @@ const styles = StyleSheet.create({
     fontSize:36,
     color:"#000000",
     fontFamily:"Inter_700Bold",
-    marginRight: 20
+    marginRight: 20,
+    
   },
 
   categoriaComida: {

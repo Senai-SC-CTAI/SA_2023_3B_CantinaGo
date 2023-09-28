@@ -18,20 +18,23 @@ function Food() {
   return (
     <>
       <Header/>
-      <main key={selectedContent.id}>
-        <article className='content'>
-          <h1 className='name'>{selectedContent.nome}</h1>
-          <section className='ingredientes'>
-            <p className='ingredientesTitle'>ingredientes</p>
-            <p className='ingredientesText'>{selectedContent.ingredientes}</p>
-          </section>
-          <section>
-            <p>{selectedContent.preco}</p>
-            <p>{selectedContent.caloria}</p>
-          </section>
-          <button>Comprar</button>
+      <main className='mainFood' key={selectedContent.id}>
+        <article className='contentFood'>
+          <h1 className='nameFood'>{selectedContent.nome}</h1>
+          <div className='alinhamentoFood'>
+            <section className='ingredientesFood'>
+              <p className='ingredientesTitleFood'>Ingredientes</p>
+              <p className='ingredientesTextFood'>{selectedContent.ingredientes}</p>
+            </section>
+            <section className='infoFood'>
+              <p>R$ {selectedContent.preco}</p>
+              <p>{selectedContent.caloria} Kcal</p>
+            </section>
+            <button>Comprar</button>
+
+          </div>
         </article>
-        <img src={selectedContent.foto}/>
+        <img className='imageFood' src={selectedContent.foto}/>
       
         
       </main>

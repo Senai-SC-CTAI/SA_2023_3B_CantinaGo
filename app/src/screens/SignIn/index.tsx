@@ -34,7 +34,7 @@ export function SignIn() {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../../../assets/img/logo-cor.svg")}
+        source={require("../../../assets/img/logo-cor.png")}
         style={{
           width: 134,
           height: 134,
@@ -48,7 +48,7 @@ export function SignIn() {
 
         <View style={styles.viewInput}>
           <Image
-            source={require("../../../assets/Icons/Email.svg")}
+            source={require("../../../assets/Icons/Email.png")}
             style={{
               width: 17,
               height: 17,
@@ -65,7 +65,7 @@ export function SignIn() {
 
         <View style={styles.viewInput}>
           <Image
-            source={require("../../../assets/Icons/Senha.svg")}
+            source={require("../../../assets/Icons/Senha.png")}
             style={{
               width: 20,
               height: 20,
