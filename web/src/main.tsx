@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import Login from './screens/Login/index.tsx'
+import SignUp from './screens/SignUp/index.tsx'
 import Food from './screens/Food/index.tsx'
 import Home from './screens/Home/index.tsx'
 import Gerenciamento from './screens/Gerenciamento/GerenciamentoHome/index.tsx'
@@ -23,11 +24,15 @@ const router = createBrowserRouter(
       },
       {
         path: '/food/:id',
-        element: <Food/>
+        element: <Food />
       },
       {
         path: '/home',
-        element: <Home/>
+        element: <Home />
+      },
+      {
+        path: '/signup',
+        element: <SignUp />
       },
       {
         path: '/gerenciamento',

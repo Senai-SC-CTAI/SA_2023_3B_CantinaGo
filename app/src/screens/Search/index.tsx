@@ -5,10 +5,6 @@ import { useNavigation } from '@react-navigation/native'
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 
-
-
-
-
 import {
   useFonts,
   Inter_300Light,
@@ -18,10 +14,7 @@ import {
   Inter_500Medium,
   }  from '@expo-google-fonts/inter';
 
-
 import styles from './styles'
-
-
 
 export function Search() {
 
@@ -50,10 +43,6 @@ export function Search() {
     }
   };
   
-  
-
-
-
   useFonts({
     Inter_400Regular,
     Inter_700Bold,
@@ -64,7 +53,7 @@ export function Search() {
   const navigation = useNavigation();
 
   function back() {
-    navigation.navigate("Home");
+    navigation.goBack();
   }
   function category(category: string) {
     navigation.navigate("Category", { category });

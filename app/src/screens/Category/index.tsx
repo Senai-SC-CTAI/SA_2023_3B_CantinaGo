@@ -22,7 +22,7 @@ export function Category() {
   const navigation = useNavigation();
   
   function back() {
-    navigation.navigate("Search");
+    navigation.goBack();
   }
 
   const categoryFoods = Content.filter(item => item.category === selectedCategory);

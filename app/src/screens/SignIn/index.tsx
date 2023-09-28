@@ -76,8 +76,8 @@ export function SignIn() {
           <TextInput
             style={styles.inputs}
             placeholder="  senha"
+            secureTextEntry={true}
             placeholderTextColor={"#6A6A6A"}
-            secureTextEntry
           ></TextInput>
         </View>
      

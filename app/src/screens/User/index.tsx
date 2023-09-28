@@ -28,7 +28,7 @@ export function User() {
   const navigation = useNavigation();
 
   function back() {
-    navigation.navigate("Home");
+    navigation.goBack();
   }
 
   const [showUser, setShowUser] = useState(true);

@@ -156,6 +156,7 @@
             ></TextInput>
           </View>
         </View>
+        
         </View>
         <TouchableOpacity 
         style={styles.button} 
@@ -169,4 +170,4 @@
         </TouchableOpacity>
       </View>
     );
-  }
+          }

@@ -38,7 +38,7 @@
 
     // Função para voltar à tela "Home" pela flechinha.
     function back() {
-      navigation.navigate('Home');
+      navigation.goBack();
     }
 
     // Obtendo a rota e o ID do alimento.
