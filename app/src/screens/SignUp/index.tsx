@@ -98,6 +98,7 @@
               placeholder="  criar senha"
               placeholderTextColor={"#6A6A6A"}
               value={senhaInput}
+              secureTextEntry
               onChangeText={(text) => setSenhaInput(text)}
             ></TextInput>
           </View>
@@ -115,6 +116,7 @@
               style={styles.inputs}
               placeholder="  confirmar senha"
               placeholderTextColor={"#6A6A6A"}
+              secureTextEntry
               value={confirmarSenhaInput}
               onChangeText={(text) => setConfirmarSenhaInput(text)}
             ></TextInput>

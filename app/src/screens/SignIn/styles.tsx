@@ -67,6 +67,9 @@ import { StyleSheet } from 'react-native';
       inputs: {
         width: '100%'
       },
+      errorText: {
+        color: "red"
+      }
     })
     
     export default styles;

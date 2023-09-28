@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useState, useEffect } from 'react'
+import axios from "axios";
 
 import styles from "./styles";
 
@@ -15,20 +16,20 @@ import {
   }  from '@expo-google-fonts/inter';
 
 export function SignIn() {
+
+  useFonts({
+   Inter_400Regular,
+   Inter_700Bold,
+   Inter_600SemiBold,
+   Inter_500Medium
+})
+
+  const navigation = useNavigation();
+
   const [login, setLogin] = useState('');
   const [emailInput, setEmailInput] = useState('');
   const [senhaInput, setSenhaInput] = useState('');
-
-   useFonts({
-    Inter_400Regular,
-    Inter_700Bold,
-    Inter_600SemiBold,
-    Inter_500Medium
-
-})
-
-
-  const navigation = useNavigation();
+  const [loginError, setLoginError] = useState(null); // Para armazenar mensagens de erro de login
 
   function SignIn() {
     navigation.navigate("Route");
@@ -49,20 +50,25 @@ export function SignIn() {
   useEffect(() => {
     fetchLogin();
   }, []);
+  
   const handleSubmit = async () => {
     try {
-      let novoUsuario = {
+      let entrarUsuario = {
         email: emailInput,
         senha: senhaInput,
       }
-      await axios.post('http://localhost:8090/usuario', entrarUsuario);
-      fetchLogin();
-      setEmailInput('');
-      setSenhaInput('');
-     } catch (error) {
-      console.error('Erro ao criar o cadastro:', error);
-     }
-    };
+      const response = await axios.post('http://localhost:8090/usuario', entrarUsuario); // Altere a rota para a rota de login adequada
+      if (response.data.success) {
+        // Se a API retornar sucesso, permita o acesso à tela inicial
+        navigation.navigate("Route");
+      } else {
+        // Se a API retornar um erro, defina a mensagem de erro para exibição
+        setLoginError(response.data.message);
+      }
+    } catch (error) {
+      console.error('Erro ao fazer login:', error);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -117,6 +123,9 @@ export function SignIn() {
             placeholderTextColor={"#6A6A6A"}
           ></TextInput>
         </View>
+           {loginError && (
+            <Text style={styles.errorText}>{loginError}</Text>
+           )}
      
      <TouchableOpacity style={styles.button} onPress={handleSubmit} >
         <Text style={styles.buttonText}>Entrar</Text>
