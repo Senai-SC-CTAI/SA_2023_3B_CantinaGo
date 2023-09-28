@@ -29,24 +29,21 @@ export function SignIn() {
   const [login, setLogin] = useState('');
   const [emailInput, setEmailInput] = useState('');
   const [senhaInput, setSenhaInput] = useState('');
-  const [loginError, setLoginError] = useState(null); // Para armazenar mensagens de erro de login
+  const [loginError, setLoginError] = useState( ); // Para armazenar mensagens de erro de login
 
-  function SignIn() {
-    navigation.navigate("Route");
-  }
-  function SignUp() {
+   function SignUp() {
     navigation.navigate("SignUp");
   }
 
   const fetchLogin = async () =>{
     try{
-      const response = await axios.get('http://localhost:8090/usuario');
+      const response = await axios.get('http://localhost:8090/login');
       setLogin(response.data);
     }catch (error) {
       console.error('Erro ao buscar dados:', error);
     }
-
   };
+
   useEffect(() => {
     fetchLogin();
   }, []);
@@ -57,7 +54,8 @@ export function SignIn() {
         email: emailInput,
         senha: senhaInput,
       }
-      const response = await axios.post('http://localhost:8090/usuario', entrarUsuario); // Altere a rota para a rota de login adequada
+      
+      const response = await axios.post('http://localhost:8090/login', entrarUsuario); // Altere a rota para a rota de login adequada
       if (response.data.success) {
         // Se a API retornar sucesso, permita o acesso à tela inicial
         navigation.navigate("Route");
