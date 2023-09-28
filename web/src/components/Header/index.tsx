@@ -26,7 +26,7 @@ function Header() {
                 <a href="#">Home</a>
               </li>
               <li>
-                <a href="#">Buscar</a>
+                <a href="/Buscar">Buscar</a>
               </li>
               <li>
                 <a href="#">Sobre</a>
