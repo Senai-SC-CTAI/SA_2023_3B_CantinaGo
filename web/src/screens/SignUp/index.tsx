@@ -1,51 +1,51 @@
 import LogoSingUp from '../../assets/img/singuplogo.svg';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 import { Link } from 'react-router-dom';
 import './style.css';
 
 export default function SignUp() {
  
-  const [, setCadastro] = useState('');
-  const [emailInput, setEmailInput] = useState('');
-  const [senhaInput, setSenhaInput] = useState('');
-  const [confirmarSenhaInput, setConfirmarSenhaInput] = useState('');
-  const [telefoneInput, setTelefoneInput] = useState('');
-  const [turmaInput, setTurmaInput] = useState('');
-  const fetchCadastro = async () => {
-    try {
-      const response = await axios.get('http://localhost:8090/usuario');
-      setCadastro(response.data);
-    } catch (error) {
-      console.error('Erro ao buscar dados:', error);
-    }
-  };
+  // const [, setCadastro] = useState('');
+  // const [emailInput, setEmailInput] = useState('');
+  // const [senhaInput, setSenhaInput] = useState('');
+  // const [confirmarSenhaInput, setConfirmarSenhaInput] = useState('');
+  // const [telefoneInput, setTelefoneInput] = useState('');
+  // const [turmaInput, setTurmaInput] = useState('');
+  // const fetchCadastro = async () => {
+  //   try {
+  //     const response = await axios.get('http://localhost:8090/usuario');
+  //     setCadastro(response.data);
+  //   } catch (error) {
+  //     console.error('Erro ao buscar dados:', error);
+  //   }
+  // };
  
-  useEffect(() => {
-    fetchCadastro();
-  }, []);
+  // useEffect(() => {
+  //   fetchCadastro();
+  // }, []);
 
-  const handleSubmit = async () => {
-    try {
-      let novoUsuario = {
-        email: emailInput,
-        senha: senhaInput,
-        confirmarSenha: confirmarSenhaInput,
-        telefone: telefoneInput,
-        turma: turmaInput,
-      }
-      await axios.post('http://localhost:8090/usuario', novoUsuario);
-      fetchCadastro();
-      setEmailInput('');
-      setSenhaInput('');
-      setConfirmarSenhaInput('');
-      setTelefoneInput('');
-      setTurmaInput('');
-    } catch (error) {
-      console.error('Erro ao criar o cadastro:', error);
-    }
-  };
+  // const handleSubmit = async () => {
+  //   try {
+  //     let novoUsuario = {
+  //       email: emailInput,
+  //       senha: senhaInput,
+  //       confirmarSenha: confirmarSenhaInput,
+  //       telefone: telefoneInput,
+  //       turma: turmaInput,
+  //     }
+  //     await axios.post('http://localhost:8090/usuario', novoUsuario);
+  //     fetchCadastro();
+  //     setEmailInput('');
+  //     setSenhaInput('');
+  //     setConfirmarSenhaInput('');
+  //     setTelefoneInput('');
+  //     setTurmaInput('');
+  //   } catch (error) {
+  //     console.error('Erro ao criar o cadastro:', error);
+  //   }
+  // };
 
   return (
     

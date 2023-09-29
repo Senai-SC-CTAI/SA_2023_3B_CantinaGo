@@ -7,7 +7,7 @@ import Card from '../../components/Card'
 function App() {
 
   return (
-    <><section>
+    <><section className='mainSearch'>
       <Header/>
       <div className="searchContainer">
         <h3>Buscar</h3>

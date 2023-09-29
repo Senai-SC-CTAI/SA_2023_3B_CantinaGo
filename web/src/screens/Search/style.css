@@ -31,7 +31,7 @@ section{
     box-shadow: 0px 5px 5px #6a6a6aad;
 }
 
-h1{
+.mainSearch h1{
     font-size: 48px;
     font-weight: 600;
     margin-top: 2rem;
