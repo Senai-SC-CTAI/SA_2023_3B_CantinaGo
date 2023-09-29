@@ -74,17 +74,17 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
 
-  tituloIgredientes: {
+  tituloIngredientes: {
     color: '#5B5B5B',
     fontWeight: 'bold'
   },
 
-  igredientes: {
+  ingredientes: {
     marginLeft: 5,
     marginBottom: 20,
   },
 
-  textoIgredientes: {
+  textoIngredientes: {
     color: '#5B5B5B',
     fontFamily:"Inter_400Regular",
     fontSize:12,

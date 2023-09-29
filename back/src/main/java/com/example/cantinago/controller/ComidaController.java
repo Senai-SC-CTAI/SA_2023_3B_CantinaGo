@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
-@CrossOrigin(origins = "http://localhost:5173")//Endereço do front
+@CrossOrigin(origins = {"http://127.0.0.1:5173","http://localhost:19006"}) // Endereço do front app
 @RestController
 @RequestMapping("/comidas")
 
@@ -40,7 +40,8 @@ public class ComidaController {
             comida.setNome(comidaAtualizado.getNome());
             comida.setCalorias(comidaAtualizado.getCalorias());
             comida.setPreco(comidaAtualizado.getPreco());
-
+            comida.setIngredientes(comidaAtualizado.getIngredientes());
+            
             Comida comidaAtualizadoBD = comidaRepository.save(comida);
             return ResponseEntity.ok(comidaAtualizadoBD);
         } else {

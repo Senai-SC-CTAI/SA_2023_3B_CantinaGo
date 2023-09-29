@@ -17,6 +17,7 @@ public class Comida {
   private Integer calorias;
   private Double preco;
   private String categoria;
+  private String ingredientes;
 
   @Column(name = "Comida_TIPO")
   private Integer tipo;
@@ -59,6 +60,14 @@ public class Comida {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+    
+    public String getIgredientes() {
+        return ingredientes;
+    }
+    
+     public void setIgredientes(String igredientes) {
+        this.ingredientes = igredientes;
     }
 
     public Integer getTipo() {

@@ -98,11 +98,11 @@
           <Text style={styles.calorias}>{selectedFood.caloria} kcal</Text>
 
           {/* Título para a seção de ingredientes */}
-          <Text style={styles.tituloIgredientes}>Ingredientes</Text>
+          <Text style={styles.tituloIngredientes}>Ingredientes</Text>
           {/* Exibindo a lista de ingredientes */}
-          <View style={styles.igredientes}>
+          <View style={styles.ingredientes}>
             {selectedFood.ingredientes.map((ingrediente, index) => (
-              <Text key={index} style={styles.textoIgredientes}>
+              <Text key={index} style={styles.textoIngredientes}>
                 • {ingrediente}
               </Text>
             ))}
