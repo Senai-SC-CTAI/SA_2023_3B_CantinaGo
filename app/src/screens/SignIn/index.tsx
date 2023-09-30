@@ -1,8 +1,6 @@
 import React from "react";
 import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { useState, useEffect } from 'react'
-import axios from "axios";
 
 import styles from "./styles";
 
@@ -16,57 +14,22 @@ import {
   }  from '@expo-google-fonts/inter';
 
 export function SignIn() {
+   useFonts({
+    Inter_400Regular,
+    Inter_700Bold,
+    Inter_600SemiBold,
+    Inter_500Medium
 
-  useFonts({
-   Inter_400Regular,
-   Inter_700Bold,
-   Inter_600SemiBold,
-   Inter_500Medium
 })
 
   const navigation = useNavigation();
 
-  const [login, setLogin] = useState('');
-  const [emailInput, setEmailInput] = useState('');
-  const [senhaInput, setSenhaInput] = useState('');
-  const [loginError, setLoginError] = useState( ); // Para armazenar mensagens de erro de login
-
-   function SignUp() {
+  function SignIn() {
+    navigation.navigate("Route");
+  }
+  function SignUp() {
     navigation.navigate("SignUp");
   }
-
-  const fetchLogin = async () =>{
-    try{
-      const response = await axios.get('http://localhost:8090/login');
-      setLogin(response.data);
-    }catch (error) {
-      console.error('Erro ao buscar dados:', error);
-    }
-  };
-
-  useEffect(() => {
-    fetchLogin();
-  }, []);
-  
-  const handleSubmit = async () => {
-    try {
-      let entrarUsuario = {
-        email: emailInput,
-        senha: senhaInput,
-      }
-      
-      const response = await axios.post('http://localhost:8090/login', entrarUsuario); // Altere a rota para a rota de login adequada
-      if (response.data.success) {
-        // Se a API retornar sucesso, permita o acesso à tela inicial
-        navigation.navigate("Route");
-      } else {
-        // Se a API retornar um erro, defina a mensagem de erro para exibição
-        setLoginError(response.data.message);
-      }
-    } catch (error) {
-      console.error('Erro ao fazer login:', error);
-    }
-  };
 
   return (
     <View style={styles.container}>
@@ -97,8 +60,6 @@ export function SignIn() {
             style={styles.inputs}
             placeholder="  seuemail@estudante.sesisenai.org.br"
             placeholderTextColor={"#6A6A6A"}
-            value={emailInput}
-            onChangeText={(text)=> setEmailInput(text)}
           ></TextInput>
         </View>
 
@@ -115,17 +76,12 @@ export function SignIn() {
           <TextInput
             style={styles.inputs}
             placeholder="  senha"
-            value={senhaInput}
-            onChangeText={(text)=> setSenhaInput(text)}
-            secureTextEntry={true}
             placeholderTextColor={"#6A6A6A"}
+            secureTextEntry
           ></TextInput>
         </View>
-           {loginError && (
-            <Text style={styles.errorText}>{loginError}</Text>
-           )}
      
-     <TouchableOpacity style={styles.button} onPress={handleSubmit} >
+     <TouchableOpacity style={styles.button} onPress={SignIn}>
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
       <Text style={styles.texty}>Não tem login?</Text>
