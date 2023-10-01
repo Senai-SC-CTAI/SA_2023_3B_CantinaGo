@@ -13,18 +13,18 @@
       
 <h4> Gerenciar - Gerente </h4>
 
-- [ ] RF7: O gerente pode adicionar, editar ou remover um produto.
-- [ ] RF9: O gerente pode gerar relatórios de vendas e consumo de alimentos.
-- [ ] RF10: O gerente pode adicionar, editar ou remover produtos do cardápio da cantina.
-- [ ] RF11: O gerente pode adicionar, editar ou remover produtos de acordo com a data.
-- [ ] RF12: O gerente pode adicionar, editar ou remover um funcionário.
+- [ ] RF7: O gerente pode gerar relatórios de vendas e consumo de alimentos.
+- [ ] RF8: O gerente pode adicionar, editar ou remover um produto.
+- [ ] RF9: O gerente pode adicionar, editar ou remover produtos do cardápio da cantina.
+- [ ] RF10: O gerente pode adicionar, editar ou remover produtos de acordo com a data.
+- [ ] RF11: O gerente pode adicionar, editar ou remover um funcionário.
 
 <h4> Gerenciar - Funcionário </h4>
 
-- [ ] RF13: O funcionário pode adicionar, editar ou remover um produto.
-- [ ] RF14: O funcionário pode gerar relatórios de vendas e consumo de alimentos.
-- [ ] RF15: O funcionário pode adicionar, editar ou remover produtos do cardápio da cantina.
-- [ ] RF16: O funcionário pode adicionar, editar ou remover produtos de acordo com a data.
+- [ ] RF12: O funcionário pode adicionar, editar ou remover um produto.
+- [ ] RF13: O funcionário pode gerar relatórios de vendas e consumo de alimentos.
+- [ ] RF14: O funcionário pode adicionar, editar ou remover produtos do cardápio da cantina.
+- [ ] RF15: O funcionário pode adicionar, editar ou remover produtos de acordo com a data.
 
 -----
 
