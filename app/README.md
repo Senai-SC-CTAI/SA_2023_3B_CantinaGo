@@ -12,16 +12,28 @@ O CantinaGo é um aplicativo desenvolvido em React Native que simplifica a exper
 - Visualização de cardápio do dia da cantina.
 - Pesquisa de produtos por categoria ou palavras-chave.
 - Avaliação ou feedback no cardápio.
+ 
+----------------------------------------------------------------
+### Como Contribuir
 
-### Como Usar
+1. Faça um fork do repositório [CantinaGo](https://github.com/Senai-SC-CTAI/SA_2023_3B_CantinaGo) para a sua própria conta GitHub.
 
-- ```git clone https://github.com/Senai-SC-CTAI/SA_2023_3B_CantinaGo```
-- ```cd SA_2023_3B_CantinaGo/app```
-- ```npm i && npx expo start```
+2. Clone o repositório forkado para o seu ambiente de desenvolvimento local:
 
-### Contribuição
+   ```shell
+   git clone https://github.com/seu-username/SA_2023_3B_CantinaGo.git
 
-- MIT License
+3. Crie um novo branch para a sua contribuição:
+   ```shell
+   git checkout -b minha-contribuicao
+
+4. Faça um push das suas alterações para o seu repositório GitHub:
+   ```shell
+   git push origin minha-contribuicao
+
+5. Abra uma solicitação de pull (pull request) para o repositório original.
+
+6. Aguarde a revisão da sua contribuição. Estaremos atentos às solicitações de pull e forneceremos feedback conforme necessário.
 
 ## Atualizações e Versões Futuras
 
