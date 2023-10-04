@@ -9,7 +9,13 @@
     font-family: Arial, sans-serif;
   }
   
-  .register-container-Login {
+  .title{
+    color: #545454;
+    font-size: 35px;
+    margin-bottom: 60px;
+  }
+
+  .container-Login {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -28,7 +34,7 @@
     right: 0;
   }
   
-  .div-content-Login {
+  .div-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +49,9 @@
   
   .input-container-Login {
     margin-bottom: 2vh;
+    min-width: 500px;
     display: flex;
+    font-size: 24px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -51,11 +59,12 @@
   .input-label-Login {
     font-weight: 300;
     margin-bottom: 5px;
+    font-size: 15px;
     color: var(--C2);
     font-weight: 500;
   }
   
-  .input-email-Login {
+  .input-Login {
     border-radius: 10px;
     width: 100%;
     padding: 1.5vw 1vw;
@@ -73,9 +82,11 @@
     margin-top: 5px;
   }
   
-  .submit-button-Login {
+  .submit-button {
     border: none;
     border-radius: 5px;
+    min-width: 500px;
+    min-height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,9 +105,10 @@
     background-color: #E61B0D;
   }
   
-  .login-link-Login {
+  .login-link {
     margin-top: 10px;
     font-size: 14px;
+    color: #7A7A7A;
   }
 
   

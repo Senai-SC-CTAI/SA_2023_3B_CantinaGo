@@ -1,0 +1,17 @@
+.btn{
+    border-width: 0px;
+}
+.buttonGerenciamento{
+    background-color: var(--L2);
+    color: var(--B1);
+    font-size: 1vw;
+    width: 100%;
+    padding: 1vw;
+    border-radius: 10px;
+    text-align: center;
+    transition: .25s;
+}
+
+.buttonGerenciamento:hover{
+    background-color: var(--L1);
+};

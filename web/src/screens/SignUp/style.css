@@ -10,7 +10,7 @@
     font-family: Arial, sans-serif;
   }
   
-  .register-container {
+  .container-Register {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -38,34 +38,39 @@
     align-items: center;
   }
   
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
   .input-container {
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
+    min-width: 500px;
     display: flex;
+    font-size: 24px;
     flex-direction: column;
     align-items: flex-start;
-   
-
+  }
+  .input-other{
+    margin-bottom: 2vh;
+    display: flex;
+    font-size: 24px;
+    flex-direction: column;
+    align-items: flex-start;
   }
   
   .input-label {
-    
     font-weight: 300;
     margin-bottom: 5px;
+    font-size: 15px;
+    color: var(--C2);
+    font-weight: 500;
   }
   
-  .input-email {
-    border: 1px solid #cac6c6;
-    border-radius: 5px;
+  .input-Register {
+    border-radius: 10px;
     width: 100%;
-    height: 40px;
-    padding: 10px;
+    padding: 1.5vw 1vw;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.2vw;
+    background-color: var(--B3);
+    color: var(--C2);
+    border: hidden;
   }
   
   
@@ -94,6 +99,9 @@
   .login-link {
     margin-top: 10px;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .login-link a {
@@ -105,4 +113,15 @@
   .login-link a:hover {
     text-decoration: underline;
   }
+
+  .main-inputs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin-bottom: 2vh;
+    align-items: center;
+    min-width: 500px;
+    gap: 10px;
+  }
+ 
   

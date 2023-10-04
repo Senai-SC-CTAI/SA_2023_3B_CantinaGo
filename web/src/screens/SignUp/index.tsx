@@ -7,7 +7,7 @@ import './style.css';
 
 export default function SignUp() {
  
-  const [, setCadastro] = useState('');
+  const [cadastro, setCadastro] = useState('');
   const [emailInput, setEmailInput] = useState('');
   const [senhaInput, setSenhaInput] = useState('');
   const [confirmarSenhaInput, setConfirmarSenhaInput] = useState('');
@@ -49,40 +49,41 @@ export default function SignUp() {
 
   return (
     
-    <div className="register-container">
+    <div className="container-Register">
       <div className="div-logo">
         <img src={LogoSingUp} className='Logo' alt="Logo" />
       </div>
       <div className="div-content">
-        <h2>Cadastrar</h2>
+        <h2 className='title'>Cadastrar</h2>
         
         <div className="input-container">
           <label htmlFor="email" className="input-label">E-mail</label>
-          <input id="email" className='input-email' type="email" placeholder="seuemail@estudante.sesisenai.org.br" value={emailInput} onChange={(e) => setEmailInput(e.target.value)}  />
+          <input id="email" className='input-Register' type="email" placeholder="seuemail@estudante.sesisenai.org.br" value={emailInput} onChange={(e) => setEmailInput(e.target.value)}  />
         </div>
-        <div className="input-left">
-          <div className="input-senha">
+        <div className="main-inputs">
+          <div className="input-other">
             <label htmlFor="senha" className="input-label">Senha</label>
-            <input id="senha" className='input-email' type="password" placeholder="senha" value={senhaInput} onChange={(e) => setSenhaInput(e.target.value)} />
+            <input id="senha" className='input-Register' type="password" placeholder="senha" value={senhaInput} onChange={(e) => setSenhaInput(e.target.value)} />
           </div>
-          <div className="input-senha">
+          <div className="input-other">
             <label htmlFor="confirmar-senha" className="input-label">Confirmar Senha</label>
-            <input id="confirmar-senha" className='input-email' type="password" placeholder="senha" value={confirmarSenhaInput} onChange={(e) => setConfirmarSenhaInput(e.target.value)} />
-          </div>
+            <input id="confirmar-senha" className='input-Register' type="password" placeholder="senha" value={confirmarSenhaInput} onChange={(e) => setConfirmarSenhaInput(e.target.value)} />
         </div>
-        <div className="input-right">
-          <div className="input-telefone">
+          <div className="input-other">
             <label htmlFor="telefone" className="input-label">Telefone</label>
-            <input id="telefone" className='input-email' type="number" placeholder="48 99999-9999" value={telefoneInput} onChange={(e) => setTelefoneInput(e.target.value)} />
+            <input id="telefone" className='input-Register' type="number" placeholder="48 99999-9999" value={telefoneInput} onChange={(e) => setTelefoneInput(e.target.value)} />
           </div>
-          <div className="input-turma">
+          <div className="input-other">
             <label htmlFor="turma" className="input-label">Turma</label>
-            <input id="turma" className='input-email' type="text" placeholder="XX" value={turmaInput}  onChange={(e) => setTurmaInput(e.target.value)} />
-          </div>
+            <input id="turma" className='input-Register' type="text" placeholder="XX" value={turmaInput}  onChange={(e) => setTurmaInput(e.target.value)} />
+        </div>
         </div>
         <button onClick={handleSubmit} className="submit-button">Cadastrar</button>
         <div className="login-link">
-          Já possui conta? <Link to="/">Faça o login</Link>
+          <p>
+          Já possui conta?
+          </p>
+           <Link to="/">Faça o login</Link>
         </div>
       </div>
     </div>

@@ -2,40 +2,40 @@ import LogoSingUp from '../../assets/img/singuplogo.svg';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-
-
-
-export default function Login ()  {
+export default function Login() {
   return (
-    <div className="register-container-Login">
+    <div className="container-Login">
       <div className="div-logo-Login">
         <img src={LogoSingUp} className='Logo-Login' />
       </div>
       <div className="div-content">
-        <h2>Login</h2>
-        
+        <h2 className="title">Entrar</h2>
+
         <div className="input-container-Login">
           <h3 className="input-label-Login">E-mail</h3>
-          <input className='input-email-Login' type="email" placeholder="seuemail@estudante.sesisenai.org.br" />
+          <input className='input-Login' type="email" placeholder="seuemail@estudante.sesisenai.org.br" />
         </div>
         <div className="input-container-Login">
-          <div className="input-senha-Login">
-            <h3 className="input-label-Login">Senha</h3>
-            <input className='input-email-Login' type="password" placeholder="senha" />
-          </div>
+          {/* <div className="input-senha-Login"> */}
+          <h3 className="input-label-Login">Senha</h3>
+          <input className='input-Login' type="password" placeholder="senha" />
+          {/* </div> */}
           <div className='esqueceuSenha-Login'>
             <Link to="/home" className='input_label-Login'>Esqueceu a senha?</Link>
           </div>
-        </div> 
-        
-        <Link to="/home" className="submit-button-Login">Entrar</Link>
+        </div>
+
+        <Link to="/home" className="submit-button">Entrar</Link>
         <div className="login-link-Login">
-          Não possui conta? <Link to="/SignUp">Faça o Cadastro</Link>
+          Não possui conta?
+          <div>
+            <Link to="/SignUp">Faça o Cadastro</Link>
+          </div>
         </div>
-        
-        </div>
+
       </div>
-  
+    </div>
+
   );
 };
 
