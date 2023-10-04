@@ -58,4 +58,6 @@
 .buttonGerenciamento:hover{
     background-color: var(--L1);
 };
-
+.btn{
+    border-width: 0px;
+}

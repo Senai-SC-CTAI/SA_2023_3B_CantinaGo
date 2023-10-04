@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
-@CrossOrigin(origins = "http://localhost:19006")//Endereço do front
+@CrossOrigin(origins = {"http://localhost:5173","http://localhost:19006"}) // Endereço do front app e web
 @RestController
 @RequestMapping("/feedback")
 
