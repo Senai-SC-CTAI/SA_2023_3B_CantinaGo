@@ -5,7 +5,7 @@ function Footer() {
   return (
     <>
       <footer>
-        <p>Todos direitos reservados a CantinaGo 2023</p>
+        <p>Todos direitos reservados a CantinaGo 2023®</p>
       </footer>
     </>
   )
