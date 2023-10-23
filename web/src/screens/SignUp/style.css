@@ -32,6 +32,7 @@
   .div-content {
     margin-left: 0.5%;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,11 +41,12 @@
   
   .input-container {
     margin-bottom: 2vh;
-    min-width: 500px;
+    width: 60%;
     display: flex;
     font-size: 24px;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
   }
   .input-other{
     margin-bottom: 2vh;
@@ -65,9 +67,9 @@
   .input-Register {
     border-radius: 10px;
     width: 100%;
-    padding: 1.5vw 1vw;
+    padding: 1rem 2rem;
     font-weight: 400;
-    font-size: 1.2vw;
+    font-size: 1rem;
     background-color: var(--B3);
     color: var(--C2);
     border: hidden;
@@ -81,7 +83,7 @@
   .submit-button {
     border: none;
     border-radius: 5px;
-    width: 150px;
+    width: 60%;
     height: 40px;
     background-color: #FA321A;
     color: #FFFFFF;
@@ -117,10 +119,11 @@
   .main-inputs{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2;
     justify-content: center;
-    margin-bottom: 2vh;
     align-items: center;
-    min-width: 500px;
+    margin-bottom: 2vh;
+    width: 60%;
     gap: 10px;
   }
  

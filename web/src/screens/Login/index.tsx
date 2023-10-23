@@ -21,7 +21,7 @@ export default function Login() {
           <input className='input-Login' type="password" placeholder="senha" />
           {/* </div> */}
           <div className='esqueceuSenha-Login'>
-            <Link to="/home" className='input_label-Login'>Esqueceu a senha?</Link>
+            <Link to="/home" className='input_label-Login'>Esqueceu a senha? Clique aqui</Link>
           </div>
         </div>
 

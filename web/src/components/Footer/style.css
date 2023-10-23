@@ -3,9 +3,17 @@ footer{
     width: 100%;
     padding: 2vw 1vw;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 footer p{
     color: var(--B1);
-    font-size: 1.2vw;
+    font-size: 1rem;
+}
+.logoFoter{
+    max-width: 45px;
 }

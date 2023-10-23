@@ -35,14 +35,16 @@
     text-decoration: none;
     color: #545454;
     transition: .5s;
-    font-style: italic;
-    font-size: 1.1rem;
+    /* font-style: italic; */
+    font-size: 1rem;
+    font-weight: 500;
   }
 
-  /* .nav .active{
+ .nav .active{
     transition: .5s;
+    color: var(--L2);
   }
-  
+   /* 
   .nav .active:hover::after {
     content: '';
     display: block;

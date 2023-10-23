@@ -1,22 +1,15 @@
 import './style.css'
 import '../../components/StyleTemplate/style.css'
-
 import Header from '../../components/Header/index'
 import Footer from '../../components/Footer/index'
 import ScrollCategory  from '../../components/ScrollCategory';
-
-
-
 import Content from '../../components/Data/content'
-
 import Calendar from '../../assets/icons/Calendario.svg'
 import FoodsImage from '../../assets/img/ImageHeader.png'
-
 
 const uniqueCategories = Array.from(new Set(Content.map((item) => item.category)));
 
 function App() {
-
 
   return (
     <>

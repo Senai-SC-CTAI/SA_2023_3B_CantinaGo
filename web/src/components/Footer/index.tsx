@@ -5,7 +5,10 @@ function Footer() {
   return (
     <>
       <footer>
-        <p>Todos direitos reservados a CantinaGo 2023®</p>
+        <p>CantinaGo 2023® 
+       </p>   
+        <img src="./favicon.png" className='logoFoter' />
+        <p>Todos direitos reservados</p>
       </footer>
     </>
   )

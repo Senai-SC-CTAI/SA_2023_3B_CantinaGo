@@ -1,10 +1,9 @@
-
-
 import './style.css'
 import '../StyleTemplate/style.css'
 import logo from '../../assets/icons/Logo.svg'
 import user from '../../assets/icons/User.svg'
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   const [activeItem, setActiveItem] = useState('Home');
@@ -17,22 +16,24 @@ function Header() {
     <>
       <header className="header">
         <div className="headerContent1">
-          <div className="logo" onClick={() => handleItemClick('Home')}>
-            <img src={logo}/>
-          </div>
+          <NavLink to="/home">
+            <div className="logo" onClick={() => handleItemClick('Home')}>
+              <img src={logo} />
+            </div>
+          </NavLink>
           <nav className="nav">
             <ul>
               <li>
-                <a href="#">Home</a>
+                <NavLink to="/home">Home</NavLink>
               </li>
               <li>
-                <a href="/Buscar">Buscar</a>
+                <NavLink to="/Buscar">Buscar</NavLink>
               </li>
               <li>
-                <a href="#">Sobre</a>
+                <NavLink to="/sobre">Sobre</NavLink>
               </li>
               <li>
-                <a href="/gerenciamento">Gerenciamento</a>
+                <NavLink to="/gerenciamento">Gerenciamento</NavLink>
               </li>
             </ul>
           </nav>
@@ -40,7 +41,7 @@ function Header() {
         <div className="user">
           <img src={user} alt="User" />
         </div>
-    </header>
+      </header>
     </>
   )
 }
