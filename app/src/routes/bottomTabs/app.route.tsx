@@ -45,7 +45,7 @@ export function TabRoutes() {
           paddingBottom: 20,
         },
         tabBarIconStyle: {
-          marginBottom: -13,
+          marginBottom: -10,
         },
       }}
     >
