@@ -1,8 +1,9 @@
 import * as React from 'react';
+import styles from './styles';
 import { useState } from 'react';
 import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons'
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 import {
   useFonts,
@@ -12,31 +13,34 @@ import {
   Inter_700Bold
   }  from '@expo-google-fonts/inter';
 
-
 import { Feedback } from '../Feedback';
-import styles from './styles';
-
 
 
 export function User() {
-
+  
   useFonts({
     Inter_400Regular,
     Inter_700Bold,
 })
 
-  const navigation = useNavigation();
+// navegação 
+  interface NavigationType {
+    goBack: any;
+    navigate: (routeName: string) => void;
+  }
+
+const navigation: NavigationType = useNavigation();
 
   function back() {
     navigation.goBack();
   }
-
-  const [showUser, setShowUser] = useState(true);
-  const [showFeedback, setShowFeedback] = useState(false);
-
+  
   function Logout() {
     navigation.navigate('SignIn')
   }
+  
+  const [showUser, setShowUser] = useState(true);
+  const [showFeedback, setShowFeedback] = useState(false);
 
   return (
     <View style={styles.container}>
