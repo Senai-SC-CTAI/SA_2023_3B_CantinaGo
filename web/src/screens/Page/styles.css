@@ -1,0 +1,100 @@
+.pageContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+    padding: 9rem 10rem
+}
+
+.pageTitle {
+    font-size: 5rem;
+    color: #444;
+    font-weight: 700
+}
+
+#orange {
+    color: #FA321A
+}
+
+.pageContainer img {
+    width: 25rem
+}
+
+.contentPage {
+    height: 100vh;
+    background-color: #FE8063
+}
+
+.btnSignIn {
+    background-color: #FD6A48;
+    padding: 0.3em 1rem;
+    border-radius: 5px;
+    color: #FFFF;
+}
+
+.loginSec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem
+}
+
+.loginSec p {
+    font-weight: bold;
+}
+
+.reg {
+    color: #545454;
+}
+
+.contentPage {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 25rem;
+}
+
+.contentPage h1 {
+    font-size: 4rem;
+    color: #FFF;
+    font-weight: 800;
+    font-family: Inter;
+}
+
+.contentPage p {
+    color: #ffffffb5;
+    font-family: Inter;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;    
+}
+
+.contentPage span {
+    color: #FA321A;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+     
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    max-width: 30%;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+}
+#circleSvg{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}

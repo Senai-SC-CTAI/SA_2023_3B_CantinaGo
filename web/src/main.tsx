@@ -18,6 +18,7 @@ import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
+import { Page } from './screens/Page/index.tsx'
 
 const router = createBrowserRouter(
   [
@@ -64,6 +65,10 @@ const router = createBrowserRouter(
       {
         path: '/sobre',
         element: <About/>
+      },
+      {
+        path: '/page',
+        element: <Page/>
       },
   ]
 )
