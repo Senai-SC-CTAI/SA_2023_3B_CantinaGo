@@ -11,8 +11,8 @@ export function Page() {
         <>
             <HeaderPage />
             <div className="pageContainer">
-                <h1 className='pageTitle'>Solução de gerenciamento
-                    de <span id='orange'>cardápio</span> da cantina.</h1>
+                <h1 className='pageTitle'>Chegou a hora de otimizar 
+                  o   <span id='orange'>cardápio</span> da cantina.</h1>
                 <img src={logo} />
             </div>
             <WaveSvg />
