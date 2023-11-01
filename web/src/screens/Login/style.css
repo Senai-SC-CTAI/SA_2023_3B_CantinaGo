@@ -85,13 +85,13 @@
   .submit-button {
     border: none;
     border-radius: 5px;
-    min-width: 500px;
+    /* min-width: 500px; */
     min-height: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
-    height: 40px;
+    width: 250px;
+    height: 50px;
     background-color: #FA321A;
     font-weight: bold;
     font-size: 16px;
