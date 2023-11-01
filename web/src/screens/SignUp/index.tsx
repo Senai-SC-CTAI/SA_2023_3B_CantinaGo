@@ -83,7 +83,7 @@ export default function SignUp() {
           <p>
           Já possui conta?
           </p>
-           <Link to="/">Faça o login</Link>
+           <Link to="/login">Faça o login</Link>
         </div>
       </div>
     </div>

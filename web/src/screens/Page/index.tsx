@@ -22,7 +22,7 @@ export function Page() {
                     <p>e tenha todo cardápio em suas mãos.</p>
                     <span>Adquira em</span>
                 </div>
-                <img src={mobileapp} />
+                <img src={mobileapp} className='phone' />
                 <img src={circlesvg} id='circleSvg' />
             </div>
         </>
@@ -61,7 +61,7 @@ function HeaderPage() {
                     </nav>
                 </div>
                 <div className="loginSec">
-                    <NavLink to="/">
+                    <NavLink to="/login">
                         <p className='btnSignIn'>
                             Entrar
                         </p>
