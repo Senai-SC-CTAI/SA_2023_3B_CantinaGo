@@ -8,12 +8,13 @@ function App() {
   return (
     <>
       <Header />
-  .
+  .<h1>Edição do cardápio</h1>  
       <main className='mainGerenciamento'>
         <section>
           <article className='graphic1Gerenciamento'>
 
           </article>
+          
           <div className='buttonsGerenciamento'>
             <Link to='/ListaComidas'>
               
