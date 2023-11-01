@@ -1,5 +1,9 @@
 import './style.css'
 import Header from '../../../components/Header/index'
+import { FaArrowRotateLeft, FaCheck, FaCalendarDays } from "react-icons/fa6";
+
+
+
 
 
 
@@ -33,9 +37,9 @@ function RegistrarComida() {
           </article>
         </section>
         <div className='botoesRegistrarComida'>
-          <button>Registrar Comida</button  >
-          <button>Resetar Informações</button>
-          <button>Editar Cardapio</button>
+          <button> <FaCheck size='4vw'/> Registrar<br /> Comida</button  >
+          <button> <FaArrowRotateLeft size='4vw'/>  Resetar <br /> Informações</button>
+          <button><FaCalendarDays size='4vw'/> Editar <br /> Cardapio</button>
         </div>
        </div>
       </main>

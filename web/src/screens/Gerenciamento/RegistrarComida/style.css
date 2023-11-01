@@ -7,11 +7,12 @@
     color: var(--C3);
     font-weight: bold;
 
+
 }
 
 .gridRegistrarComida{
     display: grid;
-    grid-template-columns: 20vw 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2vh 2vw
 }
 
@@ -20,24 +21,29 @@
     background-color: var(--L2);
     padding: 1vw;
     color: var(--B1);
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-weight: 300;
     border-radius: 10px;
     /* margin: 0 1vw; */
     margin-top: 5vh;
     grid-column: span 2;
+    box-shadow: 4px 4px 1px#00000021;
+}
+
+.titleInfoRegistrarComida p{
+    margin-left: 1vw;
 }
 
 .infosRegistrarComida{
     grid-column: span 2;
     display: grid;
-    grid-template-columns: 20vw  1fr;
+    grid-template-columns: 25vw  1fr;
     gap: 1vh 2vw;
 }
 
 .inputsRegistrarComida{
     background-color: var(--B2);
-    box-shadow: 6px 8px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.25);
     padding: 5vh 2vw;
     display: grid;
     grid-template-columns: 1fr;
@@ -53,9 +59,23 @@
 
 }
 
+.inputsRegistrarComida input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    border-color: #6f6f6f;
+}
+
+.inputsRegistrarComida input::placeholder{
+    font-size: 2vh;
+    font-weight: 600;
+ 
+    
+}
+
 .imagemRegistrarComida {
     background-color: var(--B2);
-    box-shadow: 6px 8px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.25);
     padding: 5vh 2vw;
     gap: 2vw;
     border-radius: 10px;
@@ -78,7 +98,7 @@
 .botoesRegistrarComida{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10vh;
+    gap: 5vh;
     padding: 1vw;
 }
 
@@ -87,10 +107,14 @@
     border-radius: 10px;
     border: transparent;
     color: var(--B1);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2vw;
     text-align: left;
     padding-left: 2vw;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
 
 }
 
