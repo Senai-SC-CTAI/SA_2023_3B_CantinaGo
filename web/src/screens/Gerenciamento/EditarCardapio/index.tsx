@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header />
-
+  .
       <main className='mainGerenciamento'>
         <section>
           <article className='graphic1Gerenciamento'>
