@@ -26,7 +26,7 @@ export default function Login() {
         </div>
 
         <Link to="/home" className="submit-button">Entrar</Link>
-        <div className="login-link-Login">
+        <div className="login-link">
           Não possui conta?
           <div>
             <Link to="/SignUp">Faça o Cadastro</Link>

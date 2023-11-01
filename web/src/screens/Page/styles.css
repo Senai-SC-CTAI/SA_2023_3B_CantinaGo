@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;600;700;800&display=swap');
+
 .pageContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -5,13 +7,14 @@
     justify-content: center;
     align-items: center;
     gap: 15rem;
-    padding: 9rem 10rem
+    padding: 9rem 10rem;
 }
 
 .pageTitle {
     font-size: 5rem;
     color: #444;
-    font-weight: 700
+    font-weight: 700;
+    text-align: left;
 }
 
 #orange {
@@ -24,7 +27,7 @@
 
 .contentPage {
     height: 100vh;
-    background-color: #FE8063
+    background-color: #FE8063;
 }
 
 .btnSignIn {
@@ -56,49 +59,81 @@
     justify-content: center;
     align-items: center;
     gap: 25rem;
+    animation: appear 1ms ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+    transition: 0.5s;
+
 }
 
 .contentPage h1 {
     font-size: 4rem;
     color: #FFF;
     font-weight: 800;
-    font-family: Inter;
 }
 
 .contentPage p {
     color: #ffffffb5;
-    font-family: Inter;
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;    
+    line-height: normal;
 }
 
 .contentPage span {
     color: #FA321A;
     text-align: center;
-    font-family: Inter;
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-     
+
 }
+
 .app {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Inter';
     align-items: start;
     max-width: 30%;
     gap: 1rem;
-} .phone{
+}
+
+.phone {
     width: 350px;
     z-index: 2;
     position: relative;
 }
-#circleSvg{
+
+#circleSvg {
     position: absolute;
     right: 0;
     z-index: 1;
     max-height: 100%;
+}
+.AppBtn{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.AppBtn a {
+    border: 1px solid #FA321A;
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    justify-content: center;
+    background: rgba(255, 169, 149, 0.61);
+}
+
+.AppBtn p {
+    color: #FA321A;
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
 }
