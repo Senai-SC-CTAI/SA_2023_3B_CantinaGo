@@ -12,7 +12,7 @@ function Food() {
   {/*Aplicação dos conteudos com seus conformes ID's*/}
   const selectedContent = content.find(content => content.id === parseInt(id!, 10));
   if (!selectedContent) {
-     return <div>No content found for the provided id.</div>;
+     return <div className="mainFood">Comida não encontrada</div>;
   }
 
   return (
