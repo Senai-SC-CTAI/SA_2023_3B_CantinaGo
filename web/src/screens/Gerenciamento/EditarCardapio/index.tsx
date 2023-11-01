@@ -9,6 +9,7 @@ function App() {
     <>
       <Header />
   .<h1>Edição do cardápio</h1>  
+  
       <main className='mainGerenciamento'>
         <section>
           <article className='graphic1Gerenciamento'>
@@ -44,7 +45,7 @@ Cadastrar comida</p>
           
 
           <article className='graphic3Gerenciamento'>
-
+          <p class='title'>Comidas do dia</p>
           </article>
         </section>
       </main>
