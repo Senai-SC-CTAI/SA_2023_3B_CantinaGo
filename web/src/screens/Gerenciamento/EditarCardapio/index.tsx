@@ -29,9 +29,7 @@ function App() {
         </section>
 
         <section>
-          <article className='graphic2Gerenciamento'>
-       
-          </article>
+          
           <article className='graphic3Gerenciamento'>
 
           </article>
