@@ -27,7 +27,7 @@ function RegistrarComida() {
 
   const fetchComidas = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:5173/RegistrarComida')
+      const response = await axios.get('http://localhost:8090/comidas')
       setComidas(response.data);
     } catch (error){
       console.log('error', error);
@@ -44,7 +44,7 @@ function RegistrarComida() {
         categoria: formState.categoriaInput,
         ingredientes: formState.ingredientesInput,
       };
-      await axios.post('http://localhost:5173/RegistrarComida', novaComida);
+      await axios.post('http://localhost:8090/comidas', novaComida);
       fetchComidas();
 
       setFormState({

@@ -2,6 +2,8 @@ import './styles.css'
 import logo from '../../assets/icons/Logo.svg'
 import mobileapp from '../../assets/img/mobileapp.png'
 import circlesvg from '../../assets/img/circle-svg.svg'
+import playstore from '../../assets/icons/playstore.svg'
+import appstore from '../../assets/icons/appstore.svg'
 import { WaveSvg } from '../../components/WaveSvg'
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -11,8 +13,8 @@ export function Page() {
         <>
             <HeaderPage />
             <div className="pageContainer">
-                <h1 className='pageTitle'>Chegou a hora de otimizar 
-                  o   <span id='orange'>cardápio</span> da cantina.</h1>
+                <h1 className='pageTitle'>Chegou a hora de otimizar
+                    o   <span id='orange'>cardápio</span> da cantina.</h1>
                 <img src={logo} />
             </div>
             <WaveSvg />
@@ -21,6 +23,20 @@ export function Page() {
                     <h1>Baixe o App</h1>
                     <p>e tenha todo cardápio em suas mãos.</p>
                     <span>Adquira em</span>
+                    <div className="AppBtn">
+
+                        <a href=""
+                            className='AppBtn'>
+                            <img src={playstore} />
+                            <p>Google Play</p>
+                        </a>
+                        <a href=""
+                            className='AppBtn'>
+                            <img src={appstore} />
+                            <p>App Store</p>
+
+                        </a>
+                    </div>
                 </div>
                 <img src={mobileapp} className='phone' />
                 <img src={circlesvg} id='circleSvg' />
