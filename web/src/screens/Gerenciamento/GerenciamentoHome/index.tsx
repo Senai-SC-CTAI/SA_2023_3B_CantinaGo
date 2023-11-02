@@ -1,9 +1,34 @@
 import './style.css'
+import { useState } from 'react';
 import Header from '../../../components/Header/index'
 import {Link} from "react-router-dom"
 import { FeedbackComponent } from "../Feedback"
+import axios from "axios";
 
-function App() {
+interface Comida {
+  nome: string,
+  caloria: number,
+  preco: number,
+  categoria: string,
+  ingredientes: string,
+}
+
+export const GerencamentoHome = () => {
+  const [comida, setComida] = useState<Comida[]>([])
+
+  const fetchComida = async () => {
+    try{
+      const response = await axios.get<Comida[]>('http://localhost:8090/comidas');
+      setComida(response.data);
+    } catch (error){
+      console.log('error', error);
+      
+    }
+  };
+
+  const handleViewComida = () => {
+    fetchComida();
+  }
 
   return (
     <>
@@ -22,6 +47,23 @@ function App() {
               <p className='buttonGerenciamento'>Editar Cardápio</p>
             </Link>
           <FeedbackComponent />
+          <div>
+            <button className='btn' onClick={handleViewComida}>
+              <p className='buttonGerenciamento'>Mostrar Comidas</p>
+            </button>
+
+            <div className='comidaContainer'>
+              {comida.map((comida, index) =>(
+                <div key={index} className='comidaItem'>
+                  <p>Nome: {comida.nome}</p>
+                  <p>Calorias {comida.caloria}</p>
+                  <p>Preço: {comida.preco}</p>
+                  <p>Categoria: {comida.categoria}</p>
+                  <p>Ingredientes: {comida.ingredientes}</p>
+                </div>
+              ))}
+            </div>
+          </div>
           </div>
         </section>
 
@@ -37,5 +79,3 @@ function App() {
     </>
   )
 }
-
-export default App
