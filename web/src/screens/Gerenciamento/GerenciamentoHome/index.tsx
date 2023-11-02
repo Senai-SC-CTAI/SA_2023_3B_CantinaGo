@@ -13,7 +13,7 @@ interface Comida {
   ingredientes: string,
 }
 
-export const GerencamentoHome = () => {
+function GerenciamentoHome() {
   const [comida, setComida] = useState<Comida[]>([])
 
   const fetchComida = async () => {
@@ -79,3 +79,5 @@ export const GerencamentoHome = () => {
     </>
   )
 }
+
+export default GerenciamentoHome
