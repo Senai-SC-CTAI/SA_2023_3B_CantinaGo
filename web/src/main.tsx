@@ -9,8 +9,6 @@ import Buscar from './screens/Search/index.tsx'
 import GerenciamentoHome from './screens/Gerenciamento/GerenciamentoHome/index.tsx'
 import EditarCardapio from './screens/Gerenciamento/EditarCardapio/index.tsx'
 import EditarComida from './screens/Gerenciamento/EditarComida/index.tsx'
-import ListaComidas from './screens/Gerenciamento/ListaComidas/index.tsx'
-import RegistrarComida from './screens/Gerenciamento/RegistrarComida/index.tsx'
 import About from './screens/About/index.tsx'
 
 
@@ -53,14 +51,6 @@ const router = createBrowserRouter(
       {
         path: '/editarComida',
         element: <EditarComida />
-      },
-      {
-        path: '/listaComidas',
-        element: <ListaComidas />
-      },
-      {
-        path: '/registrarComida',
-        element: <RegistrarComida />
       },
       {
         path: '/buscar',

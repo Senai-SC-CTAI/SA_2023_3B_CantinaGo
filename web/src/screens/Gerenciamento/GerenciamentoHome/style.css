@@ -1,64 +1,76 @@
-.mainGerenciamento{
+.headerGerenciamento img{
+    width: 59.8vw;
+    height: 25vh;
+    object-fit: cover;
+    
+}
+
+.headerGerenciamento{
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2vw;
-    padding: 2vw
-}
-
-.mainGerenciamento section{
-    display: flex;
-    gap: 2vw
-}
-
-.mainGerenciamento article{
-    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    margin: 1vw
-}
-
-.graphic1Gerenciamento {
-   background-color: var(--L2);
-   width: 60vw;
-   height: 30vw; 
-   border-radius: 10px;
-}
-
-.graphic2Gerenciamento{
-    background-color: var(--B3);
-    width: 50vw;
-    height: 45vw;
-    border-radius: 10px;
-}
-
-.graphic3Gerenciamento{
-    background-color: var(--B3);
-    width: 40vw;
-    height: 35vw;
-    border-radius: 10px;
-}
-
-.buttonsGerenciamento{
-    margin: 1vw;
-    display: flex;
-    flex-direction: column;
-    gap: 1vw;
-    width: 30vw;
-}
-
-.buttonGerenciamento{
+    grid-template-columns: auto 1fr;
     background-color: var(--L2);
     color: var(--B1);
-    font-size: 1vw;
-    width: 100%;
-    padding: 1vw;
-    border-radius: 10px;
-    text-align: center;
-    transition: .25s;
+    height: 25vh;
 }
 
-.buttonGerenciamento:hover{
+.headerContentGerenciamento{
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    font-size: 2.3vw;
+    text-transform: uppercase;
+
+}
+
+.contentGerenc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5vh 5vw;
+    align-items: center;
+}
+
+.contentGerenc section{
+    max-width: 30vw;
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+.contentGerenc h2{
+    font-size: 3vw;
+    color: var(--C4);
+}
+
+.contentGerenc p{
+    color: var(--C2);
+    font-size: 1.8vw;
+}
+
+.buttonsGerec{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+
+}
+
+.contentGerenc button{
+    background-color: var(--L2);
+    color: var(--B1);
+    border: none;
+    border-radius: 5px;
+    padding: 2vh 3.2vw;
+    font-size: 1.7vw;
+    transition: .2s;
+
+}
+
+.contentGerenc button:hover{
     background-color: var(--L1);
-};
-.btn{
-    border-width: 0px;
+    color: var(--B2);
+    cursor: pointer;
 }
 
+.ImageGerenc{
+    width: 40vw;
+}

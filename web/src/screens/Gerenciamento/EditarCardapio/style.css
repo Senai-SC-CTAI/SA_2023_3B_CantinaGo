@@ -1,134 +1,60 @@
-/* Reset de margens e preenchimentos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+.headerEdicao img{
+  width: 59.8vw;
+  height: 25vh;
+  object-fit: cover;
   
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .title{
-    color: #545454;
-    font-size: 35px;
-    margin-bottom: 60px;
-  }
+}
 
-  .container-Login {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .div-logo-Login {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .Logo-Login {
-    width: 100%;
-    position: absolute;
-    height: auto;
-    right: 0;
-  }
-  
-  .div-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
- .entrar-text-Login {
-    font-size: 3vw;
-    margin-bottom: 5vh;
-    color: var(--C3)
-  }
-  
-  .input-container-Login {
-    margin-bottom: 2vh;
-    width: 60%;
-    display: flex;
-    font-size: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .input-label-Login {
-    font-weight: 300;
-    margin-bottom: 5px;
-    font-size: 15px;
-    color: var(--C2);
-    font-weight: 500;
-  }
-  
-  .input-Login {
-    border-radius: 5px;
-    width: 100%;
-    padding: 1rem 2rem;
-    font-weight: 400;
-    font-size: 1rem;
-    background-color: var(--B3);
-    color: var(--C2);
-    border: hidden;
-  }
-  
-  .esqueceuSenha-Login {
-    color: var(--L2);
-    font-size: 0.9rem;
-    margin-left: 1vw;
-    margin-top: 9px;
-  }
-  
-  .submit-button {
-    border: none;
-    border-radius: 5px;
-    /* min-width: 500px; */
-    min-height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: 50px;
-    background-color: #FA321A;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 10px;
-    color: #fff
-  }
-  
-  .submit-button-Login:hover {
-    background-color: #E61B0D;
-  }
-  
-  .login-link {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #7A7A7A;
-  }
+.headerEdicao{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-color: var(--L2);
+  color: var(--B1);
+  height: 25vh;
+}
 
-  
-  .login-link-Login a {
-    color: #FA321A;
-    text-decoration: none;
-    font-weight: bold;
-  }
+.headerContentEdicao{
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  font-size: 2.3vw;
+  text-transform: uppercase;
 
-  .input_label-Login{
-    color: #FA321A;
+}
 
-  }
-  
-  .login-link-Login a:hover {
-    text-decoration: underline;
-  }
-  /* h1{
-    text-align: center ;
-  } */
-  .graphic3Gerenciamento{
-    width: 100%;
-  }
+
+.contentEdicao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5vh 5vw;
+  align-items: center;
+}
+
+.contentEdicao section{
+  max-width: 30vw;
+  display: flex;
+  gap: 1vh;
+  flex-direction: column;
+  margin-bottom: 5vh;
+}
+
+.contentEdicao h2{
+  font-size: 3vw;
+  color: var(--C4);
+}
+
+.contentEdicao p{
+  color: var(--C2);
+  font-size: 1.8vw;
+}
+
+.dateEdicao{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vh;
+
+}
+
+.ImageEdicao{
+  width: 40vw;
+}

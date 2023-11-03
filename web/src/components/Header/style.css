@@ -35,9 +35,8 @@
     text-decoration: none;
     color: #545454;
     transition: .5s;
-    /* font-style: italic; */
+    font-style: italic;
     font-size: 1rem;
-    font-weight: 600;
   }
 
  .nav .active{
