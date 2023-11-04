@@ -1,0 +1,74 @@
+.aguardandoDataMain{
+    margin-left: 5vw;
+    display: flex;
+    gap: 3vw;
+    padding-bottom: 1vh;
+    margin-bottom: 15vh;
+}
+
+.section1AguardandoData{
+    background-color: var(--B2);
+    border-radius: 20px;
+    padding: 20vh 4vw;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    width: 35vw;
+    
+}
+
+.section1AguardandoData h4{
+    font-size: 3.5vw;
+    color: var(--C3);
+    margin-left: 1vw;
+}
+
+.section1AguardandoData p{
+    font-size: 2vw;
+    color: var(--C2);
+    max-width: 35vw;
+}
+
+.section2AguardandoData{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.section2AguardandoData button{ 
+    background-color: var(--L2);
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.section2AguardandoData button:hover {   
+    background-color: var(--L1);
+    cursor: pointer;
+}
+
+
+.section2AguardandoData img{
+    width: 5vw;
+    height: 5vw;
+    padding: 1vw;
+    
+    
+    
+}
+
+.section2AguardandoData div{
+    background-color: var(--B1);
+    color: var(--L2);
+    border: 4px solid var(--L2);
+    font-size: 2.3vw;
+    padding: 2vh 2vw;
+    width: 15vw;
+    border-radius: 0px 10px 10px 0px;
+    
+}
+
+.section2AguardandoData div:hover {
+    border: 4px solid var(--L1);
+    
+}

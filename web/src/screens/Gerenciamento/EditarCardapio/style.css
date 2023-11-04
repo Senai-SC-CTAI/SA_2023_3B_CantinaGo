@@ -31,7 +31,7 @@
 }
 
 .contentEdicao section{
-  max-width: 30vw;
+  max-width: 26vw;
   display: flex;
   gap: 1vh;
   flex-direction: column;
@@ -46,6 +46,8 @@
 .contentEdicao p{
   color: var(--C2);
   font-size: 1.8vw;
+  max-width: 26vw;
+
 }
 
 .dateEdicao{
@@ -55,6 +57,18 @@
 
 }
 
+.datePicker{
+  border-radius: 20px;
+  border: 3.5px solid var(--L1);
+  padding: 2.7vh 1vw;
+  width: 100%;
+  font-size: 2vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--C0)
+}
+
 .ImageEdicao{
   width: 40vw;
 }
+
+
