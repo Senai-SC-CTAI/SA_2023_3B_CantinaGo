@@ -1,4 +1,6 @@
-.aguardandoDataMain{
+
+
+.AlimentoCriarMain{
     margin-left: 5vw;
     display: flex;
     gap: 3vw;
@@ -6,34 +8,29 @@
     margin-bottom: 15vh;
 }
 
-.section1AguardandoData{
+.section1AlimentoCriar{
     background-color: var(--B2);
     border-radius: 20px;
-    padding: 20vh 4vw;
+    padding: 5vh 3vw;
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
     width: 35vw;
     
 }
 
-.section1AguardandoData h4{
-    font-size: 2.7vw;
+.section1AlimentoCriar h4{
+    font-size: 1.8vw;
     color: var(--C3);
-    margin-left: 1vw;
+    margin-bottom: 2vh;
 }
 
-.section1AguardandoData p{
-    font-size: 1.6vw;
-    color: var(--C2);
-    max-width: 35vw;
-}
 
-.section2AguardandoData{
+.section2AlimentoCriar{
     display: flex;
     flex-direction: column;
     gap: 3vh;
 }
 
-.section2AguardandoData button{ 
+.section2AlimentoCriar button{ 
     background-color: var(--L2);
     border: none;
     border-radius: 10px 0px 0px 10px;
@@ -42,13 +39,13 @@
 
 }
 
-.section2AguardandoData button:hover {   
+.section2AlimentoCriar button:hover {   
     background-color: var(--L1);
     cursor: pointer;
 }
 
 
-.section2AguardandoData img{
+.section2AlimentoCriar img{
     width: 5vw;
     height: 5vw;
     padding: 1vw;
@@ -57,7 +54,7 @@
     
 }
 
-.section2AguardandoData div{
+.section2AlimentoCriar div{
     background-color: var(--B1);
     color: var(--L2);
     border: 4px solid var(--L2);
@@ -68,7 +65,8 @@
     
 }
 
-.section2AguardandoData div:hover {
+.section2AlimentoCriar div:hover {
     border: 4px solid var(--L1);
     
 }
+

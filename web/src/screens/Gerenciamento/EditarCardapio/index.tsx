@@ -2,22 +2,13 @@ import './style.css'
 import Header from '../../../components/Header/index'
 import FoodsImage from '../../../assets/img/ImageHeader.png'
 import Image3 from '../../../assets/img/Image3Administracao.svg'
-import DatePicker from 'react-date-picker'
 import { useState } from 'react'
 import AguardandoData from '../../../components/admComponents/Aguardando'
 import Footer from '../../../components/Footer'
 import Escolhido from '../../../components/admComponents/Escolhido'
-// import 'react-date-picker/dist/DatePicker.css';
-// import 'react-calendar/dist/Calendar.css';
- 
-
-// type ValuePiece = Date | null;
-
-// type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 function EditarCardapio() {
 
-  // const [value, onChange] = useState<Value>(new Date());
 
   return (
     <>
@@ -39,18 +30,12 @@ function EditarCardapio() {
               <p>Selecione uma data para criar, editar ou deletar um cardápio!</p>
               <div className='dateEdicao'>
                 <input type='date' className='datePicker' />
-                {/* <DatePicker 
-                  onChange={onChange} 
-                  value={value} 
-                  autoFocus={true}  
-                  
-                /> */}
               </div>
             </section>
             <img src={Image3} className='ImageEdicao'/>
           </article>
-          {/* <AguardandoData/> */}
-          <Escolhido/>
+          <AguardandoData/>
+          {/* <Escolhido/> */}
           <Footer />
       </main>
     </>

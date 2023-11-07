@@ -1,8 +1,6 @@
-.accordion input[type="checkbox"]:checked + .nomeComidaEscolhido {
-    color: var(--L1);
-}
 
-.EscolhidoMain{
+
+.AlimentoEscolherMain{
     margin-left: 5vw;
     display: flex;
     gap: 3vw;
@@ -10,7 +8,7 @@
     margin-bottom: 15vh;
 }
 
-.section1Escolhido{
+.section1AlimentoEscolher{
     background-color: var(--B2);
     border-radius: 20px;
     padding: 5vh 3vw;
@@ -19,24 +17,48 @@
     
 }
 
-.section1Escolhido h4{
-    font-size: 2vw;
-    color: var(--C3);
+.formAlimentoEscolher{
+    position: relative;
+    margin-bottom: 3vh;
 }
 
-.section1Escolhido p{
+.formAlimentoEscolher input{
+    width: 100%;
+    padding: 1rem 2vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 20px;
+    border: none;
+
+}   
+
+.formAlimentoEscolher input::placeholder{
+    color: var(--C1);
+    font-size: 1.5vw;
+    position: absolute;
+    top: 25%
+}
+
+.formAlimentoEscolher img{
+    position: absolute;
+    top: 25%;
+    right: 1vw;
+    width: 3vw;
+    height: 2vw;
+}
+
+.section1AlimentoEscolher p{
     font-size: 2vw;
     color: var(--C2);
     max-width: 35vw;
 }
 
-.section2Escolhido{
+.section2AlimentoEscolher{
     display: flex;
     flex-direction: column;
     gap: 3vh;
 }
 
-.section2Escolhido button{ 
+.section2AlimentoEscolher button{ 
     background-color: var(--L2);
     border: none;
     border-radius: 10px 0px 0px 10px;
@@ -45,13 +67,13 @@
 
 }
 
-.section2Escolhido button:hover {   
+.section2AlimentoEscolher button:hover {   
     background-color: var(--L1);
     cursor: pointer;
 }
 
 
-.section2Escolhido img{
+.section2AlimentoEscolher img{
     width: 5vw;
     height: 5vw;
     padding: 1vw;
@@ -60,7 +82,7 @@
     
 }
 
-.section2Escolhido div{
+.section2AlimentoEscolher div{
     background-color: var(--B1);
     color: var(--L2);
     border: 4px solid var(--L2);
@@ -71,7 +93,7 @@
     
 }
 
-.section2Escolhido div:hover {
+.section2AlimentoEscolher div:hover {
     border: 4px solid var(--L1);
     
 }
@@ -81,7 +103,7 @@
     margin-left: 1vw;
 }
 
-.accordion li .labelComidaEScolhido{
+.accordion li .labelComidaAlimentoEscolher{
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -92,7 +114,7 @@
 
 }
 
-.accordion li .labelComidaEScolhido::before{
+.accordion li .labelComidaAlimentoEscolher::before{
     content: '';
     width: 100%;
     height: 4px;
@@ -101,7 +123,7 @@
     bottom: 0;
 }
 
-.accordion li:last-of-type .labelComidaEScolhido::before {
+.accordion li:last-of-type .labelComidaAlimentoEscolher::before {
     content: '';
     width: 0;
     height: 4px;
@@ -111,7 +133,7 @@
 }
 
 
-.accordion li .labelComidaEScolhido::after {
+.accordion li .labelComidaAlimentoEscolher::after {
     content: '';
     background: url('../../../assets/icons/V.svg') no-repeat;
     margin-left: 1vw;
@@ -162,16 +184,71 @@
     color: var(--L2)
 }
 
-.nomeComidaEscolhido{
+.nomeComidaAlimentoEscolher{
     font-size: 1.4vw;
     color: var(--C2);
+    height: 4vh;
+    
 }
 
-.accordion input[type="radio"]:checked + .labelComidaEScolhido + .content{
+
+
+
+.accordion .content div span::after{
+    content: '';
+    background: url('../../../assets/icons/LixoPreto.svg') no-repeat;
+    margin-left: 1vw;
+    width: 2vw;
+    height: 3vh;
+    background-size: 1vw;
+    display: flex;
+    position: absolute;
+    margin-left: 4vw;
+    
+}
+
+.accordion .content div span::before{
+    content: '';
+    background: url('../../../assets/icons/EditPreto.svg') no-repeat;
+    margin-left: 1vw;
+    width: 2vw;
+    height: 3vh;
+    background-size: 1.5vw;
+    display: flex;
+    position: absolute;
+    
+}
+
+.accordion .content div span:hover::before {
+    cursor: pointer;
+    content: '';
+    background: url('../../../assets/icons/EditLaranja.svg') no-repeat;
+    margin-left: 1vw;
+    width: 2vw;
+    height: 3vh;
+    background-size: 1.5vw;
+    display: flex;
+    position: absolute;
+}
+
+.accordion .content div span:hover::after {
+    cursor: pointer;
+    content: '';
+    background: url('../../../assets/icons/LixoLaranja.svg') no-repeat;
+    margin-left: 1vw;
+    width: 2vw;
+    height: 3vh;
+    background-size: 1vw;
+    display: flex;
+    position: absolute;
+    margin-left: 4vw;
+}
+
+.accordion input[type="radio"]:checked + .labelComidaAlimentoEscolher + .content{
     max-height: 40vh;
 }
 
-.accordion input[type="radio"]:checked + .labelComidaEScolhido::after{
+.accordion input[type="radio"]:checked + .labelComidaAlimentoEscolher::after{
     background: url('../../../assets/icons/VdeLado.svg') no-repeat;
     width: 5vw;
     height: 4vh;
@@ -179,7 +256,7 @@
 
 }
 
-.accordion input[type="radio"]:checked + .labelComidaEScolhido::before{
+.accordion input[type="radio"]:checked + .labelComidaAlimentoEscolher::before{
     content: '';
     width: 0%;
 }

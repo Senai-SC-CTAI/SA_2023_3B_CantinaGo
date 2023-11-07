@@ -9,16 +9,16 @@ const Escolhido = () => {
         <section className='section1Escolhido'>
             <h4>Comidas do dia</h4>
             <ul className="accordion">
-                <li>
+            <li>
                     <input type="radio" name='accordion' id="first"/>
                     <label className='labelComidaEScolhido' htmlFor="first">Salgados</label>
                     <div className='content'>
                         <div>
-                            <input type="checkbox" id="scales" name="scales" checked />
+                            <input type="checkbox" id="scales" name="scales" />
                             <label className='nomeComidaEscolhido' htmlFor="scales">Pão de Queijo</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="scales" name="scales" checked />
+                            <input type="checkbox" id="scales" name="scales" />
                             <label className='nomeComidaEscolhido' htmlFor="scales">Pastel</label>
                         </div>
                     </div>
@@ -28,11 +28,11 @@ const Escolhido = () => {
                     <label className='labelComidaEScolhido' htmlFor="second">Doces</label>
                     <div className='content'>
                         <div>
-                            <input type="checkbox" id="scales" name="scales" checked />
+                            <input type="checkbox" id="scales" name="scales" />
                             <label className='nomeComidaEscolhido' htmlFor="scales">Crossaint</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="scales" name="scales" checked />
+                            <input type="checkbox" id="scales" name="scales" />
                             <label className='nomeComidaEscolhido' htmlFor="scales">Brigadeiro</label>
                         </div>
                     </div>
@@ -42,11 +42,11 @@ const Escolhido = () => {
                     <label className='labelComidaEScolhido' htmlFor="third">Bebidas</label>
                     <div className='content'>
                         <div>
-                            <input type="checkbox" id="scales" name="scales" checked />
+                            <input type="checkbox" id="scales" name="scales" />
                             <label className='nomeComidaEscolhido' htmlFor="scales">Suco de uva</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="scales" name="scales" checked />
+                            <input type="checkbox" id="scales" name="scales" />
                             <label className='nomeComidaEscolhido' htmlFor="scales">Água</label>
                         </div>
                     </div>
@@ -56,11 +56,11 @@ const Escolhido = () => {
                     <label className='labelComidaEScolhido' htmlFor="fourth">Snacks</label>
                     <div className='content'>
                     <div>
-                            <input type="checkbox" id="scales" name="scales" checked />
+                            <input type="checkbox" id="scales" name="scales" />
                             <label className='nomeComidaEscolhido' htmlFor="scales">Salgadinho</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="scales" name="scales" checked />
+                            <input type="checkbox" id="scales" name="scales" />
                             <label className='nomeComidaEscolhido' htmlFor="scales">Barra de Chocolate</label>
                         </div>
                     </div>

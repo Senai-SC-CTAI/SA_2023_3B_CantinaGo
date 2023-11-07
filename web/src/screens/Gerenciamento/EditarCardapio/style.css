@@ -11,6 +11,7 @@
   background-color: var(--L2);
   color: var(--B1);
   height: 25vh;
+  justify-items: end;
 }
 
 .headerContentEdicao{
