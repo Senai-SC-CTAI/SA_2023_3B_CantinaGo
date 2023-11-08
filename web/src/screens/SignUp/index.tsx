@@ -71,7 +71,7 @@ export default function SignUp() {
         </div>
           <div className="input-other">
             <label htmlFor="telefone" className="input-label">Telefone</label>
-            <input id="telefone" className='input-Register' type="number" placeholder="48 99999-9999" value={telefoneInput} onChange={(e) => setTelefoneInput(e.target.value)} />
+            <input id="telefone" className='input-Register' type="text" placeholder="48 99999-9999" value={telefoneInput} onChange={(e) => setTelefoneInput(e.target.value)} />
           </div>
           <div className="input-other">
             <label htmlFor="turma" className="input-label">Turma</label>

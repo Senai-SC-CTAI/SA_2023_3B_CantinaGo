@@ -1,8 +1,38 @@
 import LogoSingUp from '../../assets/img/singuplogo.svg';
 import { Link } from 'react-router-dom';
 import './style.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios'
+
+interface Usuario {
+  senha: string;
+  telefone: string;
+  email: string;
+  turma: string;
+}
+
 
 export default function Login() {
+
+  useEffect(() => {
+    fetchUsuarios();
+  }, [])
+
+    // Metodo GET 
+    const fetchUsuarios = async () => {
+      try {
+          const response = await axios.get('http://localhost:8090/usuario');
+          setUsuarios(response.data);
+          console.log(senha);
+          
+      } catch (error) {
+          console.log('Erro ao buscar Usuarios: ', error);
+      }
+  }
+
+  const [usuarios, setUsuarios] = useState<Usuario[]>([]);
+
+
   return (
     <div className="container-Login">
       <div className="div-logo-Login">
