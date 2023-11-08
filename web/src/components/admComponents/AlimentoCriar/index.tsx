@@ -4,6 +4,7 @@ import Mais from "../../../assets/icons/Mais.svg";
 import Reset from "../../../assets/icons/Reset.svg"
 import { useState, useEffect } from "react";
 import axios from "axios";
+import ImageInput from "../../imageInput";
 
 //FAZER MODAL
 
@@ -70,7 +71,7 @@ const AlimentoCriar = () => {
     <main className="AlimentoCriarMain">
       <section className="section1AlimentoCriar">
         <h4>Novo Alimento</h4>
-        <div className="accordion">
+        <div className="accordionCriar">
           <input
             placeholder="Nome"
             name="nomeInput"
@@ -101,14 +102,13 @@ const AlimentoCriar = () => {
             value={formState.ingredientesInput}
             onChange={handleInputChange}
           ></input>
-          <input/>
+          <ImageInput/>
         </div>
       </section>
       <section className="section2AlimentoCriar">
-        <button>
+        <button onClick={handleSubmit}>
           <img src={Mais} alt="" />
           <div>Adicionar</div>
-          <button onClick={handleSubmit}>Registrar Comida</button>
         </button>
         <button>
                 <img src={Reset} alt="" />

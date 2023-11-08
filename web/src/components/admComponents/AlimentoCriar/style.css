@@ -70,3 +70,34 @@
     
 }
 
+.accordionCriar{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh
+}
+
+
+.accordionCriar input{
+    width: 100%;
+    padding: 1.5vh 1vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 10px;
+    border: none;
+    color: var(--C2);
+   font-size: 1.5vw;
+
+}   
+
+.accordionCriar input::placeholder{
+    color: var(--C0);
+    font-size: 1.5vw;
+    position: absolute;
+    top: 25%
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 0 none;
+    outline: 0;
+} 
+

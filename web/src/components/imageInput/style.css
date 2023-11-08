@@ -1,0 +1,41 @@
+#pictureInputCriar{
+    display: none;
+}
+
+.pictureCriar{
+    width: 100%;
+    height: 40vh;
+    padding: 1.5vh 1vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 10px;
+    border: none;
+    color: var(--C2);
+    font-size: 1.5vw;;
+    background-color: var(--B1);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh
+}
+
+.pictureCriar:hover{
+    cursor: pointer;
+    opacity: 60%;
+}
+
+.pictureCriar .hidden-content img{
+    width: 8vw;
+}   
+
+.pictureCriar p{
+    font-size: 1.7vw;
+    font-weight: bold;
+    color: var(--C1)
+}
+
+.picture__img{
+    height: 20vh;
+    
+}
