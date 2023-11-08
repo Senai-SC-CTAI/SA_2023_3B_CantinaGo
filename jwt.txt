@@ -1,0 +1,13 @@
+
+
+frontend
+
+- se o usuario x logar salvar localstorege 
+- se tiver variavel x no localstorage mostart
+
+fetchComida
+fazer get no / usuario
+verificar todos os usuarios ate achar x
+cnvt -> json
+verificar se o usuario e x
+se for salvar no localstorage
