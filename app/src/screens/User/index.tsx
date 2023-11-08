@@ -1,9 +1,11 @@
 import * as React from 'react';
 import styles from './styles';
 import { useState } from 'react';
-import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
+import { View, Image, TextInput, Text, TouchableOpacity, useEffect } from 'react-native';
 import { Feather } from '@expo/vector-icons'
 import { useNavigation, NavigationProp } from '@react-navigation/native';
+import axios from 'axios';
+
 
 import {
   useFonts,
@@ -23,6 +25,29 @@ export function User() {
     Inter_700Bold,
 })
 
+useEffect(() => {
+  fetchUsuario()
+}, [])
+
+const fetchUsuario = async () => {
+  try {
+    const response = await axios.get('http://localhost:8090/Usuario')
+    setUsuario(response.data);
+  } catch (error) {
+    console.log('erro', error)
+  }
+};
+
+const handleDelete = async (id) => {
+  try {
+    await axios.delete(`http://localhost:8090/Usuario/${id}`);
+    fetchUsuario();
+  } catch (error) {
+    console.error('Erro ao excluir usuario:', error);
+  }
+};
+
+
 // navegação 
   interface NavigationType {
     goBack: any;
@@ -41,6 +66,7 @@ const navigation: NavigationType = useNavigation();
   
   const [showUser, setShowUser] = useState(true);
   const [showFeedback, setShowFeedback] = useState(false);
+  
 
   return (
     <View style={styles.container}>

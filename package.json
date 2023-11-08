@@ -2,6 +2,7 @@
   "dependencies": {
     "@mui/icons-material": "^5.14.16",
     "@react-icons/all-files": "^4.1.0",
+    "axios": "^1.6.0",
     "react-icons": "^4.11.0"
   }
 }
