@@ -9,6 +9,7 @@ import Footer from '../../../components/Footer/index'
 import FoodsImage from '../../../assets/img/ImageHeader.png'
 import Image1 from '../../../assets/img/Image1Administração.svg'
 import Image2 from '../../../assets/img/Image2Administracao.svg'
+import * as React from 'react';
 
 interface Comida {
   nome: string,
@@ -51,7 +52,7 @@ function GerenciamentoHome() {
     checkAuthentication();
   }, []);
 
-  if (!isAdmin) {
+  if (isAdmin) {
     return (
       <>
         <p>Você não está autorizado a acessar esta página. Faça login como administrador.</p>
@@ -104,7 +105,7 @@ function GerenciamentoHome() {
                 <FeedbackComponent />
                 <div>
                   <button className='btn' onClick={handleViewComida}>
-                    <p className='buttonGerenciamento'>TESTEMostrar Comidas</p>
+                    <p className='buttonGerenciamento'>Mostrar Comidas</p>
                   </button>
 
                   <div className='comidaContainer'>

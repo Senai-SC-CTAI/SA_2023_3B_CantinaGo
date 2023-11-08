@@ -52,6 +52,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 2vh;
+    padding: 10px;
 
 }
 
@@ -63,6 +64,11 @@
     padding: 2vh 3.2vw;
     font-size: 1.7vw;
     transition: .2s;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+    padding: 10px;
 
 }
 
