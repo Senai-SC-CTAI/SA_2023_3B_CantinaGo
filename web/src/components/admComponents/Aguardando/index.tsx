@@ -10,14 +10,18 @@ const AguardandoData = () => {
             <h4>Aguardando data...</h4>
             <p>Selecione uma data para as opções de escolha aparecerem aqui...</p>
         </section>
-        <section className='section2AguardandoData'>
+        <section className="section2AlimentoCriar">
             <button>
+            <div className="iconButton">
                 <img src={ok} alt="" />
-                <div>Confirmar</div>
+            </div>
+            <span>Confirmar</span>
             </button>
             <button>
+            <div className="iconButton">
                 <img src={Reset} alt="" />
-                <div>Resetar</div>
+            </div>
+            <span>Resetar</span>
             </button>
         </section>
     </main>

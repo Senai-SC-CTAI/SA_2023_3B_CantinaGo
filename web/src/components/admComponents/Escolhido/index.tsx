@@ -69,14 +69,18 @@ const Escolhido = () => {
             </ul>
            
         </section>
-        <section className='section2Escolhido'>
+        <section className="section2AlimentoCriar">
             <button>
+            <div className="iconButton">
                 <img src={ok} alt="" />
-                <div>Confirmar</div>
+            </div>
+            <span>Confirmar</span>
             </button>
             <button>
+            <div className="iconButton">
                 <img src={Reset} alt="" />
-                <div>Resetar</div>
+            </div>
+            <span>Resetar</span>
             </button>
         </section>
     </main>

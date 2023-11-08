@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Mais from "../../../assets/icons/Mais.svg";
+import Ok from "../../../assets/icons/Ok.svg";
 import Reset from "../../../assets/icons/Reset.svg"
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -107,13 +107,17 @@ const AlimentoCriar = () => {
       </section>
       <section className="section2AlimentoCriar">
         <button onClick={handleSubmit}>
-          <img src={Mais} alt="" />
-          <div>Adicionar</div>
+          <div className="iconButton">
+            <img src={Ok} alt="" />
+          </div>
+          <span>Confirmar</span>
         </button>
         <button>
-                <img src={Reset} alt="" />
-                <div>Resetar</div>
-            </button>
+          <div className="iconButton">
+            <img src={Reset} alt="" />
+          </div>
+          <span>Resetar</span>
+        </button>
       </section>
     </main>
   );

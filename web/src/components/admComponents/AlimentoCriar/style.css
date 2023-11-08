@@ -31,44 +31,50 @@
 }
 
 .section2AlimentoCriar button{ 
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;  
+    float: left;
+    overflow: hidden; 
+    transition: all .5s ease;
     background-color: var(--L2);
     border: none;
     border-radius: 10px 0px 0px 10px;
-    display: flex;
-    align-items: center;
-
-}
+}   
 
 .section2AlimentoCriar button:hover {   
     background-color: var(--L1);
     cursor: pointer;
+    width: 100%;
+    
 }
 
+.iconButton{
+    display: inline-block;
+    width: 4vw;
+    height: 4vw; 
+    overflow: hidden;
+    
+}
 
 .section2AlimentoCriar img{
-    width: 5vw;
-    height: 5vw;
-    padding: 1vw;
-    
-    
-    
+    width: 4vw;
+    height: 4vw;
+    padding: 1vw; 
+
 }
 
-.section2AlimentoCriar div{
+.section2AlimentoCriar span{
+    display: inline-block;
     background-color: var(--B1);
     color: var(--L2);
-    border: 4px solid var(--L2);
-    font-size: 2.3vw;
-    padding: 2vh 2vw;
-    width: 15vw;
-    border-radius: 0px 10px 10px 0px;
-    
+    font-size: 1.5vw;
+    padding: 1.8vh 2vw;
+    text-align: justify;
+    margin-right: 0.3vw;
+    margin-bottom: 0.7vh;
 }
 
-.section2AlimentoCriar div:hover {
-    border: 4px solid var(--L1);
-    
-}
 
 .accordionCriar{
     display: flex;

@@ -2,10 +2,6 @@ import React from 'react'
 import './style.css'
 import Mais from "../../../assets/icons/Mais.svg"
 import Buscar from "../../../assets/icons/Buscar.svg"
-import LixoLaranja from "../../../assets/icons/LixoLaranja.svg"
-import LixoPreto from "../../../assets/icons/LixoPreto.svg"
-import EditarLaranja from "../../../assets/icons/EditarLaranja.svg"
-import EditarPreto from "../../../assets/icons/EditarPreto.svg"
 
 const AlimentoEscolher = () => {
   return (
@@ -77,10 +73,12 @@ const AlimentoEscolher = () => {
             </ul>
            
         </section>
-        <section className='section2AlimentoEscolher'>
+        <section className='section2AlimentoCriar'>
             <button>
+            <div className="iconButton">
                 <img src={Mais} alt="" />
-                <div>Adicionar</div>
+            </div>
+            <span>Novo alimento</span>
             </button>
         </section>
     </main>

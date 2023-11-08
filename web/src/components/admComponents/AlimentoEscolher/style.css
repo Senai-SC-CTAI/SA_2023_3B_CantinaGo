@@ -46,57 +46,64 @@
     height: 2vw;
 }
 
-.section1AlimentoEscolher p{
-    font-size: 2vw;
-    color: var(--C2);
-    max-width: 35vw;
-}
-
-.section2AlimentoEscolher{
+.section2AlimentoCriar{
     display: flex;
     flex-direction: column;
     gap: 3vh;
 }
 
-.section2AlimentoEscolher button{ 
+.section2AlimentoCriar button{ 
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;  
+    float: left;
+    overflow: hidden; 
+    transition: all .5s ease;
     background-color: var(--L2);
     border: none;
     border-radius: 10px 0px 0px 10px;
-    display: flex;
-    align-items: center;
+}   
 
-}
-
-.section2AlimentoEscolher button:hover {   
+.section2AlimentoCriar button:hover {   
     background-color: var(--L1);
     cursor: pointer;
-}
-
-
-.section2AlimentoEscolher img{
-    width: 5vw;
-    height: 5vw;
-    padding: 1vw;
-    
-    
+    width: 100%;
     
 }
 
-.section2AlimentoEscolher div{
+.iconButton{
+    display: inline-block;
+    width: 4vw;
+    height: 4vw; 
+    overflow: hidden;
+    
+}
+
+.section2AlimentoCriar img{
+    width: 4vw;
+    height: 4vw;
+    padding: 1vw; 
+
+}
+
+.section2AlimentoCriar span{
+    display: inline-block;
     background-color: var(--B1);
     color: var(--L2);
-    border: 4px solid var(--L2);
-    font-size: 2.3vw;
-    padding: 2vh 2vw;
-    width: 15vw;
-    border-radius: 0px 10px 10px 0px;
-    
+    font-size: 1.5vw;
+    padding: 1.8vh 2vw;
+    text-align: justify;
+    margin-right: 0.3vw;
+    margin-bottom: 0.7vh;
 }
 
-.section2AlimentoEscolher div:hover {
-    border: 4px solid var(--L1);
-    
+
+.accordionCriar{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh
 }
+
 
 .accordion li{
     list-style: none;

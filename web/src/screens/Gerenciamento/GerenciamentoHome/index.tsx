@@ -9,6 +9,7 @@ import Footer from '../../../components/Footer/index'
 import FoodsImage from '../../../assets/img/ImageHeader.png'
 import Image1 from '../../../assets/img/Image1Administração.svg'
 import Image2 from '../../../assets/img/Image2Administracao.svg'
+import React from 'react';
 
 interface Comida {
   nome: string,
