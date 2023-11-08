@@ -20,18 +20,6 @@ interface Comida {
 
 function GerenciamentoHome() {
   const [comida, setComida] = useState<Comida[]>([])
-  const [isAdmin, setIsAdmin] = useState<boolean>(false);
-
-
-  const checkAuthentication = async () => {
-    try {
-      // Substitua a chamada de API abaixo pela sua lógica de autenticação
-      const response = await axios.get<boolean>('http://localhost:8090/checkAdmin');
-      setIsAdmin(response.data);
-    } catch (error) {
-      console.log('error', error);
-    }
-  };
 
   const fetchComida = async () => {
     try{
@@ -46,18 +34,6 @@ function GerenciamentoHome() {
   const handleViewComida = () => {
     fetchComida();
   };
-
-  React.useEffect(() => {
-    checkAuthentication();
-  }, []);
-
-  if (!isAdmin) {
-    return (
-      <>
-        <p>Você não está autorizado a acessar esta página. Faça login como administrador.</p>
-      </>
-    );
-  }
 
   return (
     <>
