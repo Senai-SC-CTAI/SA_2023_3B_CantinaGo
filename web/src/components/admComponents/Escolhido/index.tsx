@@ -2,8 +2,17 @@ import React from 'react'
 import './style.css'
 import ok from "../../../assets/icons/Ok.svg"
 import Reset from "../../../assets/icons/Reset.svg"
+import { useState } from 'react'
 
 const Escolhido = () => {
+
+    function handleReset() {
+        document.querySelectorAll<HTMLInputElement>('input[type="checkbox"]')
+          .forEach(el => el.checked = false);
+      }
+      
+
+
   return (
     <main className='EscolhidoMain'>
         <section className='section1Escolhido'>
@@ -76,7 +85,7 @@ const Escolhido = () => {
             </div>
             <span>Confirmar</span>
             </button>
-            <button>
+            <button id='buttonResetEscolhido' onClick={handleReset}>
             <div className="iconButton">
                 <img src={Reset} alt="" />
             </div>

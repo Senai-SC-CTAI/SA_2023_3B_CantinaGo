@@ -56,17 +56,22 @@ const AlimentoCriar = () => {
     }
   };
 
-  // const [comidas, setComidas] = useState([]);
-  // const [nomeInput, setNomeInput] = useState('');
-  // const [caloriasInput, setCaloriasInput] = useState('');
-  // const [precoInput, setPrecoInput] = useState('');
-  // const [categoriaInput, setCategoriaInput] = useState('');
-  // const [ingredientesInput, setIngredientesInput] = useState('');
-
-  const handleInputChange = (event: { target: { name: any; value: any } }) => {
+  const handleInputChange = (event: { target: { name: any; value: any; }; }) => {
     const { name, value } = event.target;
     setFormState({ ...formState, [name]: value });
   };
+
+  const handleReset = () => {
+    setFormState({
+      nomeInput: "",
+      caloriasInput: "",
+      precoInput: "",
+      categoriaInput: "",
+      ingredientesInput: "",
+      
+    });
+  };
+
   return (
     <main className="AlimentoCriarMain">
       <section className="section1AlimentoCriar">
@@ -112,7 +117,7 @@ const AlimentoCriar = () => {
           </div>
           <span>Confirmar</span>
         </button>
-        <button>
+        <button onClick={handleReset}>
           <div className="iconButton">
             <img src={Reset} alt="" />
           </div>

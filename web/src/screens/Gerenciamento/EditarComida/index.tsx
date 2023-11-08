@@ -11,6 +11,7 @@ import AlimentoCriar from '../../../components/admComponents/AlimentoCriar'
 
 function EditarComida() {
 
+  
 
   return (
     <>
@@ -34,8 +35,8 @@ function EditarComida() {
             </section>
             <img src={Image3} className='ImageEdicao'/>
           </article>
-          {/* <AlimentoEscolher/> */}
-          <AlimentoCriar/>
+          <AlimentoEscolher/>
+          {/* <AlimentoCriar/> */}
           <Footer />
       </main>
     </>
