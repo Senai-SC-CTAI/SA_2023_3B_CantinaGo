@@ -6,4 +6,4 @@
 
 # Sobre nós:
 
-Somos um grupo de estudantes do Sesi Senai em SC, foi proposto para nós criarmos um aplicativo e um site o qual ajude a sanar as dificuldades que a cantina da nossa escola possui.
+Somos um grupo de estudantes do Sesi Senai em SC, foi proposto para nós criarmos um aplicativo e um site o qual ajude a sanar as dificuldades de otimização do tempo que a cantina da nossa escola possui.
