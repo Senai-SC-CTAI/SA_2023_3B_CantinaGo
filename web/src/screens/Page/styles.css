@@ -6,12 +6,12 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 15rem;
-    padding: 9rem 10rem;
+    gap: 15vw;
+    padding: 9vw 10vh;
 }
 
 .pageTitle {
-    font-size: 5rem;
+    font-size: 4vw;
     color: #444;
     font-weight: 700;
     text-align: left;
@@ -22,7 +22,7 @@
 }
 
 .pageContainer img {
-    width: 25rem
+    width: 25vw
 }
 
 .contentPage {
