@@ -34,7 +34,6 @@ function GerenciamentoHome() {
   const handleViewComida = () => {
     fetchComida();
   };
-
   return (
     <>
       <Header />
@@ -80,7 +79,7 @@ function GerenciamentoHome() {
                 <FeedbackComponent />
                 <div>
                   <button className='btn' onClick={handleViewComida}>
-                    <p className='buttonGerenciamento'>TESTEMostrar Comidas</p>
+                    <p className='buttonGerenciamento'>Mostrar Comidas</p>
                   </button>
 
                   <div className='comidaContainer'>

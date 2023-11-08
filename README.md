@@ -6,4 +6,6 @@
 
 # Sobre nós:
 
-Somos um grupo de estudantes do Sesi Senai em SC, foi proposto para nós criarmos um aplicativo e um site o qual ajude a sanar as dificuldades de otimização do tempo que a cantina da nossa escola possui.
+Somos uma empresa com o objetivo de solucionar o problema da Cantina nas Escolas com um sistema simples e intuitivo, conectamos o usuário com o cardápio da cantina para ver quando e onde quiser, simplificando o gerenciamento e diminuindo filas.
+
+
