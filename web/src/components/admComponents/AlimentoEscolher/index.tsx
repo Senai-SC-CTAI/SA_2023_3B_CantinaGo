@@ -6,7 +6,7 @@ import Buscar from "../../../assets/icons/Buscar.svg"
 const AlimentoEscolher = () => {
   return (
     <main className='AlimentoEscolherMain'>
-        <section className='section1AlimentoEscolher'>
+        <section id='#aaa'className='section1AlimentoEscolher'>
             <form className='formAlimentoEscolher'>
                 <input type="text" placeholder="Buscar"/>
                 <img src={Buscar}/>
@@ -74,7 +74,7 @@ const AlimentoEscolher = () => {
            
         </section>
         <section className='section2AlimentoCriar'>
-            <button>
+            <button id='button'>
             <div className="iconButton">
                 <img src={Mais} alt="" />
             </div>

@@ -28,14 +28,14 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
     border-radius: 20px;
     border: none;
+    color: var(--C2);
+    font-size: 1.5vw;
 
 }   
 
 .formAlimentoEscolher input::placeholder{
     color: var(--C1);
     font-size: 1.5vw;
-    position: absolute;
-    top: 25%
 }
 
 .formAlimentoEscolher img{
@@ -52,18 +52,18 @@
     gap: 3vh;
 }
 
-.section2AlimentoCriar button{ 
-    display: inline-block;
+.section2AlimentoCriar button {
+    display: flex;
+    align-items: center; /* Adicione esta linha para centralizar verticalmente */
+    justify-content: center; /* Adicione esta linha para centralizar horizontalmente */
     width: 4vw;
-    height: 4vw;  
-    float: left;
-    overflow: hidden; 
-    transition: all .5s ease;
+    height: 4vw;
+    overflow: hidden;
+    transition: all 0.5s ease;
     background-color: var(--L2);
     border: none;
     border-radius: 10px 0px 0px 10px;
-}   
-
+}
 .section2AlimentoCriar button:hover {   
     background-color: var(--L1);
     cursor: pointer;
@@ -86,15 +86,16 @@
 
 }
 
-.section2AlimentoCriar span{
-    display: inline-block;
+.section2AlimentoCriar span {
+    flex: 1; /* Adicione esta linha para que o span ocupe todo o espaço disponível */
+    display: flex;
+    align-items: center; /* Adicione esta linha para centralizar verticalmente */
     background-color: var(--B1);
     color: var(--L2);
     font-size: 1.5vw;
-    padding: 1.8vh 2vw;
-    text-align: justify;
-    margin-right: 0.3vw;
-    margin-bottom: 0.7vh;
+    margin-right: 0.5vw;
+    height: 85%;
+    overflow: hidden;
 }
 
 
@@ -189,6 +190,7 @@
 .accordion .content input{
     width: 2vw;
     color: var(--L2)
+    
 }
 
 .nomeComidaAlimentoEscolher{
@@ -267,3 +269,12 @@
     content: '';
     width: 0%;
 }
+
+
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 0 none;
+    outline: 0;
+    margin-bottom: 0.8vh;
+} 

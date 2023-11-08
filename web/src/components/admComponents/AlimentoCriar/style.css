@@ -95,7 +95,7 @@
 }   
 
 .accordionCriar input::placeholder{
-    color: var(--C0);
+    color: var(--C0 );
     font-size: 1.5vw;
     position: absolute;
     top: 25%
