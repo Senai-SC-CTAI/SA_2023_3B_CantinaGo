@@ -12,6 +12,7 @@ function App() {
       <div className="searchContainer">
         <h3>Buscar</h3>
         <input type="text" />
+        
       </div>
       <h1>Salgados</h1>
       <div className="typeContainer">

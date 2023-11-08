@@ -14,33 +14,35 @@ import {
   Inter_500Medium,
   }  from '@expo-google-fonts/inter';
 
+/*   fetch -> para todas as comidas
+
+  map -> useState a -> filter ( a )
+   */
+
 import styles from './styles'
 
 export function Search() {
 
 
   const [comidas, setComidas] = useState([]);
-  const [novaComida, setNovaComida] = useState({
-    id:"",
-    foto:"",
-    nome:"",
-    preco:"",
-    caloria:"",
-    category:"",
-    ingredientes:[""],
-  });
   
 
   useEffect(() => {
     fetchComidas();
   }, []);
 
-  const fetchComidas = async () => {
-    try {
-      
-    } catch (error) {
-      console.error('Erro ao buscar comidas:', error);
-    }
+  const fetchComidas = async() => {
+    fetch("http://localhost:5173/comidas", {method: "GET", mode: "cors", headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },})
+  .then((response) => {
+    console.log(response)
+    setComidas(response)
+  })
+  .catch(function (err) {
+    console.log("Unable to fetch -", err);
+  });
   };
   
   useFonts({
@@ -95,7 +97,9 @@ function pesquisa(){
       </View>
       <FlatList
       data={comidas}
-      renderItem={({})}
+      renderItem={({}) => <>
+        <Text> a </Text>
+      </>}
       style={{position: 'absolute'}}>
 
 

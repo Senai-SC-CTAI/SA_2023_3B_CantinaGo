@@ -19,6 +19,18 @@ public class ComidaController {
     return comidaRepository.findAll();
   }
 
+/*    @GetMapping("/Comida/{nomeComida}")
+public List<Comida> listarComidasPorNome(@PathVariable String nomeComida) {
+    Comida comida = ComidaRepository.findByNome(nomeComida);
+
+
+    if (comida == null) {
+        throw new Exception("Comida não encontrada com o nome: " + nomeComida);
+    }
+    return ComidaRepository.findByComida(comida);
+}
+ */
+
   @PostMapping
   public Comida criarComida(@RequestBody Comida comida) {
     return comidaRepository.save(comida);
@@ -47,4 +59,8 @@ public class ComidaController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    Comida findByNome(String Nome);
+    
+
 }
