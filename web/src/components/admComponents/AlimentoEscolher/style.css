@@ -203,7 +203,7 @@
 
 
 
-.accordion .content div span::after{
+.lixoEscolher::after{
     content: '';
     background: url('../../../assets/icons/LixoPreto.svg') no-repeat;
     margin-left: 1vw;
@@ -216,7 +216,7 @@
     
 }
 
-.accordion .content div span::before{
+.editarEscolher::before{
     content: '';
     background: url('../../../assets/icons/EditPreto.svg') no-repeat;
     margin-left: 1vw;
@@ -228,7 +228,7 @@
     
 }
 
-.accordion .content div span:hover::before {
+.editarEscolher:hover::after {
     cursor: pointer;
     content: '';
     background: url('../../../assets/icons/EditLaranja.svg') no-repeat;
@@ -240,7 +240,7 @@
     position: absolute;
 }
 
-.accordion .content div span:hover::after {
+.lixoEscolher:hover::after {
     cursor: pointer;
     content: '';
     background: url('../../../assets/icons/LixoLaranja.svg') no-repeat;

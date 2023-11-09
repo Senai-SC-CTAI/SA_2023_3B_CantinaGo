@@ -2,13 +2,14 @@ import React from "react";
 import "./style.css";
 import Ok from "../../../assets/icons/Ok.svg";
 import Reset from "../../../assets/icons/Reset.svg"
+import Back from "../../../assets/icons/Back.svg"
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ImageInput from "../../imageInput";
 
 //FAZER MODAL
 
-const AlimentoCriar = () => {
+const AlimentoCriar: React.FC<{ onVoltarClick: () => void }> = ({ onVoltarClick }) => {
   const [comidas, setComidas] = useState([]);
 
   const [formState, setFormState] = useState({
@@ -122,6 +123,12 @@ const AlimentoCriar = () => {
             <img src={Reset} alt="" />
           </div>
           <span>Resetar</span>
+        </button>
+        <button onClick={onVoltarClick}>
+          <div className="iconButton">
+            <img src={Back} alt="" />
+          </div>
+          <span>Voltar</span>
         </button>
       </section>
     </main>

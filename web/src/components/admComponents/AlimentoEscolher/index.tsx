@@ -3,7 +3,7 @@ import './style.css'
 import Mais from "../../../assets/icons/Mais.svg"
 import Buscar from "../../../assets/icons/Buscar.svg"
 
-const AlimentoEscolher = () => {
+const AlimentoEscolher: React.FC<{ onNovoAlimentoClick: () => void }> = ({ onNovoAlimentoClick }) => {
   return (
     <main className='AlimentoEscolherMain'>
         <section id='#aaa'className='section1AlimentoEscolher'>
@@ -18,11 +18,13 @@ const AlimentoEscolher = () => {
                     <div className='content'>
                         <div>
                             <label className='nomeComidaAlimentoEscolher' htmlFor="scales">• Pão de Queijo</label>
-                            <span></span>
+                            <span className='editarEscolher'></span>
+                            <span className='lixoEscolher'></span>
                         </div>
                         <div>
                             <label className='nomeComidaAlimentoEscolher' htmlFor="scales">• Pastel</label>
-                            <span></span>
+                               <span className='editarEscolher'></span>
+                            <span className='lixoEscolher'></span>
                         </div>
                     </div>
                 </li>
@@ -32,11 +34,13 @@ const AlimentoEscolher = () => {
                     <div className='content'>
                         <div>
                             <label className='nomeComidaAlimentoEscolher' htmlFor="scales">• Crossaint</label>
-                            <span></span>
+                               <span className='editarEscolher'></span>
+                            <span className='lixoEscolher'></span>
                         </div>
                         <div>
                             <label className='nomeComidaAlimentoEscolher' htmlFor="scales">• Brigadeiro</label>
-                            <span></span>
+                               <span className='editarEscolher'></span>
+                            <span className='lixoEscolher'></span>
                             
                         </div>
                     </div>
@@ -47,11 +51,13 @@ const AlimentoEscolher = () => {
                     <div className='content'>
                         <div>
                             <label className='nomeComidaAlimentoEscolher' htmlFor="scales">• Suco de uva</label>
-                            <span></span>
+                               <span className='editarEscolher'></span>
+                            <span className='lixoEscolher'></span>
                         </div>
                         <div>
                             <label className='nomeComidaAlimentoEscolher' htmlFor="scales">• Água</label>
-                            <span></span>
+                               <span className='editarEscolher'></span>
+                            <span className='lixoEscolher'></span>
                         </div>
                     </div>
                 </li>
@@ -61,11 +67,13 @@ const AlimentoEscolher = () => {
                     <div className='content'>
                     <div>
                             <label className='nomeComidaAlimentoEscolher' htmlFor="scales">• Salgadinho</label>
-                            <span></span>
+                               <span className='editarEscolher'></span>
+                            <span className='lixoEscolher'></span>
                         </div>
                         <div>
                             <label className='nomeComidaAlimentoEscolher' htmlFor="scales">• Barra de Chocolate</label>
-                            <span></span>
+                               <span className='editarEscolher'></span>
+                            <span className='lixoEscolher'></span>
                         </div>
                     </div>
                 </li>
@@ -74,9 +82,9 @@ const AlimentoEscolher = () => {
            
         </section>
         <section className='section2AlimentoCriar'>
-            <button id='button'>
-            <div className="iconButton">
-                <img src={Mais} alt="" />
+            <button id='button' onClick={onNovoAlimentoClick}>
+            <div className='iconButton'>
+                <img src={Mais} alt='' />
             </div>
             <span>Novo alimento</span>
             </button>
