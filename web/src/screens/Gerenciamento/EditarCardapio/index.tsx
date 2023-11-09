@@ -34,8 +34,8 @@ function EditarCardapio() {
             </section>
             <img src={Image3} className='ImageEdicao'/>
           </article>
-          <AguardandoData/>
-          {/* <Escolhido/> */}
+          {/* <AguardandoData/> */}
+          <Escolhido/>
           <Footer />
       </main>
     </>

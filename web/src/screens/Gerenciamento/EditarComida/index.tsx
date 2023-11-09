@@ -11,7 +11,15 @@
 
   function EditarComida() {
 
-    
+    const [novoAlimentoVisible, setNovoAlimentoVisible] = useState(false);
+
+    const toggleNovoAlimento = () => {
+      setNovoAlimentoVisible(!novoAlimentoVisible);
+    };
+  
+    const handleVoltar = () => {
+      setNovoAlimentoVisible(false);
+    };
 
     return (
       
@@ -36,8 +44,11 @@
               </section>
               <img src={Image3} className='ImageEdicao'/>
             </article>
-            {/* <AlimentoEscolher/> */}
-            {/* <AlimentoCriar/> */}
+            {novoAlimentoVisible ? (
+              <AlimentoCriar onVoltarClick={handleVoltar} />
+            ) : (
+              <AlimentoEscolher onNovoAlimentoClick={toggleNovoAlimento} />
+            )}
             <Footer />
         </main>
       </>
