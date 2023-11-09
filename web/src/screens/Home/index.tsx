@@ -10,6 +10,7 @@ import FoodsImage from '../../assets/img/ImageHeader.png'
 const uniqueCategories = Array.from(new Set(Content.map((item) => item.category)));
 
 function App() {
+  scrollTo(0,0)
 
   return (
     <>

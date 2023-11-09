@@ -11,7 +11,7 @@ interface Comida {
   preco: number;
 }
 
-function App() {
+export default function Search() {
   const [comida, setComida] = useState<string>('');
   const [comidas, setComidas] = useState<Comida[]>([]);
 
@@ -102,6 +102,4 @@ function App() {
     </section>
   );
 }
-
-export default App;
 

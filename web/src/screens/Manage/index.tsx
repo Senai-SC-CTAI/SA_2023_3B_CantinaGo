@@ -1,15 +1,13 @@
 import './style.css'
 import { useState } from 'react';
-import Header from '../../../components/Header/index'
+import Header from '../../components/Header/index'
 import { Link } from "react-router-dom"
-import { FeedbackComponent } from "../Feedback"
 import axios from "axios";
-import Footer from '../../../components/Footer/index'
+import Footer from '../../components/Footer/index'
 
-import FoodsImage from '../../../assets/img/ImageHeader.png'
-import Image1 from '../../../assets/img/Image1Administração.svg'
-import Image2 from '../../../assets/img/Image2Administracao.svg'
-import React from 'react';
+import FoodsImage from '../../assets/img/ImageHeader.png'
+import Image1 from '../../assets/img/Image1Administração.svg'
+import Image2 from '../../assets/img/Image2Administracao.svg'
 
 interface Comida {
   nome: string,
@@ -19,9 +17,8 @@ interface Comida {
   ingredientes: string,
 }
 
-
-
-function GerenciamentoHome() {
+export default function Manage() {
+  scrollTo(0,0)
   const [comida, setComida] = useState<Comida[]>([])
   const [isAdmin, setisAdmin] = useState<boolean>(true)
 
@@ -61,17 +58,17 @@ function GerenciamentoHome() {
               <p>Crie, edite ou delete cardápios e alimentos de forma eficiente, prática e fácil!</p>
               <div className='buttonsGerec'>
               
-                <Link to='/EditarComida'>
+                <Link to='/edit-food'>
                   <button>Alimentos</button>
                 </Link>
-                <Link to='/EditarCardapio'>
+                <Link to='/edit-menu'>
                   <button>Cardápios</button>
                 </Link>
               </div>
 
               {isAdmin &&(
                 <>
-                  <Link to='/EditarComida'>
+                  <Link to='/edit-food'>
                   <button className='funcionarioBtn'>Funcionários</button>
                 </Link>
                 </>)}
@@ -98,6 +95,5 @@ function GerenciamentoHome() {
       </>
     )
   }
-// }
 
-export default GerenciamentoHome
+

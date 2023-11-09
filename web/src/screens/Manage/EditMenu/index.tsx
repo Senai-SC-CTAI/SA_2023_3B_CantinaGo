@@ -2,12 +2,11 @@ import './style.css'
 import Header from '../../../components/Header/index'
 import FoodsImage from '../../../assets/img/ImageHeader.png'
 import Image3 from '../../../assets/img/Image3Administracao.svg'
-import { useState } from 'react'
-import AguardandoData from '../../../components/admComponents/Aguardando'
 import Footer from '../../../components/Footer'
 import Escolhido from '../../../components/admComponents/Escolhido'
 
-function EditarCardapio() {
+export default function EditMenu() {
+  scrollTo(0,0)
 
 
   return (
@@ -42,4 +41,3 @@ function EditarCardapio() {
   )
 }
 
-export default EditarCardapio

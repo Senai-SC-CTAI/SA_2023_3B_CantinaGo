@@ -15,6 +15,8 @@ function Food() {
      return <div className="mainFood">Comida não encontrada</div>;
   }
 
+  scrollTo(0,0)
+  
   return (
     <>
       <Header/>

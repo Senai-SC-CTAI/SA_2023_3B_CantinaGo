@@ -9,7 +9,8 @@
   import AlimentoEscolher from '../../../components/admComponents/AlimentoEscolher'
   import AlimentoCriar from '../../../components/admComponents/AlimentoCriar'
 
-  function EditarComida() {
+  export default function EditFood() {
+    scrollTo(0,0)
 
     const [novoAlimentoVisible, setNovoAlimentoVisible] = useState(false);
 
@@ -55,4 +56,4 @@
     )
   }
 
-  export default EditarComida
+  
