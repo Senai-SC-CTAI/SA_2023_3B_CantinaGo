@@ -1,7 +1,7 @@
 import './style.css'
 import { useState } from 'react';
 import Header from '../../../components/Header/index'
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 import { FeedbackComponent } from "../Feedback"
 import axios from "axios";
 import Footer from '../../../components/Footer/index'
@@ -19,53 +19,71 @@ interface Comida {
   ingredientes: string,
 }
 
+
+
 function GerenciamentoHome() {
   const [comida, setComida] = useState<Comida[]>([])
+  const [isAdmin, setisAdmin] = useState<boolean>(true)
 
   const fetchComida = async () => {
-    try{
+    try {
       const response = await axios.get<Comida[]>('http://localhost:8090/comidas');
       setComida(response.data);
-    } catch (error){
+    } catch (error) {
       console.log('error', error);
-      
+
     }
   };
 
   const handleViewComida = () => {
     fetchComida();
   };
-  return (
-    <>
-      <Header />
 
-      <main className='mainGerenciamento'>
-        <header className='headerGerenciamento'>
-          <section className='headerContentGerenciamento'>
-            <h1>Administração</h1>
-          </section>
-          <img src={FoodsImage} className='foodImageHomeGerenciamento'/>
+  // if (!isAdmin) {
+  //   window.location.href="./login";
+  // }
+  // else {
 
-        </header>
+    return (
+      <>
+        <Header />
 
-        
+        <main className='mainGerenciamento'>
+          <header className='headerGerenciamento'>
+            <section className='headerContentGerenciamento'>
+              <h1>Administração</h1>
+            </section>
+            <img src={FoodsImage} className='foodImageHomeGerenciamento' />
+
+          </header>
+
+
           <article className='contentGerenc'>
             <section>
               <h2>Gerenciamento</h2>
               <p>Crie, edite ou delete cardápios e alimentos de forma eficiente, prática e fácil!</p>
               <div className='buttonsGerec'>
-                <Link to='/EditarCardapio'>
-                  <button>Cardápios</button>
-                </Link>
+              
                 <Link to='/EditarComida'>
                   <button>Alimentos</button>
                 </Link>
+                <Link to='/EditarCardapio'>
+                  <button>Cardápios</button>
+                </Link>
               </div>
+
+              {isAdmin &&(
+                <>
+                  <Link to='/EditarComida'>
+                  <button className='funcionarioBtn'>Funcionários</button>
+                </Link>
+                </>)}
+
             </section>
-            <img src={Image1} className='ImageGerenc'/>
+            <img src={Image1} className='ImageGerenc' />
           </article>
           <article className='contentGerenc'>
-             <section>
+            <section>
               <h2>Estatísticas</h2>
               <p>Veja rapidamente dados e estatísticas sobre a sua cantina com apenas um clique!</p>
               <div className='buttonsGerec'>
@@ -84,7 +102,7 @@ function GerenciamentoHome() {
                   </button>
 
                   <div className='comidaContainer'>
-                    {comida.map((comida, index) =>(
+                    {comida.map((comida, index) => (
                       <div key={index} className='comidaItem'>
                         <p>Nome: {comida.nome}</p>
                         <p>Calorias {comida.caloria}</p>
@@ -92,17 +110,17 @@ function GerenciamentoHome() {
                         <p>Categoria: {comida.categoria}</p>
                         <p>Ingredientes: {comida.ingredientes}</p>
                       </div>
-                  ))}
+                    ))}
 
                   </div>
                 </div>
               </div>
             </section>
-            <img src={Image2} className='ImageGerenc'/>
+            <img src={Image2} className='ImageGerenc' />
           </article>
-      <Footer />
-        
-        {/* <section>
+          <Footer />
+
+          {/* <section>
           <article className='graphic1Gerenciamento'>
 
           </article>
@@ -142,9 +160,10 @@ function GerenciamentoHome() {
 
           </article>
         </section> */}
-      </main>
-    </>
-  )
-}
+        </main>
+      </>
+    )
+  }
+// }
 
 export default GerenciamentoHome

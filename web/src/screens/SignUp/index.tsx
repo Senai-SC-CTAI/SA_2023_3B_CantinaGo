@@ -1,9 +1,15 @@
 import LogoSingUp from '../../assets/img/singuplogo.svg';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ChangeEvent } from 'react';
 import axios from 'axios';
 
 import { Link } from 'react-router-dom';
 import './style.css';
+
+interface Comida {
+  isAdmin: boolean;
+}
+
+
 
 export default function SignUp() {
  
@@ -47,6 +53,28 @@ export default function SignUp() {
     }
   };
 
+  // verificar usuario
+
+  const [isAdmin, setisAdmin] = useState<boolean>(false)
+  const [comida, setComida] = useState<Comida[]>([])
+
+  const fetchComida = async () => {
+    try {
+      const response = await axios.get<Comida[]>('http://localhost:8090/comidas');
+    } catch (error) {
+      console.log('error', error);
+
+    }
+  };
+
+  const handleViewComida = () => {
+    fetchComida();
+  };
+
+  if (!isAdmin) {
+    window.location.href="./login";
+  }
+
   return (
     
     <div className="container-Register">
@@ -74,9 +102,32 @@ export default function SignUp() {
             <input id="telefone" className='input-Register' type="text" placeholder="48 99999-9999" value={telefoneInput} onChange={(e) => setTelefoneInput(e.target.value)} />
           </div>
           <div className="input-other">
-            <label htmlFor="turma" className="input-label">Turma</label>
-            <input id="turma" className='input-Register' type="text" placeholder="XX" value={turmaInput}  onChange={(e) => setTurmaInput(e.target.value)} />
-        </div>
+      <label className="input-label">Usuário</label>
+
+      <div>
+        <label>
+          <input
+            type="radio"
+            value="aluno"
+            checked={tipoUsuario === 'aluno'}
+            onChange={handleTipoUsuarioChange}
+          />
+          Aluno
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            value="funcionario"
+            checked={tipoUsuario === 'funcionario'}
+            onChange={handleTipoUsuarioChange}
+          />
+          funcionario
+        </label>
+
+        {/* Adicione mais opções de acordo com suas necessidades */}
+      </div>
+    </div>
         </div>
         <button onClick={handleSubmit} className="submit-button">Cadastrar</button>
         <div className="login-link">
