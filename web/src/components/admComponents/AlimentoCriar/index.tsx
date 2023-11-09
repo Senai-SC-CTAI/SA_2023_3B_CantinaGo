@@ -26,7 +26,7 @@ const AlimentoCriar: React.FC<{ onVoltarClick: () => void }> = ({ onVoltarClick 
 
   const fetchComidas = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:5173/RegistrarComida");
+      const response = await axios.get("http://localhost:8090/comidas");
       setComidas(response.data);
     } catch (error) {
       console.log("error", error);
@@ -42,7 +42,7 @@ const AlimentoCriar: React.FC<{ onVoltarClick: () => void }> = ({ onVoltarClick 
         categoria: formState.categoriaInput,
         ingredientes: formState.ingredientesInput,
       };
-      await axios.post("http://localhost:5173/RegistrarComida", novaComida);
+      await axios.post("http://localhost:8090/comidas", novaComida);
       fetchComidas();
 
       setFormState({
@@ -78,41 +78,47 @@ const AlimentoCriar: React.FC<{ onVoltarClick: () => void }> = ({ onVoltarClick 
       <section className="section1AlimentoCriar">
         <h4>Novo Alimento</h4>
         <div className="accordionCriar">
+          {/* <form onSubmit={handleSubmit}> */}
+
           <input
             placeholder="Nome"
+            type="text"
             name="nomeInput"
             value={formState.nomeInput}
             onChange={handleInputChange}
-          ></input>
+            ></input>
           <input
             placeholder="Calorias"
             name="caloriasInput"
+            type="number"
             value={formState.caloriasInput}
             onChange={handleInputChange}
-          ></input>
+            ></input>
           <input
             placeholder="Preço"
+            type="number"
             name="precoInput"
             value={formState.precoInput}
             onChange={handleInputChange}
-          ></input>
+            ></input>
           <input
             placeholder="Categoria"
             name="categoriaInput"
             value={formState.categoriaInput}
             onChange={handleInputChange}
-          ></input>
+            ></input>
           <input
             placeholder="Ingredientes"
             name="ingredientesInput"
             value={formState.ingredientesInput}
             onChange={handleInputChange}
-          ></input>
+            ></input>
           <ImageInput/>
+            {/* </form> */}
         </div>
       </section>
       <section className="section2AlimentoCriar">
-        <button onClick={handleSubmit}>
+        <button onClick={handleSubmit} type="submit">
           <div className="iconButton">
             <img src={Ok} alt="" />
           </div>
