@@ -10,6 +10,7 @@ import GerenciamentoHome from './screens/Gerenciamento/GerenciamentoHome/index.t
 import EditarCardapio from './screens/Gerenciamento/EditarCardapio/index.tsx'
 import EditarComida from './screens/Gerenciamento/EditarComida/index.tsx'
 import About from './screens/About/index.tsx'
+import Statics from './screens/Statics/index.tsx'
 
 
 import {
@@ -59,6 +60,10 @@ const router = createBrowserRouter(
       {
         path: '/sobre',
         element: <About/>
+      },
+      {
+        path: '/statics',
+        element: <Statics/>
       },
   ]
 )
