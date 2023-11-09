@@ -87,76 +87,13 @@ function GerenciamentoHome() {
                 <Link to='/analytics'>
                   <button>Visualizar</button>
                 </Link>
-                <Link to='/'>
-                  <button>Adicionar</button>
-                </Link>
               </div>
               <div>
-                <FeedbackComponent />
-                <div>
-                  <button className='btn' onClick={handleViewComida}>
-                    <p className='buttonGerenciamento'>Mostrar Comidas</p>
-                  </button>
-
-                  <div className='comidaContainer'>
-                    {comida.map((comida, index) => (
-                      <div key={index} className='comidaItem'>
-                        <p>Nome: {comida.nome}</p>
-                        <p>Calorias {comida.caloria}</p>
-                        <p>Preço: {comida.preco}</p>
-                        <p>Categoria: {comida.categoria}</p>
-                        <p>Ingredientes: {comida.ingredientes}</p>
-                      </div>
-                    ))}
-
-                  </div>
-                </div>
               </div>
             </section>
             <img src={Image2} className='ImageGerenc' />
           </article>
           <Footer />
-
-          {/* <section>
-          <article className='graphic1Gerenciamento'>
-
-          </article>
-          <div className='buttonsGerenciamento'>
-            <Link to='/ListaComidas'>
-              <p className='buttonGerenciamento'>Comidas</p>
-            </Link>
-            <Link to='/EditarCardapio'>
-              <p className='buttonGerenciamento'>Editar Cardápio</p>
-            </Link>
-          <FeedbackComponent />
-          <div>
-            <button className='btn' onClick={handleViewComida}>
-              <p className='buttonGerenciamento'>Mostrar Comidas</p>
-            </button>
-
-            <div className='comidaContainer'>
-              {comida.map((comida, index) =>(
-                <div key={index} className='comidaItem'>
-                  <p>Nome: {comida.nome}</p>
-                  <p>Calorias {comida.caloria}</p>
-                  <p>Preço: {comida.preco}</p>
-                  <p>Categoria: {comida.categoria}</p>
-                  <p>Ingredientes: {comida.ingredientes}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          </div>
-        </section>
-
-        <section>
-          <article className='graphic2Gerenciamento'>
-       
-          </article>
-          <article className='graphic3Gerenciamento'>
-
-          </article>
-        </section> */}
         </main>
       </>
     )
