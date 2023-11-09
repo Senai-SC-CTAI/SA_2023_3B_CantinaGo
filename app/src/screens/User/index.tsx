@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import styles from './styles';
 import { useState } from 'react';
-import { View, Image, TextInput, Text, TouchableOpacity, useEffect } from 'react-native';
+import { View, Image, TextInput, Text, TouchableOpacity} from 'react-native';
 import { Feather } from '@expo/vector-icons'
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import axios from 'axios';
@@ -209,6 +209,12 @@ const navigation: NavigationType = useNavigation();
           <TouchableOpacity style={styles.button} onPress={(Logout)}>
             <Text style={styles.buttonText}>Sair</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => handleDelete(usuario.id)}>
+            <Text>Excluir</Text>
+          </TouchableOpacity>
+
+          
         </View>
       )}
 
