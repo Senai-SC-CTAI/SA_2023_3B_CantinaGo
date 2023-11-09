@@ -47,16 +47,13 @@ function GerenciamentoHome() {
     return (
       <>
         <Header />
-
         <main className='mainGerenciamento'>
           <header className='headerGerenciamento'>
             <section className='headerContentGerenciamento'>
               <h1>Administração</h1>
             </section>
             <img src={FoodsImage} className='foodImageHomeGerenciamento' />
-
           </header>
-
 
           <article className='contentGerenc'>
             <section>
@@ -87,7 +84,7 @@ function GerenciamentoHome() {
               <h2>Estatísticas</h2>
               <p>Veja rapidamente dados e estatísticas sobre a sua cantina com apenas um clique!</p>
               <div className='buttonsGerec'>
-                <Link to='/'>
+                <Link to='/analytics'>
                   <button>Visualizar</button>
                 </Link>
                 <Link to='/'>

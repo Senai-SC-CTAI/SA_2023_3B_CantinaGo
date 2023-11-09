@@ -62,7 +62,7 @@ const router = createBrowserRouter(
         element: <About/>
       },
       {
-        path: '/statics',
+        path: '/analytics',
         element: <Statics/>
       },
   ]

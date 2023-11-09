@@ -1,7 +1,7 @@
 import './style.css';
 import Header from '../../components/Header/index';
 import axios from 'axios';
-import React, { useState, useEffect, ChangeEvent } from 'react';
+import { useState, useEffect, ChangeEvent } from 'react';
 import Card from '../../components/Card';
 
 interface Comida {
@@ -21,7 +21,7 @@ function App() {
         <img src={comida.foto} alt={comida.nome} />
         <div className="div">
         <h4>{comida.nome}</h4>
-        <p>Preço: R${comida.preco.toFixed(2)}</p>
+        <p>Preço: R${comida.preco}</p>
         </div>
       </div>
     ));
@@ -55,44 +55,44 @@ function App() {
           </div>
           <h1>Salgados</h1>
       <div className="typeContainer">
+        {/* <Card/>
         <Card/>
         <Card/>
         <Card/>
         <Card/>
         <Card/>
-        <Card/>
-        <Card/>
+        <Card/> */}
         
       </div>
       <h1>Doces</h1>
       <div className="typeContainer">
+        {/* <Card/>
         <Card/>
         <Card/>
         <Card/>
         <Card/>
         <Card/>
-        <Card/>
-        <Card/>
+        <Card/> */}
       </div>
       <h1>Bebidas</h1>
       <div className="typeContainer">
+        {/* <Card/>
         <Card/>
         <Card/>
         <Card/>
         <Card/>
         <Card/>
-        <Card/>
-        <Card/>
+        <Card/> */}
       </div>
       <h1>Snacks</h1>
       <div className="typeContainer">
+        {/* <Card/>
         <Card/>
         <Card/>
         <Card/>
         <Card/>
         <Card/>
-        <Card/>
-        <Card/>
+        <Card/> */}
       </div>
       
     
@@ -105,4 +105,3 @@ function App() {
 
 export default App;
 
-export default App
