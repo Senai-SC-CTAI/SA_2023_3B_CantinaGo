@@ -19,4 +19,5 @@ public class Usuario {
     private String email;
     private String turma;
     private String telefone;
+    private boolean isAdmin;
 }

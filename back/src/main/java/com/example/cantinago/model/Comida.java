@@ -17,8 +17,11 @@ public class Comida {
   private Integer calorias;
   private Double preco;
   private String categoria;
-  private String ingredientes;
 
   @Column(name = "Comida_TIPO")
   private Integer tipo;
+  
+  public String getNome(){
+      return this.nome;
+  }
 }
