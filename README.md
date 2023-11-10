@@ -12,12 +12,11 @@ Somos uma empresa com o objetivo de solucionar o problema da Cantina nas Escolas
 
 Conheça a equipe dedicada por trás do CantinaGo, trabalhando arduamente para melhorar sua experiência de compra e tornar os momentos nas cantinas mais agradáveis.
 
-|  ![foto]()  | ![foto]() | ![foto]() | ![foto]() | ![foto]() | ![foto]()| 
-|---------------|----------------|---------------|--------------|-----------------|---------|
-|  Ana Beatriz  | Cairé de Marco | Maria Eduarda | Jaíza Freire | Bernado Machado | Enzo    | 
-|Líder, Feedback| Comidas        | Login         | Cadastro     |   Usuário       |Pesquisa |  
-| [Linkedin](https://www.linkedin.com/in/anabe-sc/) | [Linkedin](https://www.linkedin.com/in/anabe-sc/) |[Linkedin](https://www.linkedin.com/in/anabe-sc/)|[Linkedin](https://www.linkedin.com/in/anabe-sc/)|[Linkedin](https://www.linkedin.com/in/anabe-sc/) |[Linkedin](https://www.linkedin.com/in/anabe-sc/)|  
-
+|  <img src="./docs/time/integrante.png" width="100"/>  |  <img src="./docs/time/integrante.png" width="100"/>  |  <img src="./docs/time/integrante.png" width="100"/>  |  <img src="./docs/time/integrante.png" width="100"/> |  <img src="./docs/time/integrante.png" width="100"/>  |  <img src="./docs/time/integrante.png" width="100"/> | 
+|---------------|----------------|---------------|--------------|-----------------|---------------|
+|  Ana Beatriz  | Cairé de Marco | Maria Eduarda | Jaíza Freire | Bernado Machado | Enzo Dorneles | 
+|Líder, Feedback| Comidas        | Login         | Cadastro     |   Usuário       |Pesquisa       |  
+| [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://https://www.linkedin.com/in/anabe-sc/) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://https://www.linkedin.com/in/anabe-sc/) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://https://www.linkedin.com/in/anabe-sc/)|[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://https://www.linkedin.com/in/anabe-sc/) |[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://https://www.linkedin.com/in/anabe-sc/) | [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://https://www.linkedin.com/in/anabe-sc/) |
 <!--
 <div align="center">
   <div align="center">
