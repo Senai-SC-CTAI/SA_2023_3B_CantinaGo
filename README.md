@@ -12,6 +12,13 @@ Somos uma empresa com o objetivo de solucionar o problema da Cantina nas Escolas
 
 Conheça a equipe dedicada por trás do CantinaGo, trabalhando arduamente para melhorar sua experiência de compra e tornar os momentos nas cantinas mais agradáveis.
 
+|  ![foto]()  | ![foto]() | ![foto]() | ![foto]() | ![foto]() | ![foto]()| 
+|---------------|----------------|---------------|--------------|-----------------|---------|
+|  Ana Beatriz  | Cairé de Marco | Maria Eduarda | Jaíza Freire | Bernado Machado | Enzo    | 
+|Líder, Feedback| Comidas        | Login         | Cadastro     |   Usuário       |Pesquisa |  
+| [Linkedin](https://www.linkedin.com/in/anabe-sc/) | [Linkedin](https://www.linkedin.com/in/anabe-sc/) |[Linkedin](https://www.linkedin.com/in/anabe-sc/)|[Linkedin](https://www.linkedin.com/in/anabe-sc/)|[Linkedin](https://www.linkedin.com/in/anabe-sc/) |[Linkedin](https://www.linkedin.com/in/anabe-sc/)|  
+
+<!--
 <div align="center">
   <div align="center">
     <br>
@@ -51,6 +58,7 @@ Conheça a equipe dedicada por trás do CantinaGo, trabalhando arduamente para m
     <p>Bernado Machado<br/>Desenvolvedor Frontend</p>
   </div>
 </div>
+-->
 
 ## Tecnologias Utilizadas:
 
