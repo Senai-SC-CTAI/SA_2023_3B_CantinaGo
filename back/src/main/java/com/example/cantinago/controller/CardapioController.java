@@ -12,7 +12,7 @@ import org.springframework.http.ResponseEntity;
 @RestController
 @RequestMapping("/comidas")
 
-public class ComidaController {
+public class CardapioController {
 
     @Autowired
     private ComidaRepository comidaRepository;

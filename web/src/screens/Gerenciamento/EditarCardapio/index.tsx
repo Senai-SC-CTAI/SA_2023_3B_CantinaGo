@@ -8,7 +8,7 @@ import Footer from '../../../components/Footer'
 import Escolhido from '../../../components/admComponents/Escolhido'
 
 function EditarCardapio() {
-
+  let date = new Date('')
 
   return (
     <>
