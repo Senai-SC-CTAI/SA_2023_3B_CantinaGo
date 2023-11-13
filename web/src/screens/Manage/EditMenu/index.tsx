@@ -2,13 +2,17 @@ import './style.css'
 import Header from '../../../components/Header/index'
 import FoodsImage from '../../../assets/img/ImageHeader.png'
 import Image3 from '../../../assets/img/Image3Administracao.svg'
-import { useState } from 'react'
-import AguardandoData from '../../../components/admComponents/Aguardando'
 import Footer from '../../../components/Footer'
 import Escolhido from '../../../components/admComponents/Escolhido'
 
+<<<<<<< HEAD:web/src/screens/Gerenciamento/EditarCardapio/index.tsx
 function EditarCardapio() {
   let date = new Date('')
+=======
+export default function EditMenu() {
+  scrollTo(0,0)
+
+>>>>>>> main:web/src/screens/Manage/EditMenu/index.tsx
 
   return (
     <>
@@ -42,4 +46,3 @@ function EditarCardapio() {
   )
 }
 
-export default EditarCardapio

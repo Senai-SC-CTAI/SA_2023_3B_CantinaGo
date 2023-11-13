@@ -22,4 +22,8 @@ public class Comida {
 
   @Column(name = "Comida_TIPO")
   private Integer tipo;
+  
+  public String getNome(){
+      return this.nome;
+  }
 }

@@ -1,22 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+// screens
 import Login from './screens/Login/index.tsx'
 import SignUp from './screens/SignUp/index.tsx'
 import Food from './screens/Food/index.tsx'
 import Home from './screens/Home/index.tsx'
-import Buscar from './screens/Search/index.tsx'
-import GerenciamentoHome from './screens/Gerenciamento/GerenciamentoHome/index.tsx'
-import EditarCardapio from './screens/Gerenciamento/EditarCardapio/index.tsx'
-import EditarComida from './screens/Gerenciamento/EditarComida/index.tsx'
+import Search from './screens/Search/index.tsx'
+import Manage from './screens/Manage/index.tsx'
+import EditMenu from './screens/Manage/EditMenu/index.tsx'
+import EditFood from './screens/Manage/EditFood/index.tsx'
 import About from './screens/About/index.tsx'
-
+import Statics from './screens/Statics/index.tsx'
+import { Page } from './screens/Page/index.tsx'
 
 import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
-import { Page } from './screens/Page/index.tsx'
 
 const router = createBrowserRouter(
   [
@@ -41,24 +42,28 @@ const router = createBrowserRouter(
         element: <SignUp />
       },
       {
-        path: '/gerenciamento',
-        element: <GerenciamentoHome />
+        path: '/manage',
+        element: <Manage />
       },
       {
-        path: '/editarCardapio',
-        element: <EditarCardapio />
+        path: '/edit-menu',
+        element: <EditMenu />
       },
       {
-        path: '/editarComida',
-        element: <EditarComida />
+        path: '/edit-food',
+        element: <EditFood />
       },
       {
-        path: '/buscar',
-        element: <Buscar/>
+        path: '/search',
+        element: <Search/>
       },
       {
-        path: '/sobre',
+        path: '/about',
         element: <About/>
+      },
+      {
+        path: '/analytics',
+        element: <Statics/>
       },
   ]
 )

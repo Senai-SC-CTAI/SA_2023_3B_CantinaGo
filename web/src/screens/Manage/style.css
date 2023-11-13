@@ -26,14 +26,14 @@
 .contentGerenc {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 5vh 5vw;
+    padding: 10vh 8vw;
     align-items: center;
 }
 
 .contentGerenc section{
     max-width: 30vw;
     display: flex;
-    gap: 1vh;
+    gap: 2vh;
     flex-direction: column;
     margin-bottom: 5vh;
 }
@@ -45,14 +45,13 @@
 
 .contentGerenc p{
     color: var(--C2);
-    font-size: 1.8vw;
+    font-size: 1.3vw;
 }
 
 .buttonsGerec{
     display: flex;
     justify-content: space-between;
     margin-top: 2vh;
-
 }
 
 .contentGerenc button{
@@ -60,13 +59,12 @@
     color: var(--B1);
     border: none;
     border-radius: 5px;
-    padding: 2vh 3.2vw;
-    font-size: 1.7vw;
+    padding: 2vh 4.4vw;
+    font-size: 1.3vw;
     transition: .2s;
     display: flex;
-    justify-content: space-between;
-    margin-top: 2vh;
-
+    /* justify-content: space-between; */
+    margin-top: 1vh;
 }
 
 .contentGerenc button:hover{
@@ -76,5 +74,15 @@
 }
 
 .ImageGerenc{
-    width: 40vw;
+    width: 30vw;
+}
+
+.funcionarioBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--L2);
+    text-align: center;
+    width: 100%;
 }

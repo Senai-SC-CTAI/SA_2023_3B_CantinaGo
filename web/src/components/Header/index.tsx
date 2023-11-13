@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 function Header() {
   const [activeItem, setActiveItem] = useState('Home');
+  const [isAdmin, setisAdmin] = useState<boolean>(false)
 
   const handleItemClick = (item: React.SetStateAction<string>) => {
     setActiveItem(item);
@@ -27,13 +28,16 @@ function Header() {
                 <NavLink to="/home">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/Buscar">Buscar</NavLink>
+                <NavLink to="/search">Buscar</NavLink>
               </li>
               <li>
-                <NavLink to="/sobre">Sobre</NavLink>
+                <NavLink to="/about">Sobre</NavLink>
               </li>
               <li>
-                <NavLink to="/gerenciamento">Administração</NavLink>
+                {
+
+                  <NavLink to="/manage">Administração</NavLink>
+                }
               </li>
             </ul>
           </nav>

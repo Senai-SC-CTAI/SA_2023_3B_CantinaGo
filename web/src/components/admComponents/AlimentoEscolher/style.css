@@ -185,6 +185,7 @@
     display: flex;
     gap: 0.5vw;
     margin-bottom: 2vh;
+    justify-content: space-between;
 }
 
 .accordion .content input{
@@ -206,20 +207,16 @@
 .lixoEscolher::after{
     content: '';
     background: url('../../../assets/icons/LixoPreto.svg') no-repeat;
-    margin-left: 1vw;
     width: 2vw;
     height: 3vh;
     background-size: 1vw;
     display: flex;
-    position: absolute;
-    margin-left: 4vw;
     
 }
 
 .editarEscolher::before{
     content: '';
     background: url('../../../assets/icons/EditPreto.svg') no-repeat;
-    margin-left: 1vw;
     width: 2vw;
     height: 3vh;
     background-size: 1.5vw;
@@ -232,7 +229,7 @@
     cursor: pointer;
     content: '';
     background: url('../../../assets/icons/EditLaranja.svg') no-repeat;
-    margin-left: 1vw;
+
     width: 2vw;
     height: 3vh;
     background-size: 1.5vw;
@@ -244,13 +241,15 @@
     cursor: pointer;
     content: '';
     background: url('../../../assets/icons/LixoLaranja.svg') no-repeat;
-    margin-left: 1vw;
     width: 2vw;
     height: 3vh;
     background-size: 1vw;
     display: flex;
-    position: absolute;
-    margin-left: 4vw;
+
+}
+
+.spansDivEscolher{
+    width: 5vw;
 }
 
 .accordion input[type="radio"]:checked + .labelComidaAlimentoEscolher + .content{

@@ -2,29 +2,32 @@
     color: black;
     height: 100%;
     display: flex;
-    padding:  5rem 3rem;;
+    padding:  5vw 3vh;
 }
 
 .titleAbout{
     width: 30%;
-    font-size: 5rem;
+    font-size: 4vw;
 }
 .cardAbout{
     background-color: rgb(243, 243, 243);
     color: #1b1b1be1;
     font-weight: 400;
-    padding: 4rem 8rem;
-    width: 80%;
-    height: 70vh;
+    padding: 2vw 9vh;
+    width: 70%;
     border-radius: 5px;
-    font-size: 1.3rem;
+    font-size: 1.3vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
+
 .cardAbout span{
     font-weight: 600;
-    padding: 1rem 0rem;
+    padding: 1vw 0vh;
+}
+.cardAbout img{
+    width: 30vw;
 }

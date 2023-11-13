@@ -59,7 +59,10 @@ const AlimentoCriar: React.FC<{ onVoltarClick: () => void }> = ({ onVoltarClick 
 
   const handleInputChange = (event: { target: { name: any; value: any; }; }) => {
     const { name, value } = event.target;
-    setFormState({ ...formState, [name]: value });
+    setFormState(
+      //limpar 
+      { ...formState, [name]: value }
+      );
   };
 
   const handleReset = () => {
@@ -103,12 +106,14 @@ const AlimentoCriar: React.FC<{ onVoltarClick: () => void }> = ({ onVoltarClick 
             ></input>
           <input
             placeholder="Categoria"
+            type="text"
             name="categoriaInput"
             value={formState.categoriaInput}
             onChange={handleInputChange}
             ></input>
           <input
             placeholder="Ingredientes"
+            type="text"
             name="ingredientesInput"
             value={formState.ingredientesInput}
             onChange={handleInputChange}

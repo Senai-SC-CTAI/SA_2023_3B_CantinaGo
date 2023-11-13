@@ -37,3 +37,48 @@ section{
     margin-top: 2rem;
     margin-left: 2rem;
 }
+
+.pesquisaComida{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comidaContainer{
+    display: flex;
+    flex-direction: row;
+    background-color: #EFEFEF;
+    width: 80%;
+    align-items:center;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+    z-index: 1;
+
+}
+
+.comidaContainer img{
+    width: 3rem;
+    height: 3rem;
+    margin-left: 5rem;
+    margin-right: 2rem;
+}
+
+.comidaContainer h4{
+    font-size: 1rem;
+    margin-right: 1rem;
+    
+}
+
+.comidaContainer p{
+    font-size: 0.9rem;
+}
+
+.div{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainSearch{
+    z-index: 0;
+}
