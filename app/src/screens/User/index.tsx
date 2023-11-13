@@ -25,23 +25,30 @@ export function User() {
     Inter_700Bold,
 })
 
+const [usuario, setUsuario] = useState([]);
+
 useEffect(() => {
   fetchUsuario()
 }, [])
 
 const fetchUsuario = async () => {
   try {
-    const response = await axios.get('http://localhost:8090/Usuario')
+    const response = await axios.get('http://localhost:8090/usuario')
     setUsuario(response.data);
   } catch (error) {
     console.log('erro', error)
   }
 };
 
-const handleDelete = async (id) => {
+const handleDelete = async(id_usuario: any, senha: any) => {
   try {
-    await axios.delete(`http://localhost:8090/Usuario/${id}`);
+    console.log(id_usuario);
+    console.log(senha);
+    
+    await axios.delete(`http://localhost:8090/usuario/${id_usuario}`);
     fetchUsuario();
+  
+    
   } catch (error) {
     console.error('Erro ao excluir usuario:', error);
   }
