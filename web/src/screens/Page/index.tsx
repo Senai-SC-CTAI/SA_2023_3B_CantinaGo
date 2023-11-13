@@ -5,7 +5,7 @@ import circlesvg from '../../assets/img/circle-svg.svg'
 import playstore from '../../assets/icons/playstore.svg'
 import appstore from '../../assets/icons/appstore.svg'
 import { WaveSvg } from '../../components/WaveSvg'
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export function Page() {

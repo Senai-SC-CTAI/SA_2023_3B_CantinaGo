@@ -19,5 +19,6 @@ public class Usuario {
     private String email;
     private String turma;
     private String telefone;
+    @Column(name = "is_admin", nullable = false, columnDefinition = "boolean default false")
     private boolean isAdmin;
 }

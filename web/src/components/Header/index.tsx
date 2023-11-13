@@ -2,7 +2,7 @@ import './style.css'
 import '../StyleTemplate/style.css'
 import logo from '../../assets/icons/Logo.svg'
 import user from '../../assets/icons/User.svg'
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 function Header() {
@@ -43,7 +43,9 @@ function Header() {
           </nav>
         </div>
         <div className="user">
+        <NavLink to="/login">
           <img src={user} alt="User" />
+          </NavLink>
         </div>
       </header>
     </>

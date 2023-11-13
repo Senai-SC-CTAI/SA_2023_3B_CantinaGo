@@ -9,28 +9,30 @@ interface Usuario {
   telefone: string;
   email: string;
   turma: string;
+  isAdmin: boolean;
 }
 
-
 export default function Login() {
-
+  
   useEffect(() => {
     fetchUsuarios();
   }, [])
 
-    // Metodo GET 
-    const fetchUsuarios = async () => {
-      try {
-          const response = await axios.get('http://localhost:8090/usuario');
-          setUsuarios(response.data);
-          console.log(senha);
-          
-      } catch (error) {
-          console.log('Erro ao buscar Usuarios: ', error);
-      }
+  // Metodo GET 
+  const fetchUsuarios = async () => {
+    try {
+      const response = await axios.get('http://localhost:8090/usuario');
+      setUsuarios(response.data);
+      console.log(usuarios[1].email);
+      console.log(usuarios[1].senha);
+      
+    } catch (error) {
+      console.log('Erro ao buscar Usuarios: ', error);
+    }
   }
-
+  
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
+  
 
 
   return (

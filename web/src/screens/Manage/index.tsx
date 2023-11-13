@@ -1,5 +1,5 @@
 import './style.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from '../../components/Header/index'
 import { Link } from "react-router-dom"
 import axios from "axios";
@@ -17,10 +17,19 @@ interface Comida {
   ingredientes: string,
 }
 
+interface Usuario {
+  senha: string;
+  telefone: string;
+  email: string;
+  turma: string;
+  isAdmin: boolean;
+}
+
 export default function Manage() {
-  scrollTo(0,0)
+  scrollTo(0, 0)
   const [comida, setComida] = useState<Comida[]>([])
-  const [isAdmin, setisAdmin] = useState<boolean>(true)
+  const [usuario, setUsuario] = useState<Usuario[]>([])
+  const [isAdmin, setisAdmin] = useState<boolean>()
 
   const fetchComida = async () => {
     try {
@@ -31,15 +40,41 @@ export default function Manage() {
 
     }
   };
+  useEffect(() => {
+    fetchUsuarios();
+  }, [])
+
+  const fetchUsuarios = async () => {
+    try {
+      const response = await axios.get<Usuario[]>('http://localhost:8090/usuario');
+      setUsuario(response.data);
+      // checkAdmin()
+    } catch (error) {
+      console.log('error', error);
+    }
+  };
+
+  // console.log(usuario);
 
   const handleViewComida = () => {
     fetchComida();
   };
 
-  // if (!isAdmin) {
-  //   window.location.href="./login";
-  // }
-  // else {
+  const checkAdmin = usuario.filter(function(adminCheck) 
+  {
+    if (adminCheck.isAdmin == true) {
+      return true;
+    }
+  })
+
+console.log(checkAdmin);
+
+
+//   if (!checkAdmin) {
+//  window.location.href = "./login";
+//   }
+
+//  else {
 
     return (
       <>
@@ -57,7 +92,7 @@ export default function Manage() {
               <h2>Gerenciamento</h2>
               <p>Crie, edite ou delete cardápios e alimentos de forma eficiente, prática e fácil!</p>
               <div className='buttonsGerec'>
-              
+
                 <Link to='/edit-food'>
                   <button>Alimentos</button>
                 </Link>
@@ -66,11 +101,11 @@ export default function Manage() {
                 </Link>
               </div>
 
-              {isAdmin &&(
+              {checkAdmin && (
                 <>
                   <Link to='/edit-food'>
-                  <button className='funcionarioBtn'>Funcionários</button>
-                </Link>
+                    <button className='funcionarioBtn'>Funcionários</button>
+                  </Link>
                 </>)}
 
             </section>
@@ -97,3 +132,4 @@ export default function Manage() {
   }
 
 
+// }

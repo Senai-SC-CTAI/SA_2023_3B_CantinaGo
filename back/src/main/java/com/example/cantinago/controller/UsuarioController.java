@@ -15,19 +15,16 @@ public class UsuarioController {
     private UsuarioRepository usuarioRepository;
 
     @GetMapping
-
     public List<Usuario> listarUsuarios() {
         return usuarioRepository.findAll();
     }
 
     @PostMapping
-
     public Usuario criarUsuario(@RequestBody Usuario usuario) {
         return usuarioRepository.save(usuario);
     }
 
     @DeleteMapping("/{id_usuario}")
-
     public ResponseEntity<String> deletarUsuario(@PathVariable Long id_usuario) {
     if (usuarioRepository.existsById(id_usuario)) {
       usuarioRepository.deleteById(id_usuario);
@@ -38,7 +35,6 @@ public class UsuarioController {
     }
 
     @PutMapping("/{id_usuario}")
-
     public ResponseEntity<Usuario> atualizarUsuario(@PathVariable Long id_usuario, @RequestBody Usuario usuarioAtualizado) {
         if (usuarioRepository.existsById(id_usuario)) {
             Usuario usuario = usuarioRepository.findById(id_usuario).get();
