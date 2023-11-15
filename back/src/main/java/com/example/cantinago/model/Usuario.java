@@ -3,7 +3,6 @@ import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.*;
 
-
 @Entity
 @Getter
 @Setter
@@ -19,5 +18,5 @@ public class Usuario {
     private String email;
     private String turma;
     private String telefone;
-    private boolean isAdmin;
+    //private boolean isAdmin;
 }

@@ -51,7 +51,7 @@ export function Feedback() {
   const handleSubmit = async () => {
     try {
       let novoFeedback = {
-        data: Date.now(),
+        data: dataAtual,
         comentario: comentarioInput,
       };
       await axios.post('http://localhost:8090/feedback', novoFeedback);
@@ -76,6 +76,12 @@ export function Feedback() {
 
   const [feedback, setFeedback] = useState([]);
   const [comentarioInput, setComentarioInput] = useState('');
+  const dataAtual = new Date().toLocaleDateString('pt-BR', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+});
+
 
   const [showUser, setShowUser] = useState(false);
   const [showFeedback, setShowFeedback] = useState(true);
