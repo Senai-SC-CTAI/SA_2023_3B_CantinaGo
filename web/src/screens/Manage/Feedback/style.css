@@ -9,9 +9,56 @@
     padding: 1vw;
     border-radius: 10px;
     text-align: center;
+    cursor: pointer;
     transition: .25s;
 }
 
 .buttonGerenciamento:hover{
     background-color: var(--L1);
-};
+}
+
+.feedbacksContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    align-items:center;
+    justify-content: center;
+    gap: 3vh 2vw;
+    padding: 1vw 4vh;
+    min-height: 36vh;
+}
+
+.feedbackItems {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1vw;
+    /* width: 100%; */
+    max-height: 100%;
+    padding: 1vw 2vh;
+    border-radius: 10px;
+    background-color: var(--B1);
+    box-shadow: 3px 3px 7px 0px #11111140;
+
+  }
+  
+.feedbackItems p{
+    opacity: 0.7;
+    font-size: 0.8vw;
+}
+.comentario{
+    width: 100%;
+    font-size: 1.2vw;
+}
+.data{
+    opacity: 0.7;
+    font-size: 0.8vw;
+}
+
+.btnReload{
+    border: none;
+    background: none;
+    margin: 0;
+    cursor: pointer;
+}

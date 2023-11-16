@@ -9,8 +9,6 @@ interface Comida {
   isAdmin: boolean;
 }
 
-
-
 export default function SignUp() {
  
   const [cadastro, setCadastro] = useState('');
@@ -109,8 +107,8 @@ export default function SignUp() {
           <input
             type="radio"
             value="aluno"
-            checked={tipoUsuario === 'aluno'}
-            onChange={handleTipoUsuarioChange}
+            // checked={tipoUsuario === 'aluno'}
+            // onChange={handleTipoUsuarioChange}
           />
           Aluno
         </label>
@@ -119,8 +117,8 @@ export default function SignUp() {
           <input
             type="radio"
             value="funcionario"
-            checked={tipoUsuario === 'funcionario'}
-            onChange={handleTipoUsuarioChange}
+            // checked={tipoUsuario === 'funcionario'}
+            // onChange={handleTipoUsuarioChange}
           />
           funcionario
         </label>

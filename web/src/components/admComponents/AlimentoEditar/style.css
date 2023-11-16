@@ -1,0 +1,109 @@
+
+
+.AlimentoEditarMain{
+    margin-left: 5vw;
+    display: flex;
+    gap: 3vw;
+    padding-bottom: 1vh;
+    margin-bottom: 15vh;
+}
+
+.section1AlimentoEditar{
+    background-color: var(--B2);
+    border-radius: 20px;
+    padding: 5vh 3vw;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    width: 35vw;
+    
+}
+
+.section1AlimentoEditar h4{
+    font-size: 1.8vw;
+    color: var(--C3);
+    margin-bottom: 2vh;
+}
+
+
+.section2AlimentoEditar{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.section2AlimentoEditar button{ 
+    display: inline-block;
+    width: 4vw;
+    height: 4vw;  
+    float: left;
+    overflow: hidden; 
+    transition: all .5s ease;
+    background-color: var(--L2);
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+}   
+
+.section2AlimentoEditar button:hover {   
+    background-color: var(--L1);
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+.iconButton{
+    display: inline-block;
+    width: 4vw;
+    height: 4vw; 
+    overflow: hidden;
+    
+}
+
+.section2AlimentoEditar img{
+    width: 4vw;
+    height: 4vw;
+    padding: 1vw; 
+
+}
+
+.section2AlimentoEditar span{
+    display: inline-block;
+    background-color: var(--B1);
+    color: var(--L2);
+    font-size: 1.5vw;
+    padding: 1.8vh 2vw;
+    text-align: justify;
+    margin-right: 0.3vw;
+    margin-bottom: 0.7vh;
+}
+
+
+.accordionCriar{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh
+}
+
+
+.accordionCriar input{
+    width: 100%;
+    padding: 1.5vh 1vw;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 10px;
+    border: none;
+    color: var(--C2);
+   font-size: 1.5vw;
+
+}   
+
+.accordionCriar input::placeholder{
+    color: var(--C0 );
+    font-size: 1.5vw;
+    position: absolute;
+    top: 25%
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 0 none;
+    outline: 0;
+} 
+

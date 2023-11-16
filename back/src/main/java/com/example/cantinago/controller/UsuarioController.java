@@ -33,7 +33,7 @@ public class UsuarioController {
       return ResponseEntity.notFound().build();
      }
     }
-
+ 
     @PutMapping("/{id_usuario}")
     public ResponseEntity<Usuario> atualizarUsuario(@PathVariable Long id_usuario, @RequestBody Usuario usuarioAtualizado) {
         if (usuarioRepository.existsById(id_usuario)) {
