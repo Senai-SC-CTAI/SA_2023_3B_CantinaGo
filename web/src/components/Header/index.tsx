@@ -43,7 +43,9 @@ function Header() {
           </nav>
         </div>
         <div className="user">
-          <img src={user} alt="User" />
+          <NavLink to="/login">
+            <img src={user} alt="User" />
+          </NavLink>
         </div>
       </header>
     </>

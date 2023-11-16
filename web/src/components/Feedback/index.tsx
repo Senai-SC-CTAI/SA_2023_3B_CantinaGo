@@ -44,7 +44,7 @@ export const FeedbackComponent = () => {
 
       {loading && <p>Carregando feedbacks...</p>}
 
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p>{error}</p>}
 
       <div className='feedbacksContainer'>
         {feedbacks.map((feedback, index) => (

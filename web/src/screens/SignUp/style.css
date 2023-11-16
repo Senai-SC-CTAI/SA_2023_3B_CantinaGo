@@ -55,7 +55,9 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  
+  #telefone{
+    width: 100%;
+  }
   .input-label {
     font-weight: 300;
     margin-bottom: 5px;
