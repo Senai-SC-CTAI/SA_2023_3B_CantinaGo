@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export function Page() {
+    window.scrollTo(0, 0)
     return (
         <>
             <HeaderPage />

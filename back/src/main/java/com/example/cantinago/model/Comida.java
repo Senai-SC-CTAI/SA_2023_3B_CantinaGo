@@ -17,6 +17,8 @@ public class Comida {
   private Integer calorias;
   private Double preco;
   private String categoria;
+  private String ingredientes;
+  private String data;
 
   @Column(name = "Comida_TIPO")
   private Integer tipo;
