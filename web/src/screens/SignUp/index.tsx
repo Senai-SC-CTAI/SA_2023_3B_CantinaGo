@@ -53,7 +53,7 @@ export default function SignUp() {
 
   // verificar usuario
 
-  const [isAdmin, setisAdmin] = useState<boolean>(false)
+  const [isAdmin, setisAdmin] = useState<boolean>(true)
   const [comida, setComida] = useState<Comida[]>([])
 
   const fetchComida = async () => {
@@ -100,31 +100,8 @@ export default function SignUp() {
             <input id="telefone" className='input-Register' type="text" placeholder="48 99999-9999" value={telefoneInput} onChange={(e) => setTelefoneInput(e.target.value)} />
           </div>
           <div className="input-other">
-      <label className="input-label">Usuário</label>
-
-      <div>
-        <label>
-          <input
-            type="radio"
-            value="aluno"
-            // checked={tipoUsuario === 'aluno'}
-            // onChange={handleTipoUsuarioChange}
-          />
-          Aluno
-        </label>
-
-        <label>
-          <input
-            type="radio"
-            value="funcionario"
-            // checked={tipoUsuario === 'funcionario'}
-            // onChange={handleTipoUsuarioChange}
-          />
-          funcionario
-        </label>
-
-        {/* Adicione mais opções de acordo com suas necessidades */}
-      </div>
+      <label className="input-label">Turma</label>
+      <input id="turma" className='input-Register' type="text" placeholder="3B" value={turmaInput} onChange={(e) => setTurmaInput(e.target.value)} />
     </div>
         </div>
         <button onClick={handleSubmit} className="submit-button">Cadastrar</button>

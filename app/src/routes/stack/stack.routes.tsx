@@ -9,7 +9,7 @@ import { Search } from '../../screens/Search';
 import { Food } from '../../screens/Food';
 import { Category } from '../../screens/Category'
 import { Feedback } from '../../screens/Feedback';
-
+import { ComidaScroll } from '../../components/ComidaScroll';
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -72,6 +72,13 @@ export function StackRoutes() {
         headerShown: false,
       }}
     />
+    <Screen 
+  name='ComidaScroll' 
+  component={ComidaScroll}
+  options={{
+    headerShown: false,
+  }}
+/>
     </Navigator>
   )
 }

@@ -1,7 +1,7 @@
 import './styles.css'
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import { FeedbackComponent } from "../Manage/Feedback";
+import { FeedbackComponent } from "../../components/Feedback";
 import FoodsImage from '../../assets/img/ImageHeader.png'
 
 const Statics = () => {

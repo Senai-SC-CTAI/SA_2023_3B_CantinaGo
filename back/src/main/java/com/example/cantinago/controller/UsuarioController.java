@@ -18,7 +18,7 @@ public class UsuarioController {
     public List<Usuario> listarUsuarios() {
         return usuarioRepository.findAll();
     }
-
+    
     @PostMapping
     public Usuario criarUsuario(@RequestBody Usuario usuario) {
         return usuarioRepository.save(usuario);

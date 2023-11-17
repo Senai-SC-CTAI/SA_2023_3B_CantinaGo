@@ -62,57 +62,7 @@
 
     return (
       <View style={styles.container}>
-        <View style={styles.header}>
-          {/* Botão para voltar à tela anterior */}
-          <TouchableOpacity onPress={back}>
-            <Feather
-              name="arrow-left"
-              size={38}
-              color="#FA321A"
-              style={{ marginLeft: 20 }}
-            />
-          </TouchableOpacity>
-          <View style={{marginLeft: 20, flex: 1}}>
-            {/* Exibindo o nome do alimento */}
-            <Text style={styles.titleComida} numberOfLines={3} ellipsizeMode="tail" >{selectedFood.nome}</Text>
-            {/* Exibindo a categoria do alimento */}
-            <Text style={styles.categoriaComida}>{selectedFood.category}</Text>
-          </View>
-        </View>
-        {/* <Image
-          style={styles.backgroundImage}
-          source={require('../../../assets/img/FoodDesign2.png')} 
-        /> */}
-
-          <View style={{alignItems:'center', width: '100%'}}>
-            <Image
-              style={styles.imagemComida}
-              source={selectedFood.foto}
-              resizeMode="contain"
-            />
-
-          </View>
-        <View style={styles.card}>
-          {/* Exibindo a imagem do alimento */}
-          {/* Exibindo as calorias do alimento */}
-          <Text style={styles.calorias}>{selectedFood.caloria} kcal</Text>
-
-          {/* Título para a seção de ingredientes */}
-          <Text style={styles.tituloIgredientes}>Ingredientes</Text>
-          {/* Exibindo a lista de ingredientes */}
-          <View style={styles.igredientes}>
-            {selectedFood.ingredientes.map((ingrediente, index) => (
-              <Text key={index} style={styles.textoIgredientes}>
-                • {ingrediente}
-              </Text>
-            ))}
-          </View>
-        </View>
-
-        <View style={styles.cardPrice}>
-          {/* Exibindo o preço do alimento */}
-          <Text style={styles.precoTexto}>R${selectedFood.preco}</Text>
-        </View>
+       <Text>AAA</Text>
       </View>
       
       

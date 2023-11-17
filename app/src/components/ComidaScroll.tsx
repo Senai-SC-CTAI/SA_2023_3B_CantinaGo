@@ -1,21 +1,15 @@
-import * as React from 'react';
-import { View, StyleSheet, Text, ScrollView } from 'react-native';
-import { Cards } from './Cards'; //Importação dos Cards para colocar no Scroll.
+import React, { useState, useEffect } from 'react';
+import { View, StyleSheet, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { Cards } from './Cards';
+import Content from "../data/Content";
+import { useFonts, Inter_400Regular, Inter_600SemiBold, Inter_700Bold, Inter_500Medium } from '@expo-google-fonts/inter';
+import { useNavigation } from '@react-navigation/native';
 
-import Content from "../data/Content" //Importação do BancoDeDados.
+export function ComidaScroll(props: { categoria: string }) {
+  console.log('Categoria prop in ComidaScroll:', props.categoria);
+  const [comidas, setComidas] = useState([]);
+  const navigation = useNavigation();
 
-import {
-  useFonts,
-  Inter_400Regular,
-  Inter_600SemiBold,
-  Inter_700Bold,
-  Inter_500Medium
-}  from '@expo-google-fonts/inter'; // Importação de fontes do Google Fonts usando Expo.
-
-export function ComidaScroll(props: { category: string }) {
-  // Filtrar o conteúdo com base na categoria
-  const filteredContent = Content.filter(item => item.category === props.category);
-  // Carregar as fontes definidas
   useFonts({
     Inter_400Regular,
     Inter_700Bold,
@@ -23,25 +17,46 @@ export function ComidaScroll(props: { category: string }) {
     Inter_500Medium
   });
 
+  useEffect(() => {
+    const fetchComidas = async () => {
+      try {
+        const response = await fetch('http://localhost:8090/comidas?categoria=' + props.categoria);
+        const data = await response.json();
+        setComidas(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchComidas();
+  }, [props.categoria]);
+
+  console.log(comidas);
+
   return (
     <View style={styles.container}>
-      {/* Exibir o título da categoria */}
-      <Text style={styles.tituloComidas}>{props.category}</Text>
+      <Text style={styles.tituloComidas}>{props.categoria}</Text>
       <ScrollView
         horizontal
         contentContainerStyle={styles.scrollComidas}
         showsHorizontalScrollIndicator={false}
       >
-        {/* Pegar o conteúdo filtrado para criar os Cards */}
-        {filteredContent.map((item, index) => (
-          <Cards 
+      {comidas.map((item, index) => (
+          item.categoria === props.categoria && (
+            // Wrap each card with TouchableOpacity to make it clickable
+            <TouchableOpacity
             key={index}
-            id={item.id}
-            foto={item.foto}
-            nome={item.nome}
-            preco={item.preco}
-            caloria={item.caloria} 
-          />
+            onPress={() => navigation.navigate('Food', { itemId: item.id })}
+          >
+              <Cards
+                id={item.id}
+                foto={{ uri: item.foto }}
+                nome={item.nome}
+                preco={item.preco}
+                caloria={item.calorias}
+              />
+            </TouchableOpacity>
+          )
         ))}
       </ScrollView>
     </View>

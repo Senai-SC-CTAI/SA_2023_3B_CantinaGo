@@ -1,5 +1,5 @@
 import LogoSingUp from '../../assets/img/singuplogo.svg';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './style.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios'
@@ -45,28 +45,43 @@ export default function Login() {
 
         <div className="input-container-Login">
           <h3 className="input-label-Login">E-mail</h3>
-          <input className='input-Login' type="email" placeholder="seuemail@estudante.sesisenai.org.br" />
+          <input
+            className='input-Login'
+            type="email"
+            placeholder="seuemail@estudante.sesisenai.org.br"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
         <div className="input-container-Login">
           {/* <div className="input-senha-Login"> */}
           <h3 className="input-label-Login">Senha</h3>
-          <input className='input-Login' type="password" placeholder="senha" />
+          <input
+            className='input-Login'
+            type="password"
+            placeholder="senha"
+            onChange={(e) => setSenha(e.target.value)}
+          />
           {/* </div> */}
           <div className='esqueceuSenha-Login'>
             <Link to="/home" className='input_label-Login'>Esqueceu a senha? Clique aqui</Link>
           </div>
         </div>
-
-        <Link to="/home" className="submit-button">Entrar</Link>
-        <div className="login-link">
-          Não possui conta?
-          <div>
-            <Link to="/SignUp">Faça o Cadastro</Link>
-          </div>
+        <button
+          type="button"
+          className="submit-button"
+          onClick={handleLogin}>
+          Entrar
+      </button>
+      <div className="login-link">
+        Não possui conta?
+        <div>
+          <Link to="/SignUp">Faça o Cadastro</Link>
         </div>
-
       </div>
+
     </div>
+    </div >
 
   );
 };

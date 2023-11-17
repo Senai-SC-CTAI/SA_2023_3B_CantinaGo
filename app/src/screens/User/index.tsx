@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from './styles';
 import { useState } from 'react';
-import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
+import { View, Image, TextInput, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { Feather } from '@expo/vector-icons'
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 
@@ -11,34 +11,34 @@ import {
   Inter_400Regular,
   Inter_600SemiBold,
   Inter_700Bold
-  }  from '@expo-google-fonts/inter';
+} from '@expo-google-fonts/inter';
 
 import { Feedback } from '../Feedback';
 
 
 export function User() {
-  
+
   useFonts({
     Inter_400Regular,
     Inter_700Bold,
-})
+  })
 
-// navegação 
+  // navegação 
   interface NavigationType {
     goBack: any;
     navigate: (routeName: string) => void;
   }
 
-const navigation: NavigationType = useNavigation();
+  const navigation: NavigationType = useNavigation();
 
   function back() {
     navigation.goBack();
   }
-  
+
   function Logout() {
     navigation.navigate('SignIn')
   }
-  
+
   const [showUser, setShowUser] = useState(true);
   const [showFeedback, setShowFeedback] = useState(false);
 
@@ -65,25 +65,25 @@ const navigation: NavigationType = useNavigation();
                 source={require('../../../assets/img/User.png')}
                 style={styles.image}
               />
-                <Image
-                  source={require("../../../assets/Icons/Editar.png")}
-                  style={{
-                    width: 30,
-                    height: 30,
-                    resizeMode: "contain",
-                    
-                    position: 'absolute',
-                    right: 30,
-                    top: 30,
-                    justifyContent: 'center',
-                    alignItems: 'center'
+              <Image
+                source={require("../../../assets/Icons/Editar.png")}
+                style={{
+                  width: 30,
+                  height: 30,
+                  resizeMode: "contain",
 
-                  }}
-                />
+                  position: 'absolute',
+                  right: 30,
+                  top: 30,
+                  justifyContent: 'center',
+                  alignItems: 'center'
+
+                }}
+              />
             </View>
             <View style={styles.profileInfo}>
               <Text style={{ fontSize: 20, fontFamily: "Inter_700Bold" }}>Nome do Usuário</Text>
-              <Text style={{ fontSize: 14, color: '#9E9D9D', fontFamily:"Inter_400Regular", textAlign: 'center'}}>Tipo de usuário</Text>
+              <Text style={{ fontSize: 14, color: '#9E9D9D', fontFamily: "Inter_400Regular", textAlign: 'center' }}>Tipo de usuário</Text>
             </View>
           </View>
           <View style={styles.inputsInfo}>
@@ -146,8 +146,8 @@ const navigation: NavigationType = useNavigation();
                   marginLeft: -30,
                   marginRight: 10,
                 }}
-              />            
-              </View>
+              />
+            </View>
             <View style={styles.viewInput}>
               <Image
                 source={require("../../../assets/Icons/Telefone.png")}
@@ -168,15 +168,15 @@ const navigation: NavigationType = useNavigation();
                   resizeMode: "contain",
                   marginLeft: -30,
                   marginRight: 10,
-        
+
                 }}
-              />           
-              </View>
+              />
+            </View>
           </View>
           <View style={styles.feedbackText}>
-            <Text style={{ color: "#9E9D9D", fontSize: 14, fontFamily:'Inter_400Regular' }}>Algum comentário?</Text>
+            <Text style={{ color: "#9E9D9D", fontSize: 14, fontFamily: 'Inter_400Regular' }}>Algum comentário?</Text>
             <TouchableOpacity onPress={() => { setShowUser(false); setShowFeedback(true); }}>
-              <Text style={{ fontSize: 14, textDecorationLine: 'underline', color: '#FA321A', fontFamily:'Inter_400Regular', textAlign: 'center'  }}>Deixe-o aqui</Text>
+              <Text style={{ fontSize: 14, textDecorationLine: 'underline', color: '#FA321A', fontFamily: 'Inter_400Regular', textAlign: 'center' }}>Deixe-o aqui</Text>
             </TouchableOpacity>
           </View>
 

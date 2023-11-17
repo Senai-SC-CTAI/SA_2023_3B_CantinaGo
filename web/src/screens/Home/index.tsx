@@ -6,11 +6,37 @@ import ScrollCategory  from '../../components/ScrollCategory';
 import Content from '../../components/Data/content'
 import Calendar from '../../assets/icons/Calendario.svg'
 import FoodsImage from '../../assets/img/ImageHeader.png'
+import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
-const uniqueCategories = Array.from(new Set(Content.map((item) => item.category)));
+
+const uniqueCategories = Array.from(new Set(Content.map((item) => item.categoria)));
 
 function App() {
   scrollTo(0,0)
+  const [categories, setCategories] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8090/comidas');
+        const data = await response.json();
+        const uniqueCategories = Array.from(new Set(data.map((item: any) => item.categoria)));
+        setCategories(uniqueCategories);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
@@ -34,11 +60,10 @@ function App() {
         <img src={FoodsImage} className='foodImageHome'/>
       </article>
 
-      <main className='mainHome'>
-        <article className='scrollCardsHome'>
-        {/* Map through unique categories and render ScrollCategory */}
-          {uniqueCategories.map((category) => (
-            <ScrollCategory key={category} category={category} />
+      <main className="mainHome">
+        <article className="scrollCardsHome">
+          {categories.map((categoria) => (
+            <ScrollCategory key={categoria} categoria={categoria} />
           ))}
         </article>
       </main>

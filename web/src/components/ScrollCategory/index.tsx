@@ -1,54 +1,62 @@
-import './style.css'
 import React, { useState, useEffect } from 'react';
-import Content from '../../components/Data/content'
-import Card from '../../components/Card/index'
-import {Link} from "react-router-dom"
+import { Link } from 'react-router-dom';
+import Card from '../../components/Card/index';
+import './style.css'
 
-function ScrollCategory(props: { category: string }) {
 
-  const [visibleCards, setVisibleCards] = useState(4); // Inicialmente, exiba 4 Cards
+function ScrollCategory(props: { categoria: string }) {
+  const [visibleCards, setVisibleCards] = useState(4);
+  const [content, setContent] = useState<any[]>([]);
 
-    // Filter content based on the category
-  const filteredContent = Content.filter(
-    (item) => item.category === props.category
-  );
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('http://localhost:8090/comidas?categoria=' + props.categoria);
+        const data = await response.json();
+        setContent(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
-  // Function to show more Cards
+    fetchData();
+  }, [props.categoria]);
+
   const showMoreCards = () => {
     const newVisibleCards = visibleCards + 4;
     setVisibleCards(newVisibleCards);
   };
 
-  // Calculate the total number of cards for this category
+  const filteredContent = content.filter((item) => item.categoria === props.categoria);
   const totalCards = filteredContent.length;
 
   return (
     <>
-      <h1 className='titleCategory'>{props.category}</h1>
-      <div className='scroll'>
-        <div className='cardContainer'>
-        {filteredContent.slice(0, visibleCards).map((content) => (
-          <Link to={`/Food/${content.id}`}  key={content.id}>
-            <Card
-              key={content.id}
-              foto={content.foto}
-              nome={content.nome}
-              preco={content.preco}
-              caloria={content.caloria}
-              id={content.id}
-            />
-          
-          </Link>
+      <h1  className='titleCategory'>{props.categoria}</h1>
+      <div className="scroll">
+        <div className="cardContainer">
+          {filteredContent.slice(0, visibleCards).map((content) => (
+            <Link to={`/Food/${content.id}`} key={content.id}>
+              <Card
+                key={content.id}
+                foto={content.foto}
+                nome={content.nome}
+                preco={content.preco}
+                caloria={content.calorias}
+                id={content.id}
+                categoria={content.categoria}
+              />
+            </Link>
           ))}
         </div>
         {visibleCards < totalCards && (
-          <button onClick={showMoreCards} className='verMaisButton'>
+          <button onClick={showMoreCards} className="verMaisButton">
             Ver mais
           </button>
         )}
       </div>
     </>
-  )
+  );
 }
 
-export default ScrollCategory
+export default ScrollCategory;
