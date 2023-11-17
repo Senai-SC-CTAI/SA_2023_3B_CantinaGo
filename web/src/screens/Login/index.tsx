@@ -1,39 +1,47 @@
 import LogoSingUp from '../../assets/img/singuplogo.svg';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './style.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios'
 
-interface Usuario {
-  senha: string;
-  telefone: string;
-  email: string;
-  turma: string;
-  isAdmin: boolean;
-}
+// interface Usuario {
+//   senha: string;
+//   telefone: string;
+//   email: string;
+//   turma: string;
+// }
+
+const logar = async (email: string, senha: string) => {
+  try {
+    const response = await axios.post('http://localhost:8090/api/login', {
+      email: email,
+      senha: senha,
+    });
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
 export default function Login() {
-  
-  useEffect(() => {
-    fetchUsuarios();
-  }, [])
 
-  // Metodo GET 
-  const fetchUsuarios = async () => {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [, setIsAuthenticated] = useState(false)
+
+  const handleLogin = async () => {
     try {
-      const response = await axios.get('http://localhost:8090/usuario');
-      setUsuarios(response.data);
-      console.log(usuarios[1].email);
-      console.log(usuarios[1].senha);
-      
+      const response = await logar(email, senha);
+      if (response == true) {
+        setIsAuthenticated(true);
+        window.location.href="/home"
+      } else {
+        setIsAuthenticated(false);
+      }
     } catch (error) {
-      console.log('Erro ao buscar Usuarios: ', error);
+      console.error('Erro ao se logar:', error);
     }
-  }
-  
-  const [usuarios, setUsuarios] = useState<Usuario[]>([]);
-  
-
+  };
 
   return (
     <div className="container-Login">
@@ -85,4 +93,3 @@ export default function Login() {
 
   );
 };
-
