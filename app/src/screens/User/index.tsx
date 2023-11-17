@@ -1,9 +1,15 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import styles from './styles';
 import { useState } from 'react';
+
 import { View, Image, TextInput, Text, TouchableOpacity, ScrollView } from 'react-native';
+
+
+
 import { Feather } from '@expo/vector-icons'
 import { useNavigation, NavigationProp } from '@react-navigation/native';
+import axios from 'axios';
+
 
 import {
   useFonts,
@@ -23,7 +29,37 @@ export function User() {
     Inter_700Bold,
   })
 
-  // navegação 
+const [usuario, setUsuario] = useState([]);
+
+useEffect(() => {
+  fetchUsuario()
+}, [])
+
+const fetchUsuario = async () => {
+  try {
+    const response = await axios.get('http://localhost:8090/usuario')
+    setUsuario(response.data);
+  } catch (error) {
+    console.log('erro', error)
+  }
+};
+
+const handleDelete = async(id_usuario: any, senha: any) => {
+  try {
+    console.log(id_usuario);
+    console.log(senha);
+    
+    await axios.delete(`http://localhost:8090/usuario/${id_usuario}`);
+    fetchUsuario();
+  
+    
+  } catch (error) {
+    console.error('Erro ao excluir usuario:', error);
+  }
+};
+
+
+// navegação 
   interface NavigationType {
     goBack: any;
     navigate: (routeName: string) => void;
@@ -41,6 +77,7 @@ export function User() {
 
   const [showUser, setShowUser] = useState(true);
   const [showFeedback, setShowFeedback] = useState(false);
+  
 
   return (
     <View style={styles.container}>
@@ -183,6 +220,12 @@ export function User() {
           <TouchableOpacity style={styles.button} onPress={(Logout)}>
             <Text style={styles.buttonText}>Sair</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => handleDelete(usuario.id)}>
+            <Text>Excluir</Text>
+          </TouchableOpacity>
+
+          
         </View>
       )}
 
