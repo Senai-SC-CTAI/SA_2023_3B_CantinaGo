@@ -1,15 +1,10 @@
 import React, { useEffect } from 'react';
 import styles from './styles';
 import { useState } from 'react';
-
 import { View, Image, TextInput, Text, TouchableOpacity, ScrollView } from 'react-native';
-
-
-
 import { Feather } from '@expo/vector-icons'
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 import axios from 'axios';
-
 
 import {
   useFonts,
@@ -20,7 +15,6 @@ import {
 } from '@expo-google-fonts/inter';
 
 import { Feedback } from '../Feedback';
-
 
 export function User() {
 
@@ -77,7 +71,6 @@ const handleDelete = async(id_usuario: any, senha: any) => {
 
   const [showUser, setShowUser] = useState(true);
   const [showFeedback, setShowFeedback] = useState(false);
-  
 
   return (
     <View style={styles.container}>
@@ -146,11 +139,11 @@ const handleDelete = async(id_usuario: any, senha: any) => {
                   resizeMode: "contain",
                   marginLeft: 13,
                 }}
-              />
+              /> 
               <TextInput style={styles.inputs} placeholder="  data de nascimento" placeholderTextColor={"#6A6A6A"}  >
               </TextInput>
 
-              <Image
+              {/* <Image
                 source={require("../../../assets/Icons/EditarCinza.png")}
                 style={{
                   width: 25,
@@ -159,7 +152,7 @@ const handleDelete = async(id_usuario: any, senha: any) => {
                   marginLeft: -30,
                   marginRight: 10,
                 }}
-              />
+              /> */}
 
             </View>
             <View style={styles.viewInput}>
@@ -171,10 +164,10 @@ const handleDelete = async(id_usuario: any, senha: any) => {
                   resizeMode: "contain",
                   marginLeft: 13,
                 }}
-              />
+              /> 
               <TextInput style={styles.inputs} placeholder="  turma" placeholderTextColor={"#6A6A6A"}  >
               </TextInput>
-              <Image
+              {/* <Image
                 source={require("../../../assets/Icons/EditarCinza.png")}
                 style={{
                   width: 25,
@@ -183,7 +176,7 @@ const handleDelete = async(id_usuario: any, senha: any) => {
                   marginLeft: -30,
                   marginRight: 10,
                 }}
-              />
+              /> */}
             </View>
             <View style={styles.viewInput}>
               <Image
@@ -197,7 +190,7 @@ const handleDelete = async(id_usuario: any, senha: any) => {
               />
               <TextInput style={styles.inputs} placeholder="  telefone" placeholderTextColor={"#6A6A6A"}  >
               </TextInput>
-              <Image
+              {/* <Image
                 source={require("../../../assets/Icons/EditarCinza.png")}
                 style={{
                   width: 25,
@@ -207,7 +200,7 @@ const handleDelete = async(id_usuario: any, senha: any) => {
                   marginRight: 10,
 
                 }}
-              />
+              /> */}
             </View>
           </View>
           <View style={styles.feedbackText}>
