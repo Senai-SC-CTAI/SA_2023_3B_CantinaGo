@@ -41,7 +41,7 @@ public class UsuarioController {
             usuario.setNome(usuarioAtualizado.getNome());
             usuario.setSobrenome(usuarioAtualizado.getSobrenome());
             usuario.setSenha(usuarioAtualizado.getSenha());
-            usuario.setConfirmarSenha(usuarioAtualizado.getConfirmarSenha());;
+            usuario.setConfirmarSenha(usuarioAtualizado.getConfirmarSenha());
             // usuario.setSobrenome(usuarioAtualizado.getSobrenome());
             usuario.setEmail(usuarioAtualizado.getEmail());
             usuario.setTelefone(usuarioAtualizado.getTelefone());
