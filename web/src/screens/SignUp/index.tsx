@@ -10,7 +10,7 @@ interface Comida {
 }
 
 export default function SignUp() {
- 
+
   const [cadastro, setCadastro] = useState('');
   const [emailInput, setEmailInput] = useState('');
   const [senhaInput, setSenhaInput] = useState('');
@@ -25,21 +25,31 @@ export default function SignUp() {
       console.error('Erro ao buscar dados:', error);
     }
   };
- 
+
   useEffect(() => {
     fetchCadastro();
   }, []);
 
   const handleSubmit = async () => {
     try {
+      // Validar campos não nulos
+      if (!emailInput || !senhaInput || !confirmarSenhaInput || !telefoneInput || !turmaInput) {
+        alert('Todos os campos devem ser preenchidos.');
+        return;
+      }
+
       let novoUsuario = {
         email: emailInput,
         senha: senhaInput,
         confirmarSenha: confirmarSenhaInput,
         telefone: telefoneInput,
         turma: turmaInput,
-      }
+      };
+
+      // Enviar solicitação apenas se os campos não forem nulos
       await axios.post('http://localhost:8090/usuario', novoUsuario);
+
+      // Resto do código
       fetchCadastro();
       setEmailInput('');
       setSenhaInput('');
@@ -70,21 +80,21 @@ export default function SignUp() {
   };
 
   if (!isAdmin) {
-    window.location.href="./login";
+    window.location.href = "./login";
   }
 
   return (
-    
+
     <div className="container-Register">
       <div className="div-logo">
         <img src={LogoSingUp} className='Logo' alt="Logo" />
       </div>
       <div className="div-content">
         <h2 className='title'>Cadastrar</h2>
-        
+
         <div className="input-container">
           <label htmlFor="email" className="input-label">E-mail</label>
-          <input id="email" className='input-Register' type="email" placeholder="seuemail@estudante.sesisenai.org.br" value={emailInput} onChange={(e) => setEmailInput(e.target.value)}  />
+          <input id="email" className='input-Register' type="email" placeholder="seuemail@estudante.sesisenai.org.br" value={emailInput} onChange={(e) => setEmailInput(e.target.value)} />
         </div>
         <div className="main-inputs">
           <div className="input-other">
@@ -94,22 +104,22 @@ export default function SignUp() {
           <div className="input-other">
             <label htmlFor="confirmar-senha" className="input-label">Confirmar Senha</label>
             <input id="confirmar-senha" className='input-Register' type="password" placeholder="senha" value={confirmarSenhaInput} onChange={(e) => setConfirmarSenhaInput(e.target.value)} />
-        </div>
+          </div>
           <div className="input-other">
             <label htmlFor="telefone" className="input-label">Telefone</label>
             <input id="telefone" className='input-Register' type="text" placeholder="48 99999-9999" value={telefoneInput} onChange={(e) => setTelefoneInput(e.target.value)} />
           </div>
           <div className="input-other">
-      <label className="input-label">Turma</label>
-      <input id="turma" className='input-Register' type="text" placeholder="3B" value={turmaInput} onChange={(e) => setTurmaInput(e.target.value)} />
-    </div>
+            <label className="input-label">Turma</label>
+            <input id="turma" className='input-Register' type="text" placeholder="3B" value={turmaInput} onChange={(e) => setTurmaInput(e.target.value)} />
+          </div>
         </div>
         <button onClick={handleSubmit} className="submit-button">Cadastrar</button>
         <div className="login-link">
           <p>
-          Já possui conta?
+            Já possui conta?
           </p>
-           <Link to="/login">Faça o login</Link>
+          <Link to="/login">Faça o login</Link>
         </div>
       </div>
     </div>

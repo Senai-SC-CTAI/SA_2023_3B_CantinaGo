@@ -33,10 +33,10 @@ export default function Login() {
     try {
       const response = await logar(email, senha);
       if (response == true) {
-        setIsAuthenticated(true);
         window.location.href="/home"
       } else {
         setIsAuthenticated(false);
+        alert("Usuario nao cadastrado")        
       }
     } catch (error) {
       console.error('Erro ao se logar:', error);
@@ -68,6 +68,7 @@ export default function Login() {
             className='input-Login'
             type="password"
             placeholder="senha"
+            value={senha}
             onChange={(e) => setSenha(e.target.value)}
           />
           {/* </div> */}

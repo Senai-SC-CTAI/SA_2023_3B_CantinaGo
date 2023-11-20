@@ -62,19 +62,6 @@ function HeaderPage() {
                             <img src={logo} />
                         </div>
                     </NavLink>
-                    <nav className="nav">
-                        <ul>
-                            <li>
-                                <NavLink to="/page">Home</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/sobre">Sobre</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/">Contato</NavLink>
-                            </li>
-                        </ul>
-                    </nav>
                 </div>
                 <div className="loginSec">
                     <NavLink to="/login">
