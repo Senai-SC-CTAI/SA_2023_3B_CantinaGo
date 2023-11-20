@@ -213,12 +213,6 @@ const handleDelete = async(id_usuario: any, senha: any) => {
           <TouchableOpacity style={styles.button} onPress={(Logout)}>
             <Text style={styles.buttonText}>Sair</Text>
           </TouchableOpacity>
-
-          <TouchableOpacity onPress={() => handleDelete(usuario.id)}>
-            <Text>Excluir</Text>
-          </TouchableOpacity>
-
-          
         </View>
       )}
 

@@ -36,11 +36,17 @@ export function SignIn() {
 
   })
 
-  const navigation = useNavigation();
+  interface NavigationType {
+    goBack: any;
+    navigate: (routeName: string) => void;
+  }
+  const navigation: NavigationType = useNavigation();
+
 
   function SignIn() {
     navigation.navigate("Route");
   }
+
   function SignUp() {
     navigation.navigate("SignUp");
   }
@@ -54,7 +60,7 @@ export function SignIn() {
       const response = await logar(email, senha);
       if (response == true) {
         setIsAuthenticated(true);
-        window.location.href = "/home"
+        SignIn()
       } else {
         setIsAuthenticated(false);
       }
@@ -93,7 +99,7 @@ export function SignIn() {
           placeholder="  seuemail@estudante.sesisenai.org.br"
           placeholderTextColor={"#6A6A6A"}
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChangeText={(e) => setEmail(e)}
         ></TextInput>
       </View>
 
@@ -113,11 +119,11 @@ export function SignIn() {
           placeholderTextColor={"#6A6A6A"}
           secureTextEntry
           value={senha}
-          onChange={(e) => setSenha(e.target.value)}
+          onChangeText={(e) => setSenha(e)}
         ></TextInput>
       </View>
 
-      <TouchableOpacity style={styles.button} onPress={SignIn}>
+      <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
       <Text style={styles.texty}>Não tem login?</Text>

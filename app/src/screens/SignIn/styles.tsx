@@ -38,6 +38,7 @@ import { StyleSheet } from 'react-native';
         paddingHorizontal: 10, 
         marginBottom: 26,
         backgroundColor:"#F4F4F4",
+        outline: 'none',
       },
       button: {
         marginBottom: 50,

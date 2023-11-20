@@ -7,10 +7,6 @@ import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlin
 import { Link } from 'react-router-dom';
 import './style.css';
 
-interface Comida {
-  isAdmin: boolean;
-}
-
 export default function SignUp() {
 
   const [cadastro, setCadastro] = useState('');
@@ -35,6 +31,7 @@ export default function SignUp() {
     fetchCadastro();
   }, []);
 
+  // POST 
   const handleSubmit = async () => {
     try {
       // Validar campos não nulos
@@ -46,6 +43,7 @@ export default function SignUp() {
         }, 3000);
         return;
       }
+      
       let novoUsuario = {
         email: emailInput,
         senha: senhaInput,
@@ -74,20 +72,6 @@ export default function SignUp() {
   // verificar usuario
 
   const [isAdmin, setisAdmin] = useState<boolean>(true)
-  const [comida, setComida] = useState<Comida[]>([])
-
-  const fetchComida = async () => {
-    try {
-      const response = await axios.get<Comida[]>('http://localhost:8090/comidas');
-    } catch (error) {
-      console.log('error', error);
-
-    }
-  };
-
-  const handleViewComida = () => {
-    fetchComida();
-  };
 
   if (!isAdmin) {
     window.location.href = "./login";

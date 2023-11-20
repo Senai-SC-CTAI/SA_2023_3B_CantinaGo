@@ -52,6 +52,7 @@ public class ComidaController {
             comida.setNome(comidaAtualizado.getNome());
             comida.setCalorias(comidaAtualizado.getCalorias());
             comida.setPreco(comidaAtualizado.getPreco());
+            comida.setIngredientes(comidaAtualizado.getIngredientes());
 
             Comida comidaAtualizadoBD = comidaRepository.save(comida);
             return ResponseEntity.ok(comidaAtualizadoBD);

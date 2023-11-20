@@ -27,16 +27,13 @@
       Inter_500Medium
     })
 
-    // Hook de navegação para redirecionamento entre telas.
-    const navigation = useNavigation();
-
     // Estado para controlar a visibilidade do seletor de data.
     const [isDatePickerVisible, setDatePickerVisible] = useState(false);
 
     // Estado para armazenar as categria vindas do backend.
     const [categoria, setCategoria] = useState<string[]>([]);
 
-    const capitalize = (str) => {
+    const capitalize = (str: string) => {
       return str.charAt(0).toUpperCase() + str.slice(1);
     };
     
@@ -53,6 +50,12 @@
       setDatePickerVisible(true);
     };
 
+    interface NavigationType {
+      goBack: any;
+      navigate: (routeName: string) => void;
+    }
+    const navigation: NavigationType = useNavigation();
+  
     function user() {
       navigation.navigate("User");
     }
