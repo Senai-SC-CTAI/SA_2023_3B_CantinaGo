@@ -1,6 +1,8 @@
 import LogoSingUp from '../../assets/img/singuplogo.svg';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
+import CheckCircleOutlineRoundedIcon from '@mui/icons-material/CheckCircleOutlineRounded';
 
 import { Link } from 'react-router-dom';
 import './style.css';
@@ -17,6 +19,9 @@ export default function SignUp() {
   const [confirmarSenhaInput, setConfirmarSenhaInput] = useState('');
   const [telefoneInput, setTelefoneInput] = useState('');
   const [turmaInput, setTurmaInput] = useState('');
+  const [sucessMessage, setSucessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
   const fetchCadastro = async () => {
     try {
       const response = await axios.get('http://localhost:8090/usuario');
@@ -34,10 +39,13 @@ export default function SignUp() {
     try {
       // Validar campos não nulos
       if (!emailInput || !senhaInput || !confirmarSenhaInput || !telefoneInput || !turmaInput) {
-        alert('Todos os campos devem ser preenchidos.');
+        setSucessMessage("")
+        setErrorMessage("campos não podem ser nulos")
+        setTimeout(() => {
+          setErrorMessage("");
+        }, 3000);
         return;
       }
-
       let novoUsuario = {
         email: emailInput,
         senha: senhaInput,
@@ -45,17 +53,19 @@ export default function SignUp() {
         telefone: telefoneInput,
         turma: turmaInput,
       };
-
       // Enviar solicitação apenas se os campos não forem nulos
       await axios.post('http://localhost:8090/usuario', novoUsuario);
-
-      // Resto do código
       fetchCadastro();
       setEmailInput('');
       setSenhaInput('');
       setConfirmarSenhaInput('');
       setTelefoneInput('');
       setTurmaInput('');
+      setErrorMessage("");
+      setSucessMessage("usuário cadastrado com sucesso");
+      setTimeout(() => {
+        setSucessMessage("");
+      }, 3000);
     } catch (error) {
       console.error('Erro ao criar o cadastro:', error);
     }
@@ -114,6 +124,9 @@ export default function SignUp() {
             <input id="turma" className='input-Register' type="text" placeholder="3B" value={turmaInput} onChange={(e) => setTurmaInput(e.target.value)} />
           </div>
         </div>
+        {errorMessage && <div className="error-message"><ErrorOutlineRoundedIcon />{errorMessage}</div>}
+        {sucessMessage && <div className="sucess-message"><CheckCircleOutlineRoundedIcon />{sucessMessage}</div>}
+
         <button onClick={handleSubmit} className="submit-button">Cadastrar</button>
         <div className="login-link">
           <p>

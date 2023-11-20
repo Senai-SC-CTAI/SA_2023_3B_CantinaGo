@@ -38,9 +38,17 @@ export default function Login() {
       } else if (!email || !senha) {
         setIsAuthenticated(false);
         setErrorMessage("campos não podem ser nulos")
+        setTimeout(() => {
+          setErrorMessage("");
+        }, 3000);
+        return;
       } else {
         setIsAuthenticated(false);
         setErrorMessage("email ou senha incorretos")
+        setTimeout(() => {
+          setErrorMessage("");
+        }, 3000);
+        return;
       }
     } catch (error) {
       console.error('Erro ao se logar:', error);
@@ -81,7 +89,7 @@ export default function Login() {
           </div>
         </div>
         {errorMessage && <div className="error-message"><ErrorOutlineRoundedIcon />{errorMessage}</div>}
-         <button
+        <button
           type="button"
           className="submit-button"
           onClick={handleLogin}>
