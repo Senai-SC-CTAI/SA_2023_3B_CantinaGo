@@ -1,5 +1,5 @@
 import LogoSingUp from '../../assets/img/singuplogo.svg';
-import { useState, useEffect, ChangeEvent } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import { Link } from 'react-router-dom';

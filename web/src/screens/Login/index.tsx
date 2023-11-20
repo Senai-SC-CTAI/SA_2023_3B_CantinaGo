@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './style.css';
 import { useState } from 'react';
 import axios from 'axios'
-
+import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
 // interface Usuario {
 //   senha: string;
 //   telefone: string;
@@ -28,15 +28,19 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [, setIsAuthenticated] = useState(false)
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleLogin = async () => {
     try {
       const response = await logar(email, senha);
       if (response == true) {
-        window.location.href="/home"
+        window.location.href = "/home"
+      } else if (!email || !senha) {
+        setIsAuthenticated(false);
+        setErrorMessage("campos não podem ser nulos")
       } else {
         setIsAuthenticated(false);
-        alert("Usuario nao cadastrado")        
+        setErrorMessage("email ou senha incorretos")
       }
     } catch (error) {
       console.error('Erro ao se logar:', error);
@@ -76,20 +80,21 @@ export default function Login() {
             <Link to="/home" className='input_label-Login'>Esqueceu a senha? Clique aqui</Link>
           </div>
         </div>
-        <button
+        {errorMessage && <div className="error-message"><ErrorOutlineRoundedIcon />{errorMessage}</div>}
+         <button
           type="button"
           className="submit-button"
           onClick={handleLogin}>
           Entrar
-      </button>
-      <div className="login-link">
-        Não possui conta?
-        <div>
-          <Link to="/SignUp">Faça o Cadastro</Link>
+        </button>
+        <div className="login-link">
+          Não possui conta?
+          <div>
+            <Link to="/SignUp">Faça o Cadastro</Link>
+          </div>
         </div>
-      </div>
 
-    </div>
+      </div>
     </div >
 
   );
