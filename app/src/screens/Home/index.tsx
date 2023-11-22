@@ -8,6 +8,17 @@
   import { format } from 'date-fns'; // Biblioteca para formatação de datas, traduzir dd/mm/yyyy para texto.
   import ptBR from 'date-fns/locale/pt-BR'; // Traduzir as datas para português.
 
+  import coxinha from '../../../assets/img/Coxinha.png';
+  import pastel from '../../../assets/img/Pastel.png';
+  import barrinha from '../../../assets/img/SnackHitter.png';
+  import docinho from '../../../assets/img/Beijinho.png';
+  import salgadinho from '../../../assets/img/salgadinho.png';
+  import bolomorango from '../../../assets/img/bolomorango.png';
+  import crossaint from '../../../assets/img/croissant.png';
+  import mandioca from '../../../assets/img/SnackMandioca.png';
+  import cha from '../../../assets/img/Cha.png';
+  import agua from '../../../assets/img/Agua.png';
+
   import {
     useFonts,
     Inter_300Light,
@@ -17,6 +28,9 @@
     Inter_500Medium
   } from '@expo-google-fonts/inter'; // Importação de fontes do Google Fonts usando Expo.
   import Content from '../../data/Content';
+
+  export const localImages: string[] = [coxinha, pastel, barrinha, docinho, salgadinho, bolomorango, crossaint, mandioca, cha, agua];
+
 
   // Componente principal da tela Home.
   export function Home() {

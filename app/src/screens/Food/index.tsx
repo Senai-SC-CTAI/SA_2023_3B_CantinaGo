@@ -17,6 +17,9 @@
     Inter_800ExtraBold
   } from '@expo-google-fonts/inter'; // Importação de fontes do Google Fonts usando Expo.
   
+  import {localImages} from '../Home/index';
+
+
   //Componente principal da tela Food.
   export function Food() {
     const [selectedContent, setSelectedContent] = useState([]);
@@ -64,7 +67,7 @@
     console.log("comida", selectedContent);
 
   
-    const { nome, ingredientes, preco, calorias, foto } = selectedContent;
+    const { nome, ingredientes, preco, calorias } = selectedContent;
 
   
 
@@ -100,7 +103,7 @@
           <View style={{alignItems:'center', width: '100%'}}>
             <Image
               style={styles.imagemComida}
-              source={selectedContent.foto}
+              source={localImages[itemId - 24]}
               resizeMode="contain"
             />
           </View>
@@ -114,7 +117,7 @@
           {/* Exibindo a lista de ingredientes */}
           <View style={styles.igredientes}>
               <Text style={styles.textoIgredientes}>
-                • {selectedContent.ingrediente}
+                • {selectedContent.ingredientes}
               </Text>
           </View>
         </View>

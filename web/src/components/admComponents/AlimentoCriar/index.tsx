@@ -7,6 +7,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ImageInput from "../../imageInput";
 
+import {localImages} from '../../../screens/Home/index';
+
 //FAZER MODAL
 
 const AlimentoCriar: React.FC<{ onVoltarClick: () => void }> = ({ onVoltarClick }) => {
@@ -35,12 +37,14 @@ const AlimentoCriar: React.FC<{ onVoltarClick: () => void }> = ({ onVoltarClick 
 
   const handleSubmit = async () => {
     try {
+      const index: number = comidas.length % localImages.length;
       let novaComida = {
         nome: formState.nomeInput,
         calorias: formState.caloriasInput,
         preco: formState.precoInput,
         categoria: formState.categoriaInput,
         ingredientes: formState.ingredientesInput,
+        foto: localImages[index],
       };
       await axios.post("http://localhost:8090/comidas", novaComida);
       fetchComidas();

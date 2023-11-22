@@ -9,8 +9,24 @@ import FoodsImage from '../../assets/img/ImageHeader.png'
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
+import coxinha from '../../assets/img/Coxinha.png'
+import pastel from '../../assets/img/Pastel.png'
+import barrinha from '../../assets/img/SnackHitter.png'
+import docinho from '../../assets/img/Beijinho.png'
+import salgadinho from '../../assets/img/salgadinho.png'
+import bolomorango from '../../assets/img/bolomorango.png'
+import crossaint from '../../assets/img/Crossaint.png'
+import mandioca from '../../assets/img/SnackMandioca.png'
+import cha from '../../assets/img/Cha.png'
+import agua from '../../assets/img/Agua.png'
+
+
 
 const uniqueCategories = Array.from(new Set(Content.map((item) => item.categoria)));
+
+export const localImages: string[] = [coxinha, pastel, barrinha, docinho, salgadinho, bolomorango, crossaint, mandioca, cha, agua];
+
+
 
 function App() {
   scrollTo(0,0)
@@ -57,8 +73,8 @@ function App() {
             <input type="date" className="dateInput" name="dateInput" id="dateInput" />
           </div>
         </section>
-        <img src={FoodsImage} className='foodImageHome'/>
-      </article>
+        <img src={FoodsImage} className='foodImageHome' alt="Food" />
+              </article>
 
       <main className="mainHome">
         <article className="scrollCardsHome">

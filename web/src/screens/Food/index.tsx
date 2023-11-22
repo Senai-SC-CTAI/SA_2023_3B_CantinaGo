@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 
 import Header from '../../components/Header'
 
+import { localImages } from '../Home';
+
 function Food() {
   const { id } = useParams();
   const [selectedContent, setSelectedContent] = useState([]);
@@ -47,7 +49,7 @@ function Food() {
     return <div className="mainFood">Comida não encontrada</div>;
   }
 
-  const { nome, ingredientes, preco, calorias, foto } = selectedContent;
+  const { nome, ingredientes, preco, calorias} = selectedContent;
 
   return (
     <>
@@ -67,7 +69,7 @@ function Food() {
             <button>Comprar</button>
           </div>
         </article>
-        <img className="imageFood" src={foto} alt={nome} />
+        <img className="imageFood" src={localImages[id - 24]} alt={nome} />
       </main>
     </>
   );

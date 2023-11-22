@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../../components/Card/index';
 import './style.css'
+import {localImages} from '../../screens/Home/index';
+
 
 
 function ScrollCategory(props: { categoria: string }) {
@@ -32,14 +34,14 @@ function ScrollCategory(props: { categoria: string }) {
 
   return (
     <>
-      <h1  className='titleCategory'>{props.categoria}</h1>
+      <h1 className='titleCategory'>{props.categoria}</h1>
       <div className="scroll">
         <div className="cardContainer">
           {filteredContent.slice(0, visibleCards).map((content) => (
             <Link to={`/Food/${content.id}`} key={content.id}>
               <Card
                 key={content.id}
-                foto={content.foto}
+                foto={localImages[content.id - 24]} // Usando a primeira imagem da array
                 nome={content.nome}
                 preco={content.preco}
                 caloria={content.calorias}

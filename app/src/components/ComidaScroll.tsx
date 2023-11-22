@@ -16,6 +16,9 @@ import {
   Inter_500Medium,
 } from "@expo-google-fonts/inter";
 
+import {localImages} from '../screens/Home/index';
+
+
 export function ComidaScroll(props: { categoria: string }) {
   console.log("Categoria prop in ComidaScroll:", props.categoria);
   const [comidas, setComidas] = useState([]);
@@ -66,7 +69,7 @@ export function ComidaScroll(props: { categoria: string }) {
                 <View style={styles.card}>
                   <Image
                     style={styles.imagemComida}
-                    source={{ uri: item.foto }}
+                    source={localImages[item.id - 24]} 
                     resizeMode="contain"
                   />
                   <Text style={styles.nomeComida}>{item.nome}</Text>
